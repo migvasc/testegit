@@ -5,8 +5,8 @@ function pg_connection_string() {
 } 
 
 
-$con = pg_connect(pg_connection_string()); 
-$result=pg_query($conn, "SELECT * FROM x WHERE a=b;");
+$conn = pg_connect(pg_connection_string()); 
+$result= pg_query($conn, "SELECT * FROM x WHERE a=b;");
 if  (!$result) {
    echo "query did not execute";
 }
