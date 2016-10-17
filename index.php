@@ -1,11 +1,10 @@
-<html><body>
 <?php
-// A simple web site in Cloud9 that runs through Apache
-// Press the 'Run' button on the top to start the web server,
-// then click the URL that is emitted to the Output tab of the console
 
-echo 'TESTE PARA CONFIRMAR SE ESTA FUNCIONADO 3';
+function pg_connection_string() { 
+	return "dbname= d2b8h06bak4ivo host= ec2-23-23-176-135.compute-1.amazonaws.com user=kykiyayfiroilv password=rYI3CtNdygxh8_gn358BjPutkw port=5432 sslmode=require"
+} 
 
-?>
-</body>
-</html>
+function select() { 
+	$con = pg_connect(pg_connection_string()); 
+	echo pg_query($con, "SELECT * from usuarios");
+} 
