@@ -4,7 +4,7 @@
 // Press the 'Run' button on the top to start the web server,
 // then click the URL that is emitted to the Output tab of the console
 
-echo 'TO FICANDO SEM FRASES NESSA CARALHA';
+echo 'TO FICANDO SEM FRASES NESSA CARALHA AII SAFADA NA HORA DE LEVAR MADEIRADA';
 
 ?>
 </body>
