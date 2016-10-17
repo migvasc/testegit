@@ -22,3 +22,5 @@ deploy:
  api-key:
   secure: $HEROKU_API_KEY
  app: testegit
+script: phpunit Test.php
+
