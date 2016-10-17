@@ -24,3 +24,4 @@ deploy:
  app: testegit
 script: phpunit Test.php
 
+ heroku pg:psql
