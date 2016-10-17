@@ -6,5 +6,5 @@ function pg_connection_string() {
 
 function select() { 
 	$con = pg_connect(pg_connection_string()); 
-	echo pg_query($con, "SELECT * from usuarios");
+	var_dump( pg_query($con, "SELECT * from usuarios"));
 } 
