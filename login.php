@@ -99,7 +99,7 @@
                                     </div>
                                 </form>
                             </div>  
-                             Ainda não tem uma conta? Cadastre-se <a href="cadastro.html" class="page-scroll">aqui</a>.
+                             Ainda não tem uma conta? Cadastre-se <a href="cadastro.php" class="page-scroll">aqui</a>.
                         </div>
 
                     </div>
