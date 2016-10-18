@@ -45,7 +45,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html#page-top"><img src="../images/logo_extenso.png" alt="Progressus HTML5 template"></a>
+                <a class="navbar-brand page-scroll" href="index.php#page-top"><img src="../images/logo_extenso.png" alt="Progressus HTML5 template"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,15 +55,15 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index.html#about">About</a>
+                        <a class="page-scroll" href="index.php#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index.html#team">Team</a>
+                        <a class="page-scroll" href="index.php#team">Team</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index.html#contact">Contact</a>
+                        <a class="page-scroll" href="index.php#contact">Contact</a>
                     </li>
-                    <li><a href="login.html" class="page-scroll btn btn-xl">SIGN IN / SIGN UP</a></li>
+                    <li><a href="login.php" class="page-scroll btn btn-xl">SIGN IN / SIGN UP</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

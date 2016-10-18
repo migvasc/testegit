@@ -9,6 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <?php echo "Funciona peste!"; die();?>
+    
     <title>Pet Ajuda | Home</title>
 
     <!-- Bootstrap Core CSS -->
@@ -43,7 +45,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html#page-top"><img src="../images/logo_extenso.png" alt="Progressus HTML5 template"></a>
+                <a class="navbar-brand page-scroll" href="index.php#page-top"><img src="../images/logo_extenso.png" alt="Progressus HTML5 template"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -61,7 +63,7 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
-                    <li><a href="login.html" class="page-scroll btn btn-xl">SIGN IN / SIGN UP</a></li>
+                    <li><a href="login.php" class="page-scroll btn btn-xl">SIGN IN / SIGN UP</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
