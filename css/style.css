@@ -1,0 +1,102 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+@keyframes show-top-to-center {
+    from {margin-top: -80%; opacity: 0.2}
+    to {margin-top: 25%; opacity: 0.95}
+}
+
+#fundo-login {
+	background-image: url(../images/fundo-login.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#painel-login {
+	margin-top: 25%;
+
+	animation-name: show-top-to-center;
+	animation-duration: 1s;
+}
+
+#icone-painel-login {
+	height: 200px;
+	margin-bottom: 5%;
+}
+
+#banner-painel {
+	height: 20%;
+	/*background-image: url(../imagens/fundo-xadrez.jpg);*/
+}
+
+#logo-painel {
+	height: 100%;
+	background-image: url(../images/logo-full.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+.full-height {
+	height: 100%;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.logo-icone {
+	background-image: url(../images/logo.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.fundo-branco {
+	background-color: #FFFFFF;
+}
+
+.fade {
+	opacity: 0.95;
+	transition: 0.3s all ease;
+}
+.fade:hover {
+	opacity: 1;
+}
+
+
+.btn-primary.active,.btn-primary:active,.btn-xl.active,.btn-xl:active,.open .dropdown-toggle.btn-primary,.open .dropdown-toggle.btn-xl{
+ 	background-image:none}
+
+.btn-primary,.btn-xl,h1,h2,h3,h4,h5,h6{
+ 	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:300}
+
+
+.btn-primary{
+	color:#fff;
+	background-color:#26a881;
+	border-color:#26a881;
+
+}
+
+.btn-primary.active,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.open .dropdown-toggle.btn-primary{
+	color:#fff;
+	background-color:#26a881;
+	border-color: #26a881
+}
+
+.btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled:active,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled],.btn-primary[disabled].active,.btn-primary[disabled]:active,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary.active,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover{
+	background-color:#26a881;
+	border-color:#26a881
+}
+
+.btn-primary .badge{
+	color:#26a881;
+	background-color:#fff
+}
