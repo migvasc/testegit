@@ -9,6 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <?php echo "Funciona peste!"; die();?>
+    
     <title>Pet Ajuda | Home</title>
 
     <!-- Bootstrap Core CSS -->
