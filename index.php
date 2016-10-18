@@ -12,7 +12,7 @@ print "OPA 2\n";
 # Here we establish the connection. Yes, that's all.
 $pg_conn = pg_connect(pg_connection_string_from_database_url());
 # Now let's use the connection for something silly just to prove it works:
-$result = pg_query($pg_conn, "insert into public.usuario values ('EU','SENHA') ");
+$result = pg_query($pg_conn, "select * from usuario");
 print "<pre>\n";
 if (!pg_num_rows($result)) {
 print("Your connection is working, but your database is empty.\nFret not. This is expected for new apps.\n");
