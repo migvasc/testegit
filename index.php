@@ -5,7 +5,7 @@ function pg_connection_string_from_database_url() {
 extract(parse_url($_ENV["DATABASE_URL"]));
 print "user=$user\n";
 print "password=$pass\n";
-return "user=$user password=$pass host=$host dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
+return "user=$user password=$pass host=$host sslmode=require dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
 }
 print "OPA\n";
 print "OPA 2\n";
