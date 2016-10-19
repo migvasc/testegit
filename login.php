@@ -78,34 +78,51 @@
                         <div class="panel panel-default" id="painel-login">
                             <div class="panel-body">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 logo-icone" id="icone-painel-login"></div>
-                                <form class="form-horizontal" role="form">
-                                    <div class="form-group">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <input type="text" class="form-control" placeholder="Insira seu e-mail *" id="e-mail" required data-validation-required-message="Please enter your name.">
-                                        <p class="help-block text-danger"></p>
+                                <form name="sentMessage" id="loginForm" novalidate>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" placeholder="Insira seu e-mail *" id="email" required data-validation-required-message="Por favor insira seu e-mail.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12s">
-                                        <input type="password" class="form-control" placeholder="Insira sua senha *" id="senha" required data-validation-required-message="Please enter your name.">
-                                        <p class="help-block text-danger"></p>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" placeholder="Insira sua senha *" id="senha" required data-validation-required-message="Por favor, insira sua senha."></textarea>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="panel-footer">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <button type="button" class="btn btn-primary full-height full-width" id="btn-login">Entrar</button>
+                                        <div class="clearfix"></div>
+                                        <div class="col-lg-12 text-center">
+                                            <div id="success"></div>
+                                            <button type="submit" class="btn btn-primary full-width">Entrar</button>
                                         </div>
                                     </div>
                                 </form>
                             </div>  
-                             Ainda não tem uma conta? Cadastre-se <a href="cadastro.php" class="page-scroll">aqui</a>.
+                             <label>Ainda não tem uma conta? Cadastre-se <a href="cadastro.php" class="page-scroll">aqui</a>.</label>
                         </div>
 
                     </div>
                 </div>
             </div>
         </div>
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../js/jqBootstrapValidation.js"></script>
+    <script src="../js/login.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../js/agency.min.js"></script>
+
 </body>
 
 </html>
