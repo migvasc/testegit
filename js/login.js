@@ -17,7 +17,7 @@ $(function() {
 
 
             $.ajax({
-                url: "../homepage/post/check_login.php",
+                url: "/post/check_login.php",
                 type: "POST",
                 data: {
                     email: email,
