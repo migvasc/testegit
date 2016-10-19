@@ -100,7 +100,9 @@
                                     </div>
                                 </form>
                             </div>  
-                             <label>Ainda não tem uma conta? Cadastre-se <a href="cadastro.php" class="page-scroll">aqui</a>.</label>
+                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                             Ainda não tem uma conta? Cadastre-se <a href="cadastro.php" class="page-scroll">aqui</a>.
+                             <br /> &emsp;
                         </div>
 
                     </div>
