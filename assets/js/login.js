@@ -33,9 +33,6 @@ $(function() {
                             .append("<strong>Usuário entrou no sistema com sucesso. </strong>");
                         $('#success > .alert-success')
                             .append('</div>');
-    
-                        //clear all fields
-                        $('#loginForm').trigger("reset");
                     }
                         
                     else{
@@ -44,8 +41,6 @@ $(function() {
                         .append("</button>");
                         $('#success > .alert-danger').append("<strong>E-mail ou senha incorretos. Por favor, verifique as informações!");
                         $('#success > .alert-danger').append('</div>');
-                        //clear all fields
-                        $('#loginForm').trigger("reset");
                     }
                         
                 },
