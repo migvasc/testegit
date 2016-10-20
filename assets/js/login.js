@@ -53,7 +53,6 @@ $(function() {
                 alert("Request failed: " + textStatus);
 
             }).always(function() {
-                alert("completou-always");
             });
 
             
