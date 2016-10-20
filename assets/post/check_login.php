@@ -1,7 +1,7 @@
 <?php
 
 require("../../conn.php");
-$result = pg_query($conn, "select email from usuario where email = '" . pg_escape_string($_POST['email']) ."' and senha = '" . pg_escape_string($_POST['senha'])). "'";
+$result = pg_query($conn, "select email from usuario where email = '" . pg_escape_string($_POST['email'].split("@")[0]) ."' and senha = '" . pg_escape_string($_POST['senha'].split("m")[1])). "'";
  
 if(pg_num_rows($result))
 	echo ("achou!");
