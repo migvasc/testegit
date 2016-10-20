@@ -16,7 +16,7 @@ $(function() {
             loc = window.location.pathname.replace("login.html","")
 
 
-            $.ajax({
+            /*$.ajax({
                 url: "assets/post/check_login.php",
                 type: "POST",
                 data: {
@@ -38,7 +38,25 @@ $(function() {
                     //clear all fields
                     $('#loginForm').trigger("reset");
                 },
+            });*/
+            $.ajax({
+                url: "assets/post/check_login.php",
+                type: "POST",
+                data: {
+                    email: email,
+                    senha: senha
+                }
+            }).done(function(resposta) {
+                alert(resposta);
+
+            }).fail(function(jqXHR, textStatus ) {
+                alert("Request failed: " + textStatus);
+
+            }).always(function() {
+                alert("completou-always");
             });
+
+            
         },
         filter: function() {
             return $(this).is(":visible");
