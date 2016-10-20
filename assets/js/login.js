@@ -25,7 +25,7 @@ $(function() {
                 cache: false,
                 success: function(resposta) {
                     alert(resposta);
-                    if(resposta != null)
+                    if(resposta != null && resposta != "")
                         alert("Login localizado!"+resposta)
                     else
                         alert("Login não encontrado!");
