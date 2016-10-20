@@ -24,35 +24,17 @@ $(function() {
                 },
                 cache: false,
                 success: function(resposta) {
-                    if(resposta != null && resposta != ""){
-                        $('#success').html("<div class='alert alert-success'>");
-                        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                            .append("</button>");
-                        $('#success > .alert-success')
-                            .append("<strong>Your message has been sent. </strong>");
-                        $('#success > .alert-success')
-                            .append('</div>');
-    
-                        //clear all fields
-                        alert("Seja bem-vindo(a), usuario "+resposta);
-                        $('#contactForm').trigger("reset");
-                    }
-                    else{
-                        $('#success').html("<div class='alert alert-danger'>");
-                        $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                            .append("</button>");
-                        $('#success > .alert-danger').append("<strong>E-mail ou senha incorretos. Por favor, verifique as informações!");
-                        $('#success > .alert-danger').append('</div>');
-                        //clear all fields
-                        $('#loginForm').trigger("reset");
-                    }
+                    if(resposta != null && resposta != "")
+                        alert("Login localizado!"+resposta);
+                    else
+                        alert("Login não encontrado!");
                 },
                 error: function() {
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Não foi possível conectar ao servidor! Desculpe-nos o transtorno e tente novamente mais tarde.");
+                    $('#success > .alert-danger').append("<strong>E-mail ou senha incorretos. Por favor, verifique as informações!");
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#loginForm').trigger("reset");
