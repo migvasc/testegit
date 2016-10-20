@@ -2,9 +2,9 @@
 
 require("conn.php");
 echo $url;
-$result = pg_query($conn, "select * from usuario");
+//$result = pg_query($conn, "select * from usuario");
 
-//$result = pg_query($conn, "select email from usuario where email = 'teste@teste.com' and senha = 'admin123'");
+$result = pg_query($conn, "select email from usuario where email = 'teste@teste.com' and senha = 'admin123'");
 
 
 if (!pg_num_rows($result)) {
