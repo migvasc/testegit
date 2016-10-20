@@ -15,8 +15,7 @@ $(function() {
 
             loc = window.location.pathname.replace("login.html","")
 
-
-            /*$.ajax({
+            $.ajax({
                 url: "assets/post/check_login.php",
                 type: "POST",
                 data: {
@@ -24,9 +23,11 @@ $(function() {
                     senha: senha
                 },
                 cache: false,
-                success: function() {
-                    // Success message
-                    alert("Funcionou");
+                success: function(resposta) {
+                    if(resposta)
+                        alert("Login localizado!")
+                    else
+                        alert("Login não encontrado!");
                 },
                 error: function() {
                     // Fail message
@@ -38,8 +39,8 @@ $(function() {
                     //clear all fields
                     $('#loginForm').trigger("reset");
                 },
-            });*/
-            $.ajax({
+            });
+            /*$.ajax({
                 url: "assets/post/check_login.php",
                 type: "POST",
                 data: {
@@ -53,8 +54,7 @@ $(function() {
                 alert("Request failed: " + textStatus);
 
             }).always(function() {
-
-            });
+            });*/
 
             
         },
