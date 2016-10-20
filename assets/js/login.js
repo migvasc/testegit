@@ -24,6 +24,7 @@ $(function() {
                 },
                 cache: false,
                 success: function(resposta) {
+                    alert(resposta);
                     if(resposta)
                         alert("Login localizado!")
                     else
