@@ -54,8 +54,9 @@ $(function() {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Não conseguimos acessar nosso servidor :/ Desculpe-nos o transtorno e tente novamente mais tarde.");
+                    $('#success > .alert-danger').append("<strong>Não conseguimos acessar nosso servidor :/ Desculpe-nos o transtorno e tente novamene mais tarde.");
                     $('#success > .alert-danger').append('</div>');
+                },
             });
             /*$.ajax({
                 url: "assets/post/check_login.php",
