@@ -5,7 +5,7 @@ $result = pg_query($conn, "select email from usuario where email = '" . htmlspec
 
 if(pg_num_rows($result)){
 	$row = pg_fetch_row($result);
-	echo ($row[]0);
+	echo ($row[0]);
 }
 	
 
