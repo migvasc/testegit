@@ -1,6 +1,7 @@
 <?php
 
 require("conn.php");
+echo url;
 $result = pg_query($conn, "select * from usuario");
 
 //$result = pg_query($conn, "select email from usuario where email = 'teste@teste.com' and senha = 'admin123'");
