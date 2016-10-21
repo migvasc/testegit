@@ -46,6 +46,7 @@ $(function() {
                                 .append("<strong>Usuário cadastrado com sucesso. </strong>");
                             $('#success > .alert-success')
                                 .append('</div>');
+                            window.location.assign("home.php");
                         }
                         else{
                             $('#success').html("<div class='alert alert-danger'>");
