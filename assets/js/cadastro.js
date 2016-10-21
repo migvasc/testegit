@@ -2,7 +2,7 @@
 
 $(function() {
 
-    $("#cadastroinput,#cadastroForm textarea").jqBootstrapValidation({
+    $("#cadastroForm,#cadastroForm textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
             
@@ -16,8 +16,6 @@ $(function() {
             var phone = $("input#phone").val();
             var senha1 = $("input#senha1").val();
             var senh2 = $("input#senha2").val();
-
-            loc = window.location.pathname.replace("login.html","")
 
 
             $.ajax({

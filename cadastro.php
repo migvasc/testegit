@@ -111,8 +111,7 @@
                                         <div class="col-lg-12 text-center">
 
                                             <div id="success"></div>
-                                            <button type="submit" class="btn btn-primary">Cadastrar</button>
-                                        </div>
+                                            <button type="submit" class="btn btn-primary full-width">Cadastrar</button>
                                     </div>
                                 </form>
                             </div>  

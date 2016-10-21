@@ -13,8 +13,6 @@ $(function() {
             var email = $("input#email").val();
             var senha = $("input#senha").val();
 
-            loc = window.location.pathname.replace("login.html","")
-
             $.ajax({
                 url: "assets/post/check_login.php",
                 type: "POST",
