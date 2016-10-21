@@ -99,11 +99,11 @@
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="password" class="form-control" placeholder="Insira sua senha *" id="password" required data-validation-required-message="Por favor, insira uma senha.">
+                                                <input type="password" class="form-control" placeholder="Insira sua senha *" id="senha1" required data-validation-required-message="Por favor, insira uma senha.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="password" class="form-control" placeholder="Confirme sua senha *" id="password" required data-validation-required-message="Por favor, confirme sua senha inserindo-a novamente no campo acima.">
+                                                <input type="password" class="form-control" placeholder="Confirme sua senha *" id="senha2" required data-validation-required-message="Por favor, confirme sua senha inserindo-a novamente no campo acima.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
