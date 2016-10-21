@@ -1,4 +1,4 @@
-// Login Form Scripts
+// Cadastro Form Scripts
 
 $(function() {
 
@@ -29,7 +29,7 @@ $(function() {
                     senha: senha
                 },
                 cache: false,
-                success: function(respostas) {
+                success: function(resposta) {
                     if(resposta != null && resposta != ""){
                         alert("Bem-vindo(a), "+resposta);
                         $('#success').html("<div class='alert alert-success'>");
