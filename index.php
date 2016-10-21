@@ -171,21 +171,21 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="../images/team/1.jpg" class="img-responsive img-circle" alt="">
+                        <img src="../images/team/miguel.jpeg" class="img-responsive img-circle" alt="">
                         <h4>Miguel Vasconcelos</h4>
                         <p class="text-muted">Lead Developer</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="../images/team/2.jpg" class="img-responsive img-circle" alt="">
+                        <img src="../images/team/alan.jpeg" class="img-responsive img-circle" alt="">
                         <h4>Alan Sabino</h4>
                         <p class="text-muted">Lead Tester</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="../images/team/3.jpg" class="img-responsive img-circle" alt="">
+                        <img src="../images/team/thais.jpeg" class="img-responsive img-circle" alt="">
                         <h4>Thais Neubauer</h4>
                         <p class="text-muted">Lead Designer</p>
                         <!--<ul class="list-inline social-buttons">
