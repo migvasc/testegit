@@ -2,7 +2,7 @@
 
 $(function() {
 
-    $("#cadastroForm,#cadastroForm textarea").jqBootstrapValidation({
+    $("#cadastroForm input,#cadastroForm textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
             
