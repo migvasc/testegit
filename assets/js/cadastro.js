@@ -31,19 +31,32 @@ $(function() {
                     senha: senha
                 },
                 cache: false,
-                success: function() {
-                    // Success message
-                    alert("Cadastro efetuado com sucesso! \nFaça login e comece a ajudar :)");
+                success: function(respostas) {
+                    if(resposta != null && resposta != ""){
+                        alert("Bem-vindo(a), "+resposta);
+                        $('#success').html("<div class='alert alert-success'>");
+                        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                            .append("</button>");
+                        $('#success > .alert-success')
+                            .append("<strong>Usuário cadastrado com sucesso. </strong>");
+                        $('#success > .alert-success')
+                            .append('</div>');
+                    }
+                    else{
+                        $('#success').html("<div class='alert alert-danger'>");
+                        $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                        $('#success > .alert-danger').append("<strong>E-mail já cadastrado!");
+                        $('#success > .alert-danger').append('</div>');
+                    }
                 },
                 error: function() {
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong> Usuário já cadastrado!");
+                    $('#success > .alert-danger').append("<strong> Não conseguimos acessar nosso servidor :/ Desculpe-nos o transtorno e tente novamene mais tarde!");
                     $('#success > .alert-danger').append('</div>');
-                    //clear all fields
-                    $('#loginForm').trigger("reset");
                 },
             });
         },
