@@ -25,7 +25,6 @@ $(function() {
                     nome: nome,
                     sobrenome: sobrenome,
                     email: email,
-                    phone: phone,
                     senha1: senha1
                 },
                 cache: false,
