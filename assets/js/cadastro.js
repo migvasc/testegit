@@ -38,7 +38,6 @@ $(function() {
                     cache: false,
                     success: function(resposta) {
                         if(resposta != null && resposta != ""){
-                            alert("Bem-vindo(a), "+resposta);
                             $('#success').html("<div class='alert alert-success'>");
                             $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                                 .append("</button>");
@@ -46,6 +45,7 @@ $(function() {
                                 .append("<strong>Usuário cadastrado com sucesso. </strong>");
                             $('#success > .alert-success')
                                 .append('</div>');
+                            alert("Bem-vindo(a), "+resposta);
                             window.location.assign("home.php");
                         }
                         else{
