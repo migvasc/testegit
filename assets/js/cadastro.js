@@ -15,7 +15,7 @@ $(function() {
             var email = $("input#email").val();
             var phone = $("input#phone").val();
             var senha1 = $("input#senha1").val();
-            var senh2 = $("input#senha2").val();
+            var senha2 = $("input#senha2").val();
 
 
             $.ajax({
@@ -26,7 +26,7 @@ $(function() {
                     sobrenome: sobrenome,
                     email: email,
                     phone: phone,
-                    senha: senha
+                    senha: senha1
                 },
                 cache: false,
                 success: function(resposta) {
