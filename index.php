@@ -98,10 +98,10 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Animais abandonados</h4>
-                                    <h4 class="subheading">Muitos animais abandonados nas ruas...</h4>
+                                    <h4 class="subheading">Muitos animais abandonados...</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Muitas pessoas querem ajudar... algumas conseguem diretamente, outras não.</p>
+                                    <p class="text-muted">Muitas pessoas querem ajudar, mas nem todas podem ajudar diretamente :/</p>
                                 </div>
                             </div>
                         </li>
@@ -112,10 +112,10 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Anfitriões</h4>
-                                    <h4 class="subheading">Os anfitriões ajudam esses pets tirando-os das ruas e cuidando deles...</h4>
+                                    <h4 class="subheading">Algumas pessoas ajudam esses pets tirando-os das ruas e cuidando deles...</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Mais os anfitriões também precisam de ajuda!</p>
+                                    <p class="text-muted">Mais eles também precisam de ajuda para isso, com comida, remédios, tratamentos etc.</p>
                                 </div>
                             </div>
                         </li>
@@ -126,10 +126,10 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Padrinhos</h4>
-                                    <h4 class="subheading">Os padrinhos querem ajudar, mas não podem diretamente...</h4>
+                                    <h4 class="subheading">Outras pessoas querem ajudar, mas não podem diretamente</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Com o Pet Ajuda, pessoas que querem ajudar os anfitriões conseguem encontrar informações para isso!</p>
+                                    <p class="text-muted">Com o Pet Ajuda, pessoas que querem ajudar os anfitriões conseguem encontrar informações para isso de forma fácil e centralizada!</p>
                                 </div>
                             </div>
                         </li>
@@ -140,10 +140,10 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Veterinários, Clínicas e Pet Shops</h4>
-                                    <h4 class="subheading">Também precisamos de ajuda de profissionais para cuidar dos nossos amiguinhos!</h4>
+                                    <h4 class="subheading">Precisamos da ajuda de profissionais para cuidar dos nossos amiguinhos</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Com o Pet Ajuda você também pode encontrar os profissionais mais próximos do seu endereço e acompanhar a reputação deles!</p>
+                                    <p class="text-muted">Com o Pet Ajuda você também pode encontrar os profissionais mais próximos do seu endereço e acompanhar a reputação deles.</p>
                                 </div>
                             </div>
                         </li>
@@ -174,14 +174,6 @@
                         <img src="../images/team/1.jpg" class="img-responsive img-circle" alt="">
                         <h4>Miguel Vasconcelos</h4>
                         <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -189,14 +181,6 @@
                         <img src="../images/team/2.jpg" class="img-responsive img-circle" alt="">
                         <h4>Alan Sabino</h4>
                         <p class="text-muted">Lead Tester</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -204,14 +188,14 @@
                         <img src="../images/team/3.jpg" class="img-responsive img-circle" alt="">
                         <h4>Thais Neubauer</h4>
                         <p class="text-muted">Lead Designer</p>
-                        <ul class="list-inline social-buttons">
+                        <!--<ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
-                        </ul>
+                        </ul>-->
                     </div>
                 </div>
             </div>
