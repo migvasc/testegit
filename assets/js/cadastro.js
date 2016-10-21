@@ -26,7 +26,7 @@ $(function() {
                     sobrenome: sobrenome,
                     email: email,
                     phone: phone,
-                    senha: senha1
+                    senha1: senha1
                 },
                 cache: false,
                 success: function(resposta) {
