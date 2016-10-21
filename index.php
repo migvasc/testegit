@@ -93,7 +93,7 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="../images/about/1.jpg" alt="">
+                                <img class="img-circle img-responsive" src="assets/images/about/1.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -107,7 +107,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="../images/about/2.jpg" alt="">
+                                <img class="img-circle img-responsive" src="assets/images/about/2.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -121,7 +121,7 @@
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="../images/about/3.jpg" alt="">
+                                <img class="img-circle img-responsive" src="assets/images/about/3.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -135,7 +135,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="../images/about/4.jpg" alt="">
+                                <img class="img-circle img-responsive" src="assets/images/about/4.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -171,21 +171,21 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="../images/team/miguel.jpeg" class="img-responsive img-circle" alt="">
+                        <img src="assets/images/team/miguel.jpeg" class="img-responsive img-circle" alt="">
                         <h4>Miguel Vasconcelos</h4>
                         <p class="text-muted">Lead Developer</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="../images/team/alan.jpeg" class="img-responsive img-circle" alt="">
+                        <img src="assets/images/team/alan.jpeg" class="img-responsive img-circle" alt="">
                         <h4>Alan Sabino</h4>
                         <p class="text-muted">Lead Tester</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="../images/team/thais.jpeg" class="img-responsive img-circle" alt="">
+                        <img src="assets/images/team/thais.jpeg" class="img-responsive img-circle" alt="">
                         <h4>Thais Neubauer</h4>
                         <p class="text-muted">Lead Designer</p>
                         <!--<ul class="list-inline social-buttons">
