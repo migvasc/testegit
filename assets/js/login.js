@@ -2,7 +2,7 @@
 
 
 
-$(function sendRequest() {
+function sendRequest() {
 
     $("#loginForm input,#loginForm textarea").jqBootstrapValidation({
         preventSubmit: true,
