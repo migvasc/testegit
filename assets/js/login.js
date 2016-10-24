@@ -27,7 +27,7 @@ function sendRequest() {
         e.preventDefault();
         $(this).tab("show");
     });
-});
+}
 
 function getUserName(email, senha){
     $.ajax({
