@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit>
+    <php>
+        <var name="DB_DSN" value="postgresql:dbname=d2b8h06bak4ivo;host=ec2-23-23-176-135.compute-1.amazonaws.com" />
+        <var name="DB_USER" value="kykiyayfiroilv" />
+        <var name="DB_PASSWD" value="rYI3CtNdygxh8_gn358BjPutkw" />
+        <var name="DB_DBNAME" value="d2b8h06bak4ivo" />
+    </php>
+</phpunit>	
