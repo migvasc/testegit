@@ -72,6 +72,6 @@ function getUserName(email, senha){
 }
 
 /*When clicking on Full hide fail/success boxes */
-('#name').focus(function() {
-   $('#success').html('');
-});
+//('#name').focus(function() {
+//   $('#success').html('');
+//});
