@@ -1,6 +1,6 @@
 // Login Form Scripts
 
-$(function() {
+$(function sendRequest() {
 
     $("#loginForm input,#loginForm textarea").jqBootstrapValidation({
         preventSubmit: true,
