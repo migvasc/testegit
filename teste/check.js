@@ -14,7 +14,7 @@ describe('Ajax login tests', function() {
     });
     
     var username = 'teste@teste.com';
-    var senha = 'admin123'
+    var senha = 'admin123';
     
     getUserName(username,senha);
     
