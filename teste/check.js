@@ -26,28 +26,28 @@
     //expect(callbacks.displayErrorMessage).not.toHaveBeenCalled(); 
 //});
 
-
-it("shoul fail", function () {
-    var callback = jasmine.createSpy();
-    getUserName(email, senha, callback);
-    waitsFor(function() {
-        return callback.callCount > 0;
-    });
-    runs(function() {
-        expect(callback).toHaveBeenCalled();
+describe('Ajax login tests', function() {
+    it("shoul fail", function () {
+        var callback = jasmine.createSpy();
+        getUserName(email, senha, callback);
+        waitsFor(function() {
+            return callback.callCount > 0;
+        });
+        runs(function() {
+            expect(callback).toHaveBeenCalled();
+        });
     });
 });
 
 function getUserName(email, senha, callback){
     $.ajax({
-                url: "assets/post/check_login.php",
-                type: "POST",
-                data: {
-                    email: email,
-                    senha: senha
-                },
-                cache: false,
-                success: callback
-                },
-            });
+        url: "assets/post/check_login.php",
+        type: "POST",
+        data: {
+            email: email,
+            senha: senha
+        },
+        cache: false,
+        success: callback
+    })
 }
