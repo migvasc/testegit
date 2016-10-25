@@ -34,8 +34,8 @@ describe('testAle', function() {
     var email = 'teste@teste.com';
     var senha = 'admin123';
     $.ajax({
-        //url: "http://localhost/assets/post/check_login.php",
-        url: "assets/post/check_login.php",
+        url: "http://localhost/assets/post/check_login.php",
+        //url: "assets/post/check_login.php",
         type: "POST",
         data: {
             email: email,
@@ -68,30 +68,38 @@ describe('testAle', function() {
     });
 });
 
-//describe('Ajax login tests', function() {
-//    it("should fail", function () {
-//        var callback = jasmine.createSpy();
-//        var email = 'teste@teste.com';
-//        var senha = 'admin123';
-//        getUserName(email, senha, callback);
-//        waitsFor(function() {
-//            return callback.callCount > 0;
-//        });
-//        runs(function() {
-//            expect(callback).toHaveBeenCalled();
-//        });
-//    });
-//});
 
-//function getUserName(email, senha, callback){
-    //$.ajax({
-        //url: "assets/post/check_login.php",
-        //type: "POST",
-        //data: {
-            //email: email,
-            //senha: senha
-        //},
-      //  cache: false,
-    //    success: callback
-    //})
-//}
+
+
+
+describe("Ajax Tests", function() {
+    var configuration = { url: "http://localhost/assets/post/check_login.php",
+                          email: "teste@tes.com",
+                          senha: "admin123"
+                        };
+      
+    
+    it("should make an Ajax request to the correct URL", function() {
+        spyOn($, "ajax");
+        sendRequest(undefined, configuration);
+        expect($.ajax.mostRecentCall.args[0]["url"]).toEqual(configuration.url);
+    });                  
+});
+
+function sendRequest(callbacks, configuration) {
+    $.ajax({
+        url: configuration.url,
+        type: "POST",
+        data: {
+            email: configuration.email,
+            senha: configuration.senha
+        },
+        async: false,
+        success: function(data) {
+            callbacks.checkForInformation(data);
+        },
+        error: function(data) {
+            callbacks.displayErrorMessage();
+        }
+    });
+}
