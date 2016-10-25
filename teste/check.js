@@ -59,7 +59,7 @@ describe('testAle', function() {
     });
     
     it('Should exist', function() {
-        expect(a).toBe("yep");
+        expect(a).toBe("nope0");
     });
 });
 
