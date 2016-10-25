@@ -17,7 +17,7 @@ module.exports = function(config) {
     files: [
       //'dist/*.js' , 'teste/*.js'
       
-      'http://localhost/assets/js/jquery.min.js',
+      'assets/js/jquery.min.js',
       //'assets/js/login.js' , 
       'teste/*.js'
     ],
