@@ -11,7 +11,8 @@ describe('Ajax login tests', function() {
      it('should receive a successful response', function() {
         spyOn($, "ajax").andCallFake(function(e) {
         e.success({});
-    });
+        });
+     });
     
     var username = 'teste@teste.com';
     var senha = 'admin123';
