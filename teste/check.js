@@ -42,6 +42,7 @@ describe('testAle', function() {
             senha: senha
         },
         cache: false,
+        async: false,
         success: function(resposta) {
             if(resposta != null && resposta != ""){
                 //usuario+senha = valido
