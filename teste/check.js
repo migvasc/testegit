@@ -29,12 +29,13 @@
 
 
 describe('testAle', function() {
-    var a = window.location.href;
+    var a = "nope0";
 
     var email = 'teste@teste.com';
     var senha = 'admin123';
     $.ajax({
-        url: "http://localhost/assets/post/check_login.php",
+        //url: "http://localhost/assets/post/check_login.php",
+        url: "http://localhost/petajuda/assets/post/check_login.php",
         type: "POST",
         data: {
             email: email,
@@ -59,7 +60,7 @@ describe('testAle', function() {
     });
     
     it('Should exist', function() {
-        expect(a).toBe("nope0");
+        expect(a).toBe("yep");
     });
 });
 
