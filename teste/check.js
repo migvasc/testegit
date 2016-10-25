@@ -58,7 +58,7 @@ describe('testAle', function() {
                 a = "nope404";
             }
             else {
-                a = "nope2";
+                a = xhr.statusText;
             }
         }
     });
