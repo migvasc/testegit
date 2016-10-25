@@ -56,7 +56,10 @@ describe('testAle', function() {
             if(xhr.status==404) {
                 a = "nope404";
             }
-        },
+            else {
+                a = "nope2";
+            }
+        }
     });
     
     it('Should exist', function() {
