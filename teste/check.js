@@ -26,22 +26,12 @@
     //expect(callbacks.displayErrorMessage).not.toHaveBeenCalled(); 
 //});
 
-describe('Ajax login tests', function() {
-    it("shoul fail", function () {
-        var callback = jasmine.createSpy();
-        var email = 'teste@teste.com';
-        var senha = 'admin123';
-        getUserName(email, senha, callback);
-        waitsFor(function() {
-            return callback.callCount > 0;
-        });
-        runs(function() {
-            expect(callback).toHaveBeenCalled();
-        });
-    });
-});
 
-function getUserName(email, senha, callback){
+describe('testAle', function() {
+    var a = "nope0";
+
+    var email = 'teste@teste.com';
+    var senha = 'admin123';
     $.ajax({
         url: "assets/post/check_login.php",
         type: "POST",
@@ -50,6 +40,51 @@ function getUserName(email, senha, callback){
             senha: senha
         },
         cache: false,
-        success: callback
-    })
-}
+        success: function(resposta) {
+            if(resposta != null && resposta != ""){
+                //usuario+senha = valido
+                a = "yep";
+            }
+            else{
+                //usuario+senha = invalido
+                a = "nope1";
+            }
+        },
+        error: function() {
+            //erro na funcao
+            a = "nope2";
+        },
+    });
+    
+    it('Should exist', function() {
+        expect(a).toBe("yep");
+    });
+});
+
+//describe('Ajax login tests', function() {
+//    it("should fail", function () {
+//        var callback = jasmine.createSpy();
+//        var email = 'teste@teste.com';
+//        var senha = 'admin123';
+//        getUserName(email, senha, callback);
+//        waitsFor(function() {
+//            return callback.callCount > 0;
+//        });
+//        runs(function() {
+//            expect(callback).toHaveBeenCalled();
+//        });
+//    });
+//});
+
+//function getUserName(email, senha, callback){
+    //$.ajax({
+        //url: "assets/post/check_login.php",
+        //type: "POST",
+        //data: {
+            //email: email,
+            //senha: senha
+        //},
+      //  cache: false,
+    //    success: callback
+    //})
+//}

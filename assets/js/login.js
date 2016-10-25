@@ -1,8 +1,6 @@
 // Login Form Scripts
 
-
-
-function sendRequest() {
+$(function () {
 
     $("#loginForm input,#loginForm textarea").jqBootstrapValidation({
         preventSubmit: true,
@@ -11,26 +9,11 @@ function sendRequest() {
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
-            
+            // get values from FORM
             var email = $("input#email").val();
             var senha = $("input#senha").val();
-            
-            getUserName(email, senha);
-            
-        },
-        filter: function() {
-            return $(this).is(":visible");
-        },
-    });
 
-    $("a[data-toggle=\"tab\"]").click(function(e) {
-        e.preventDefault();
-        $(this).tab("show");
-    });
-}
-
-function getUserName(email, senha){
-    $.ajax({
+            $.ajax({
                 url: "assets/post/check_login.php",
                 type: "POST",
                 data: {
@@ -69,9 +52,37 @@ function getUserName(email, senha){
                     $('#success > .alert-danger').append('</div>');
                 },
             });
-}
+            /*$.ajax({
+                url: "assets/post/check_login.php",
+                type: "POST",
+                data: {
+                    email: email,
+                    senha: senha
+                }
+            }).done(function(resposta) {
+                alert(resposta);
+
+            }).fail(function(jqXHR, textStatus ) {
+                alert("Request failed: " + textStatus);
+
+            }).always(function() {
+            });*/
+
+            
+        },
+        filter: function() {
+            return $(this).is(":visible");
+        },
+    });
+
+    $("a[data-toggle=\"tab\"]").click(function(e) {
+        e.preventDefault();
+        $(this).tab("show");
+    });
+});
+
 
 /*When clicking on Full hide fail/success boxes */
-//('#name').focus(function() {
-//   $('#success').html('');
-//});
+$('#name').focus(function() {
+    $('#success').html('');
+});
