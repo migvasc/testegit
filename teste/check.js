@@ -28,7 +28,7 @@
 
 
 
-describe('testAle', function() {
+/*describe('testAle', function() {
     var a = "nope0";
 
     var email = 'teste@teste.com';
@@ -67,7 +67,7 @@ describe('testAle', function() {
         expect(a).toBe("yep");
     });
 });
-
+*/
 
 
 
