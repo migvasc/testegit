@@ -29,7 +29,7 @@
 describe('Ajax login tests', function() {
     it("shoul fail", function () {
         var callback = jasmine.createSpy();
-        var username = 'teste@teste.com';
+        var email = 'teste@teste.com';
         var senha = 'admin123';
         getUserName(email, senha, callback);
         waitsFor(function() {
