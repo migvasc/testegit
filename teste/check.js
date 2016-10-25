@@ -81,12 +81,13 @@ describe("Ajax Tests", function() {
     
     it("should make an Ajax request to the correct URL", function() {
         spyOn($, "ajax");
-        sendRequest(undefined, configuration);
-        expect($.ajax.mostRecentCall.args[0]["url"]).toEqual(configuration.url);
+        var x = sendRequest(undefined, configuration);
+        expect(x).toEqual("yep");
     });                  
 });
 
 function sendRequest(callbacks, configuration) {
+    var x = "nope";
     $.ajax({
         url: configuration.url,
         type: "POST",
@@ -96,10 +97,14 @@ function sendRequest(callbacks, configuration) {
         },
         async: false,
         success: function(data) {
+            x = "yep";
             callbacks.checkForInformation(data);
         },
         error: function(data) {
+            x = "nopenope";
             callbacks.displayErrorMessage();
         }
+        
     });
+    return x;
 }
