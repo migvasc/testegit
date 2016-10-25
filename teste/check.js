@@ -34,7 +34,7 @@ describe('testAle', function() {
     var email = 'teste@teste.com';
     var senha = 'admin123';
     $.ajax({
-        url: "check_login.php",
+        url: "http://localhost/assets/post/check_login.php",
         type: "POST",
         data: {
             email: email,
