@@ -29,7 +29,7 @@
 
 
 describe('testAle', function() {
-    var a = "nope0";
+    var a = window.location.href;
 
     var email = 'teste@teste.com';
     var senha = 'admin123';
