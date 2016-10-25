@@ -51,9 +51,10 @@ describe('testAle', function() {
                 a = "nope1";
             }
         },
-        error: function() {
-            //erro na funcao
-            a = "nope2";
+        error: function (xhr, ajaxOptions, thrownError){
+            if(xhr.status==404) {
+                a = "nope404";
+            }
         },
     });
     
