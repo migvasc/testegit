@@ -1,3 +1,4 @@
+
 //describe('getDiv', function() {
 //    var d = document.querySelector('.box');
 
@@ -88,7 +89,8 @@ describe("Ajax Tests", function() {
 
 function sendRequest(callbacks, configuration) {
     var x = "nope";
-    $.ajax({
+    
+    "global $".ajax({
         url: configuration.url,
         type: "POST",
         data: {
