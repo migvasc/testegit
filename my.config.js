@@ -73,7 +73,6 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity,
-    
     customLaunchers: {
       swd_firefox: {
         base: 'SeleniumWebdriver',
@@ -87,8 +86,5 @@ module.exports = function(config) {
     },
  
     browsers: ['swd_firefox']
-  });
-    
-    
-  
+  })
 }
