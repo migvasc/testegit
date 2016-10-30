@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-    - "0.10"
+    - "4.5"
 #//script: node_modules/karma/bin/karma start my.config.js --single-run
 script: node_modules/karma/bin/karma start karma.config.js --single-run
 
