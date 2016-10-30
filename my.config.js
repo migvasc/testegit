@@ -23,9 +23,9 @@ module.exports = function(config) {
       
       'assets/js/jquery.min.js',
       //'assets/js/login.js' , 
-      'teste/*.js',
+      'teste/*.js' ,
       {pattern: 'node_modules/assert/assert.js', included: true},
-      {pattern: 'node_modules/karma-selenium-webdriver-launcher/index.js', included: true},
+      {pattern: 'node_modules/karma-selenium-webdriver-launcher/node_modules/q/q.js ', included: true},
     ],
 
 
