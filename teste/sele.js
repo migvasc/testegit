@@ -10,7 +10,7 @@ require(['assert'], function (assert) {
 
 require(['selenium-webdriver'], function (webdriver) {
     //foo is now loaded.
-    var webdriver=require("selenium-webdriver");
+    webdriver=require("selenium-webdriver");
 });
 //var webdriver = require("");
 describe("testing javascript in the browser", function() {
