@@ -15,7 +15,7 @@ describe("testing javascript in the browser", function() {
     beforeEach(function() {
         this.browser = new webdriver.Builder()
         .withCapabilities({
-        browserName: "chrome"
+        browserName: "firefox"
     }).build();
     return this.browser.get("http://petajuda.herokuapp.com/index.php");
     });
