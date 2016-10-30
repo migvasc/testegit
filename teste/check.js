@@ -88,7 +88,7 @@ describe("Ajax Tests", function() {
 });
 
 function sendRequest(callbacks, configuration) {
-    var x = "yes";
+    var x = "yep";
     
     $.ajax({
         url: configuration.url,
