@@ -96,7 +96,7 @@
                                         <div class="clearfix"></div>
                                         <div class="col-lg-12 text-center">
                                             <div id="success"></div>
-                                            <button type="submit" class="btn btn-primary full-width">Entrar</button>
+                                            <button type="submit" id="enviar" class="btn btn-primary full-width">Entrar</button>
                                         </div>
                                     </div>
                                 </form>
