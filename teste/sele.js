@@ -1,14 +1,14 @@
 //var assert = require("assert");
 
-var assert="";
-var webdriver="";
-require(['assert'], function (assert) {
+
+
+var assert= require(['assert'], function (assert) {
     //foo is now loaded.
-    assert=require("assert");
+
 });
 
 
-require(['selenium-webdriver'], function (webdriver) {
+var webdriver=require(['selenium-webdriver'], function (webdriver) {
     //foo is now loaded.
     webdriver=require("selenium-webdriver");
 });
