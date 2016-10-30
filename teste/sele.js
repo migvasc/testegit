@@ -1,4 +1,9 @@
-var assert = require("assert");
+//var assert = require("assert");
+require(['assert'], function (assert) {
+    //foo is now loaded.
+});
+
+
 var webdriver = require("selenium-webdriver");
 describe("testing javascript in the browser", function() {
     beforeEach(function() {
