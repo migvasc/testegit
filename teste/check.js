@@ -101,12 +101,12 @@ function sendRequest(callbacks, configuration) {
         success: function(data) {
             
             callbacks.checkForInformation(data);
-            return "nopenope";
+            x: "nopenope";
         },
         error: function(data) {
             
             callbacks.displayErrorMessage();
-            return "nopenope";
+            x: "nopenope";
         }
         
     });
