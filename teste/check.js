@@ -99,7 +99,7 @@ function sendRequest(callbacks, configuration) {
         },
         async: false,
         success: function(data) {
-            
+            x = "nopenope";
             callbacks.checkForInformation(data);
         },
         error: function(data) {
