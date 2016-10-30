@@ -99,12 +99,14 @@ function sendRequest(callbacks, configuration) {
         },
         async: false,
         success: function(data) {
-            x = "nopenope";
+            
             callbacks.checkForInformation(data);
+            return "nopenope";
         },
         error: function(data) {
-            x = "nopenope";
+            
             callbacks.displayErrorMessage();
+            return "nopenope";
         }
         
     });
