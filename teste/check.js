@@ -90,7 +90,7 @@ describe("Ajax Tests", function() {
 function sendRequest(callbacks, configuration) {
     var x = "nope";
     
-    "global $".ajax({
+    $.ajax({
         url: configuration.url,
         type: "POST",
         data: {
