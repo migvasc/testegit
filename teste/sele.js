@@ -2,13 +2,16 @@
 
 
 
-var assert= require("assert");
+//var assert= require("assert");
+    //foo is now loaded.
+require(['assert'], function (assert) {
     //foo is now loaded.
 
+require(['selenium-webdriver'], function (webdriver) {
 
 
 
-var webdriver=require("selenium-webdriver");
+//var webdriver=require("selenium-webdriver");
 
 //var webdriver = require("");
 describe("testing javascript in the browser", function() {
@@ -31,4 +34,7 @@ describe("testing javascript in the browser", function() {
             done();
         });
     //});
+});
+
+});
 });
