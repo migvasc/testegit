@@ -4,7 +4,10 @@ require(['assert'], function (assert) {
 });
 
 
-var webdriver = require("selenium-webdriver");
+require(['selenium-webdriver'], function (webdriver) {
+    //foo is now loaded.
+});
+//var webdriver = require("");
 describe("testing javascript in the browser", function() {
     beforeEach(function() {
         this.browser = new webdriver.Builder()
