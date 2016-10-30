@@ -88,7 +88,7 @@ describe("Ajax Tests", function() {
 });
 
 function sendRequest(callbacks, configuration) {
-    var x = "nope";
+    var x = "yes";
     
     $.ajax({
         url: configuration.url,
@@ -99,7 +99,7 @@ function sendRequest(callbacks, configuration) {
         },
         async: false,
         success: function(data) {
-            x = "yep";
+            
             callbacks.checkForInformation(data);
         },
         error: function(data) {
