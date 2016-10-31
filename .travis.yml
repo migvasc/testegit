@@ -1,11 +1,14 @@
 language: python
 python:
-    - "2.7"
+- "2.7"
 
-//before_script:
-//- python RunFlask.py worker.py &
-//- python worker.py &
+addons:
+  sauce_connect: true
+	 username: $SauceLogin
+  	 access_key: $SauceAccessKey
 script: python test/travis-testcases.py
+
+
 deploy:
  provider: heroku
  api-key:
