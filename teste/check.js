@@ -143,7 +143,7 @@ function sendRequest(callbacks, configuration) {
 
 describe("A jQuery ajax request should be able to fetch...", function() {
     it("should execute the callback function on success", function () {
-        spyOn($, "ajax").andCallFake(function(options) {
+        spyOn($, "ajax").and.callFake(function(options) {
             options.success();
         });
         var email = "teste@teste.com";
