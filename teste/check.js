@@ -142,14 +142,15 @@ function sendRequest(callbacks, configuration) {
 });*/
 
 var login = {
-                fire: function(data, sfn, efn) {
+                //fire: function(data, sfn, efn) {
+                fire: function(url, sfn, efn) {
                    $.ajax({
-                       url: "http://localhost/assets/post/check_login.php",
-                        type: "POST",
-                        data: {
-                            email: data[0],
-                            senha: data[1]
-                        },
+                       url: url,
+                        //type: "POST",
+                        //data: {
+                        //    email: data[0],
+                        //    senha: data[1]
+                        //},
                         success: sfn,
                         error: efn
                    });
@@ -218,14 +219,14 @@ describe("testando ajax com spyOnteste..", function() {
     });
 
     it("success", function () {
-        var data = ["teste@teste.com", "admin123"];
-        login.fire(data, successFn, errorFn);
+       // var data = ["teste@teste.com", "admin123"];
+        login.fire("http://localhost/assets/post/check_login.php", successFn, errorFn);
         expect(successFn).toHaveBeenCalled();
     });
     
     it("error response", function () {
-        var data = ["teste@teste.com", "admin123"];
-        login.fire(data, successFn, errorFn);
+        //var data = ["teste@teste.com", "admin123"];
+        login.fire("http://localhost/assets/check_login.php", successFn, errorFn);
         expect(errorFn).toHaveBeenCalled();
     });
 
