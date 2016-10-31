@@ -133,19 +133,31 @@ function sendRequest(callbacks, configuration) {
     return x;
 }*/
 
-describe("A jQuery ajax request should be able to fetch...", function() {
+/*describe("A jQuery ajax request should be able to fetch...", function() {
     it("should make an AJAX request to the correct URL", function() {
         spyOn($, "ajax");
         getUserName("teste@teste.com", "admin123");
         expect($.ajax.calls.mostRecent().args[0]["url"]).toEqual("http://localhost/assets/post/check_login.php");
     });
+});*/
+
+describe("A jQuery ajax request should be able to fetch...", function() {
+    it("should execute the callback function on success", function () {
+        spyOn($, "ajax").andCallFake(function(options) {
+            options.success();
+        });
+        var email = "teste@teste.com";
+        var senha = "admin123";
+        var callback = jasmine.createSpy();
+        getUserName(email,senha, callback);
+        expect(callback).toHaveBeenCalled();
+    });
 });
 
-function getUserName(email, senha) {
-    var a = "nope"
+
+function getUserName(email, senha, callback) {
    $.ajax({
         url: "http://localhost/assets/post/check_login.php",
-        //url: "assets/post/check_login.php",
         type: "POST",
         data: {
             email: email,
@@ -156,19 +168,11 @@ function getUserName(email, senha) {
         success: function(resposta) {
             if(resposta != null && resposta != ""){
                 //usuario+senha = valido
-                a = "yep";
+                callback = "yep";
             }
             else{
                 //usuario+senha = invalido
-                a = "nope1";
-            }
-        },
-        error: function (xhr, ajaxOptions, thrownError){
-            if(xhr.status==404) {
-                a = "nope404";
-            }
-            else {
-                a = xhr.statusText;
+                callback = "nope1";
             }
         }
     });
