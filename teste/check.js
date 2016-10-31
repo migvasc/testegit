@@ -143,12 +143,15 @@ function sendRequest(callbacks, configuration) {
 
 describe("testando ajax com spyOnteste..", function() {
     
-    var callback = jasmine.createSpy(); 
-    spyOn($, "ajax").and.callFake(function(options) {
-            options.success();
-        });
+    /*//Tentando seguir o exemplo abaixo, usando a funcao beforeEach...
+    
+    var callback;
     
     beforeEach(function(done) {
+        callback = jasmine.createSpy(); 
+        spyOn($, "ajax").and.callFake(function(options) {
+            options.success();
+        });
         var email = "teste@teste.com";
         var senha = "admin123";
         getUserName(email,senha, callback);
@@ -156,7 +159,7 @@ describe("testando ajax com spyOnteste..", function() {
     
     it("is asynchronous", function() {
         expect(callback).toEqual("yep");
-    });
+    });*/
     
     /*beforeEach(function(done) {
         $.ajax('/some/url').success(done);
@@ -167,7 +170,8 @@ describe("testando ajax com spyOnteste..", function() {
     });*/
     
     
-    /*it("should execute the callback function on success", function () {
+    /*//Funcao waitsFor nao funcionar
+    it("should execute the callback function on success", function () {
         var callback = jasmine.createSpy();
         spyOn($, "ajax").and.callFake(function(options) {
             options.success();
@@ -183,10 +187,39 @@ describe("testando ajax com spyOnteste..", function() {
         });
         
     });*/
+    var successFn, errorFn;
+    beforeEach(function () {
+        successFn = jasmine.createSpy("successFn");
+        errorFn = jasmine.createSpy("errorFn");
+        jQuery.ajax = spyOn(jQuery, "ajax").andCallFake(
+            function (options) {
+                if(/.*success.*/.test(options.url)) {
+                    options.success();
+                } else {
+                    options.error();
+                }
+            }
+        );
+    });
+
+    it("success", function () {
+        email = "teste@teste.com";
+        senha = "admin123"
+        getUserName(email,senha, successFn, errorFn);
+        expect(successFn).toEqual("yep");
+    });
+    
+    it("error response", function () {
+        email = "teste@teste.com";
+        senha = "sa"
+        app.fire("error/url", successFn, errorFn);
+        expect(errorFn).toEqual("nope");
+    });
+
 });
 
 
-function getUserName(email, senha, callback) {
+function getUserName(email, senha, sfn, efn) {
    $.ajax({
         url: "http://localhost/assets/post/check_login.php",
         type: "POST",
@@ -199,11 +232,11 @@ function getUserName(email, senha, callback) {
         success: function(resposta) {
             if(resposta != null && resposta != ""){
                 //usuario+senha = valido
-                callback = "yep";
+                sfn = "yep";
             }
             else{
                 //usuario+senha = invalido
-                callback = "nope1";
+                efn = "nope";
             }
         }
     });
