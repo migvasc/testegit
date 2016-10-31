@@ -150,7 +150,7 @@ describe("A jQuery ajax request should be able to fetch...", function() {
         var senha = "admin123";
         var callback = jasmine.createSpy();
         getUserName(email,senha, callback);
-        expect(callback).toHaveBeenCalled();
+        expect(callback).toEqual("yep");
     });
 });
 
