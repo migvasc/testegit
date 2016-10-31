@@ -37,7 +37,7 @@ describe('testAle', function() {
     $.ajax({
         url: "http://localhost/assets/post/check_login.php",
         //url: "assets/post/check_login.php",
-        type: "POST",
+        type: "GET",
         data: {
             email: email,
             senha: senha
