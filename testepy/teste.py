@@ -16,13 +16,27 @@ driver = webdriver.Remote(
   
 # This is your test logic. You can add multiple tests here.
 driver.implicitly_wait(10)
-driver.get("http://www.google.com")
-if not "Google" in driver.title:
+driver.get("http://petajuda.herokuapp.com/login.php")
+driver.find_element_by_id("email").click()
+driver.find_element_by_id("email").clear()
+driver.find_element_by_id("email").send_keys("carlos@carlos.com")
+driver.find_element_by_id("senha").clear()
+driver.find_element_by_id("senha").send_keys("1234")
+driver.find_element_by_xpath("//button[@type='submit']").click()
+if not "Pet Ajuda | Home" in driver.title:
     raise Exception("Unable to load google page!")
 elem = driver.find_element_by_name("q")
 elem.send_keys("Sauce Labs")
 elem.submit()
 print driver.title
+
+
+
+
+
+
+
+
   
 # This is where you tell Sauce Labs to stop running tests on your behalf.
 # It's important so that you aren't billed after your test finishes.
