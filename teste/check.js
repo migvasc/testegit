@@ -141,8 +141,33 @@ function sendRequest(callbacks, configuration) {
     });
 });*/
 
-describe("A jQuery ajax request should be able to fetch...", function() {
-    it("should execute the callback function on success", function () {
+describe("teste...", function() {
+    
+    var callback = jasmine.createSpy(); 
+    spyOn($, "ajax").and.callFake(function(options) {
+            options.success();
+        });
+    
+    beforeEach(function(done) {
+        var email = "teste@teste.com";
+        var senha = "admin123";
+        getUserName(email,senha, callback);
+    });
+    
+    it("is asynchronous", function() {
+        expect(callback).toEqual("yep");
+    });
+    
+    /*beforeEach(function(done) {
+        $.ajax('/some/url').success(done);
+    });
+    
+    it("is asynchronous", function() {
+        // this won't run until the done callback is invoked from the beforeEach
+    });*/
+    
+    
+    /*it("should execute the callback function on success", function () {
         var callback = jasmine.createSpy();
         spyOn($, "ajax").and.callFake(function(options) {
             options.success();
@@ -157,7 +182,7 @@ describe("A jQuery ajax request should be able to fetch...", function() {
             expect(callback).toEqual("yep");
         });
         
-    });
+    });*/
 });
 
 
