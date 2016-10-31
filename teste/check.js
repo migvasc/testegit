@@ -75,7 +75,7 @@
 
 describe("Ajax Tests", function() {
     var configuration = { url: "http://localhost/assets/post/check_login.php",
-                          email: "teste@tes.com",
+                          email: "teste@teste.com",
                           senha: "admin123"
                         };
       
@@ -88,7 +88,7 @@ describe("Ajax Tests", function() {
 });
 
 function sendRequest(callbacks, configuration) {
-    var x = "yep";
+    var x = "nope";
     
     $.ajax({
         url: configuration.url,
@@ -101,7 +101,7 @@ function sendRequest(callbacks, configuration) {
         success: function(data) {
             
             callbacks.checkForInformation(data);
-            x: "nopenope";
+            x: "yep";
         },
         error: function(data) {
             
