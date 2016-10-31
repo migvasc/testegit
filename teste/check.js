@@ -141,7 +141,7 @@ function sendRequest(callbacks, configuration) {
     });
 });*/
 
-describe("teste...", function() {
+describe("testando ajax com spyOnteste..", function() {
     
     var callback = jasmine.createSpy(); 
     spyOn($, "ajax").and.callFake(function(options) {
