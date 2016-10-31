@@ -6,13 +6,15 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from sauceclient import SauceClient
 import os
 
 class COMSUCESSO(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox()
-        self.driver.implicitly_wait(30)
-        self.base_url = "http://petajuda.herokuapp.com/"
+        #self.driver = webdriver.Firefox()
+        #self.driver.implicitly_wait(30)
+#        self.base_url = "http://petajuda.herokuapp.com/"
         self.verificationErrors = []
         self.accept_next_alert = True
         #Sauce Labs
@@ -28,12 +30,12 @@ class COMSUCESSO(unittest.TestCase):
         }
         self.SauceLogin = os.environ['SAUCE_USERNAME']
         self.SauceAccessKey = os.environ['SAUCE_ACESS_KEY']
-      #  self.driver = webdriver.Remote(command_executor="http://%s:%s@ondemand.saucelabs.com:80/wd/hub" 
-               #       % (self.SauceLogin, self.SauceAccessKey),desired_capabilities=self.desired_cap)
-        #self.URL = "http://askgithub.com"
+        self.driver = webdriver.Remote(command_executor="http://%s:%s@ondemand.saucelabs.com:80/wd/hub" 
+                      % (self.SauceLogin, self.SAUCE_ACESS_KEY),desired_capabilities=self.desired_cap)
+        self.URL = "http://petajuda.herokuapp.com/"
         # Travis-CI & Sauce Labs
-        #self.URL = "http://localhost:" + os.environ.get('PORT') 
-     #   self.driver.get(self.URL)
+        self.URL = "http://localhost:" + os.environ.get('PORT') 
+        self.driver.get(self.URL)
         self.status = True
         self.message = ""
     
