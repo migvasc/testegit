@@ -31,6 +31,7 @@ describe("testing javascript in the browser", function() {
         ///headline.click();
         //headline.getText().then(function(txt) {
             assert.equal(a, "1");
+            echo("OPA");
             done();
         });
     //});
