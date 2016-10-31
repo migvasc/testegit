@@ -5,7 +5,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from sauceclient import SauceClient
 import os
 
-class COMSUCESSO(unittest.TestCase):
+class AskGitHubTestSuite(unittest.TestCase):
     def setUp(self):
         #Sauce Labs
         self.desired_cap = {
@@ -60,14 +60,7 @@ class COMSUCESSO(unittest.TestCase):
         except:
             self.message += "Test 3 failed."
             self.status = False   
-    def test_c_o_m _s_u_c_e_s_s_o(self):
-        sel = self.selenium
-        sel.open("/login.php")
-        sel.click("id=email")
-        sel.type("id=email", "carlos@carlos.com")
-        sel.type("id=senha", "1234")
-        sel.click("//button[@type='submit']")
-        self.assertEqual("Bem-vindo(a), carlos", sel.get_alert())
+
 
     def tearDown(self):
         print("testing complete;closing connection")
