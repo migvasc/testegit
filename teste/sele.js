@@ -30,7 +30,7 @@ describe("testing javascript in the browser", function() {
         var a = webdriver.getCurrentUrl();
         ///headline.click();
         //headline.getText().then(function(txt) {
-            assert.equal(a, "http://petajuda.herokuapp.com/index.php");
+            assert.equal(a, "1");
             done();
         });
     //});
