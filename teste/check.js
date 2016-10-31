@@ -238,7 +238,7 @@ function getUserName(email, senha, sfn, efn) {
                 //usuario+senha = invalido
                 efn = "nope";
             }
-        }
+        },
         error:function() {
             efn = "nope2";
         }
