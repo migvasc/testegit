@@ -5,7 +5,7 @@ python:
 
 install:
   #- pip install sauceclient 
-  - pip install selenium nose #--use-mirrors  
+  #- pip install selenium nose #--use-mirrors  
 
 script: nosetests
 
