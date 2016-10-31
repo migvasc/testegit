@@ -22,7 +22,7 @@ before_script:
 
 install:
   - pip install selenium nose --use-mirrors
-  - pip install sauceclient
+  - sudo pip install sauceclient 
 
 script: python testepy/teste.py
 
