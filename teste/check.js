@@ -203,19 +203,13 @@ describe("testando ajax com spyOnteste..", function() {
     });
 
     it("success", function () {
-        data = {
-            email: "teste@teste.com",
-            senha: "admin123"
-        }
+        data = ["teste@teste.com", "admin123"];
         getUserName(data, successFn, errorFn);
         expect(successFn).toHaveBeenCalled();
     });
     
     it("error response", function () {
-        data = {
-            email: "teste@teste.com",
-            senha: "sa"
-        }
+        data = ["teste@teste.com", "admin123"];
         getUserName(data, successFn, errorFn);
         expect(errorFn).toHaveBeenCalled();
     });
@@ -227,7 +221,10 @@ function getUserName(data, sfn, efn) {
    $.ajax({
         url: "http://localhost/assets/post/check_login.php",
         type: "POST",
-        data: data,
+        data: {
+            email: data[0],
+            senha: data[1]
+        },
         cache: false,
         async: false,
         success: sfn,
