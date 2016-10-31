@@ -74,6 +74,14 @@ class COMSUCESSO(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
         self.assertEqual([], self.verificationErrors)
+        print("testing complete;closing connection")
+        id = self.driver.session_id
+        print("Link to job: https://saucelabs.com/jobs/%s" % (id))
+        print("Errors?", self.message)
+        sauce_client = SauceClient(self.SAUCE_USERNAME, self.SAUCE_ACESS_KEY)
+        sauce_client.jobs.update_job(self.driver.session_id, passed=self.status)
+        self.driver.quit()
+
 
 if __name__ == "__main__":
     unittest.main()
