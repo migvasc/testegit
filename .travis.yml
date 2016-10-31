@@ -25,7 +25,7 @@ install:
   - pip install selenium nose #--use-mirrors
   
 
-script: python notestset# testepy/teste.py
+script: python nosetests# testepy/teste.py
 
 deploy:
  provider: heroku
