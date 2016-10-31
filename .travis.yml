@@ -23,7 +23,7 @@ before_script:
 install:
   - pip install selenium nose --use-mirrors
 
-script: nosetests
+script: python testepy/teste.py
 
 deploy:
  provider: heroku
