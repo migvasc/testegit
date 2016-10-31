@@ -3,12 +3,19 @@ python:
   - "2.7"
 
 
-install:
+#install:
   #- pip install sauceclient 
-  - pip install selenium nose #--use-mirrors  
+#  - pip install selenium nose #--use-mirrors  
+
+#script: nosetests
+
+addons:
+  sauce_connect:
+    username: $SauceLogin
+    access_key: $SauceAcessKey
+
 
 script: nosetests
-
 
 deploy:
  provider: heroku
