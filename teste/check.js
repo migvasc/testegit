@@ -206,14 +206,14 @@ describe("testando ajax com spyOnteste..", function() {
         email = "teste@teste.com";
         senha = "admin123"
         getUserName(email,senha, successFn, errorFn);
-        expect(successFn).toEqual("yep");
+        expect(successFn).toHaveBeenCalled();
     });
     
     it("error response", function () {
         email = "teste@teste.com";
         senha = "sa"
         getUserName(email,senha, successFn, errorFn);
-        expect(errorFn).toEqual("nope");
+        expect(errorFn).toHaveBeenCalled();
     });
 
 });
@@ -229,19 +229,7 @@ function getUserName(email, senha, sfn, efn) {
         },
         cache: false,
         async: false,
-        success: function(resposta) {
-            if(resposta != null && resposta != ""){
-                //usuario+senha = valido
-                sfn = "yep";
-            }
-            else{
-                //usuario+senha = invalido
-                efn = "nope";
-            }
-        },
-        error:function() {
-            efn = "nope2";
-        }
-        
+        success: sfn,
+        error: efn
     });
 }
