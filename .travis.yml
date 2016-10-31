@@ -14,9 +14,14 @@ python:
 # command to run tests
 addons:
   sauce_connect:
-    username: $SauceLogin
-    access_key: $SauceAcessKey
+    username: $SAUCE_USER_NAME
+    access_key: $SAUCE_ACESS_KEY
 
+before_script:
+  - curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash
+
+install:
+  - pip install selenium nose --use-mirrors
 
 script: nosetests
 
