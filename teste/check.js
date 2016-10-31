@@ -143,14 +143,20 @@ function sendRequest(callbacks, configuration) {
 
 describe("A jQuery ajax request should be able to fetch...", function() {
     it("should execute the callback function on success", function () {
+        var callback = jasmine.createSpy();
         spyOn($, "ajax").and.callFake(function(options) {
             options.success();
         });
         var email = "teste@teste.com";
         var senha = "admin123";
-        var callback = jasmine.createSpy();
         getUserName(email,senha, callback);
-        expect(callback).toEqual("yep");
+        waitsFor(function() {
+            return callback.callCount > 0;
+        });
+        runs(function() {
+            expect(callback).toEqual("yep");
+        });
+        
     });
 });
 
