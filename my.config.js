@@ -1,8 +1,8 @@
 // Karma configuration
 // Generated on Mon Oct 24 2016 22:35:36 GMT+0000 (UTC)
-var By = require('selenium-webdriver').By,
+/*var By = require('selenium-webdriver').By,
     until = require('selenium-webdriver').until,
-    firefox = require('selenium-webdriver/firefox');
+    firefox = require('selenium-webdriver/firefox');*/
 
 
 module.exports = function(config) {
@@ -75,7 +75,7 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity,
-    customLaunchers: {
+    /*customLaunchers: {
       swd_firefox: {
         base: 'SeleniumWebdriver',
         browserName: 'Firefox',
@@ -85,7 +85,7 @@ module.exports = function(config) {
           return driver;
         }
       },
-    },
+    },*/
  
     browsers: ['swd_firefox']
   })

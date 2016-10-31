@@ -75,7 +75,7 @@
 
 describe("Ajax Tests", function() {
     var configuration = { url: "http://localhost/assets/post/check_login.php",
-                          email: "teste@teste.com",
+                          email: "teste@tes.com",
                           senha: "admin123"
                         };
       
@@ -99,14 +99,12 @@ function sendRequest(callbacks, configuration) {
         },
         async: false,
         success: function(data) {
-            
+            x = "yep";
             callbacks.checkForInformation(data);
-            x: "yep";
         },
         error: function(data) {
-            
+            x = "nopenope";
             callbacks.displayErrorMessage();
-            x: "nopenope";
         }
         
     });
