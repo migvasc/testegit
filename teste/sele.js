@@ -4,21 +4,18 @@
 
 //var assert= require("assert");
     //foo is now loaded.
-    var assert;
-require(['assert'], function (assert) {
-    assert =require('assert');
-});
+    var assert=require('assert');
+
     //foo is now loaded.
-var webdriver;
-require(['selenium-webdriver'], function (webdriver) {
-    webdriver=require('selenium-webdriver');
-});
+
+    var webdriver=require('selenium-webdriver');
+
 
 
 //var webdriver=require("selenium-webdriver");
 
 //var webdriver = require("");
-describe("testing javascript in the browser", function() {
+describe("O SITE EH ESSE?", function() {
     beforeEach(function() {
         this.browser = new webdriver.Builder()
         .withCapabilities({
@@ -29,7 +26,7 @@ describe("testing javascript in the browser", function() {
     afterEach(function() {
         return this.browser.quit();
     });
-    it("should handle clicking on a headline", function(done) {
+    it("URL SAO IGUAIS?", function(done) {
         
         var a = webdriver.getCurrentUrl();
         ///headline.click();
