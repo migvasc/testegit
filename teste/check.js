@@ -191,7 +191,7 @@ describe("testando ajax com spyOnteste..", function() {
     beforeEach(function () {
         successFn = jasmine.createSpy("successFn");
         errorFn = jasmine.createSpy("errorFn");
-        jQuery.ajax = spyOn(jQuery, "ajax").andCallFake(
+        jQuery.ajax = spyOn(jQuery, "ajax").and.callFake(
             function (options) {
                 if(/.*success.*/.test(options.url)) {
                     options.success();
