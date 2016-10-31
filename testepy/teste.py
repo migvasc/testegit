@@ -7,8 +7,8 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 # parameter tells us which browsers and OS to spin up.
 desired_cap = {
     'platform': "Mac OS X 10.9",
-    'browserName': "chrome",
-    'version': "31",
+    'browserName': "firefox",
+    'version': "41",
 }
 driver = webdriver.Remote(
    command_executor='http://migvasc:edb8e905-bb7c-45f0-8c81-fa2a41402c5d@ondemand.saucelabs.com:80/wd/hub',
