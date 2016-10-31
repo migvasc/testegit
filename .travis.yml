@@ -12,5 +12,16 @@ python:
 # command to install dependencies
 
 # command to run tests
+addons:
+  sauce_connect:
+    username: $SauceLogin
+    access_key: $SauceAcessKey
+
+
 script: nosetests
 
+deploy:
+ provider: heroku
+ api-key:
+  secure: $HEROKU_API_KEY
+ app: petajuda
