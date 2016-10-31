@@ -77,13 +77,26 @@ describe("Ajax Tests", function() {
                           email: "teste@tes.com",
                           senha: "admin123"
                         };
-      
-    
     it("should make an Ajax request to the correct URL", function() {
-        spyOn($, "ajax");
-        var x = sendRequest(undefined, configuration);
-        expect(x).toEqual("yep");
-    });                  
+        spyOn($, "ajax").andCallFake(function(e) {
+            e.success({});
+        });
+     
+        var callbacks = {
+            checkForInformation: jasmine.createSpy(),
+            displayErrorMessage: jasmine.createSpy(),
+        };
+     
+        sendRequest(callbacks, configuration);
+        expect(callbacks.checkForInformation).toHaveBeenCalled();  //Verifies this was called
+        expect(callbacks.displayErrorMessage).not.toHaveBeenCalled();  //Verifies this was NOT called
+    });
+    
+    //it("should make an Ajax request to the correct URL", function() {
+    //    spyOn($, "ajax");
+    //    var x = sendRequest(undefined, configuration);
+    //    expect(x).toEqual("yep");
+    //});                  
 });
 
 function sendRequest(callbacks, configuration) {
