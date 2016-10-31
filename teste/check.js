@@ -141,7 +141,7 @@ function sendRequest(callbacks, configuration) {
     });
 });*/
 
-var login = {
+/*var login = {
                 //fire: function(data, sfn, efn) {
                 fire: function(url, sfn, efn) {
                    $.ajax({
@@ -156,7 +156,7 @@ var login = {
                    });
                 }
             };
-
+*/
 describe("testando ajax com spyOnteste..", function() {
     
     /*//Tentando seguir o exemplo abaixo, usando a funcao beforeEach...
@@ -203,13 +203,13 @@ describe("testando ajax com spyOnteste..", function() {
         });
         
     });*/
-    var successFn, errorFn;
+    /*var successFn, errorFn;
     beforeEach(function () {
         successFn = jasmine.createSpy("successFn");
         errorFn = jasmine.createSpy("errorFn");
         jQuery.ajax = spyOn(jQuery, "ajax").and.callFake(
             function (options) {
-                if(/.*success.*/.test(options.url)) {
+                if(/.*success.* /.test(options.url)) { //tirar esse espaço entre o * e a /
                     options.success();
                 } else {
                     options.error();
@@ -228,8 +228,41 @@ describe("testando ajax com spyOnteste..", function() {
         //var data = ["teste@teste.com", "admin123"];
         login.fire("http://localhost/assets/check_login.php", successFn, errorFn);
         expect(errorFn).toHaveBeenCalled();
-    });
+    });*/
+    it("should get the content of an XML file", function(done)
+    {
+        var success = jasmine.createSpy('success');
+        var error = jasmine.createSpy('error');
 
+        success.and.callFake(function(xml_content)
+        {
+            expect(success).toHaveBeenCalled();
+
+            // you can even do more tests with xml_content which is
+            // the data returned by the success function of your AJAX call
+
+            done(); // we're done, Jasmine can run the specs now
+        });
+
+        error.and.callFake(function()
+        {
+            // this will fail since success has not been called
+            expect(success).toHaveBeenCalled();
+
+            // If you are happy about the fact that error has been called,
+            // don't make it fail by using expect(error).toHaveBeenCalled();
+
+            done(); // we're done
+        });
+
+        jQuery.ajax({
+            type : "POST",
+            url : "http://localhost/assets/post/check_login.php",
+            //dataType : "xml",
+            success : success,
+            error : error
+        });
+    });
 });
 
 
