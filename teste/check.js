@@ -218,13 +218,13 @@ describe("testando ajax com spyOnteste..", function() {
     });
 
     it("success", function () {
-        data = ["teste@teste.com", "admin123"];
+        var data = ["teste@teste.com", "admin123"];
         login.fire(data, successFn, errorFn);
         expect(successFn).toHaveBeenCalled();
     });
     
     it("error response", function () {
-        data = ["teste@teste.com", "admin123"];
+        var data = ["teste@teste.com", "admin123"];
         login.fire(data, successFn, errorFn);
         expect(errorFn).toHaveBeenCalled();
     });
