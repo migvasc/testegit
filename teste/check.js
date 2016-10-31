@@ -212,7 +212,7 @@ describe("testando ajax com spyOnteste..", function() {
     it("error response", function () {
         email = "teste@teste.com";
         senha = "sa"
-        app.fire("error/url", successFn, errorFn);
+        getUserName(email,senha, successFn, errorFn);
         expect(errorFn).toEqual("nope");
     });
 
@@ -239,5 +239,9 @@ function getUserName(email, senha, sfn, efn) {
                 efn = "nope";
             }
         }
+        error:function() {
+            efn = "nope2";
+        }
+        
     });
 }
