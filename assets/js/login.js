@@ -29,7 +29,7 @@ $(function () {
                             .append("<strong>Usuário entrou no sistema com sucesso. </strong>");
                         $('#success > .alert-success')
                             .append('</div>');
-                        alert("Bem-vindo(a), "+resposta);
+                    //    alert("Bem-vindo(a), "+resposta);
                         window.location.assign("home.php");
                     }
                         
