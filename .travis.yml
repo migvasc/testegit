@@ -1,16 +1,16 @@
 language: python
 python:
-- "2.7"
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.5-dev" # 3.5 development branch
+  - "3.6-dev" # 3.6 development branch
+  - "nightly" # currently points to 3.7-dev
+# command to install dependencies
 
-addons:
-  sauce_connect: true
-	 username: $SauceLogin
-  	 access_key: $SauceAccessKey
-script: python test/travis-testcases.py
+# command to run tests
+script: nosetests
 
-
-deploy:
- provider: heroku
- api-key:
-  secure: $HEROKU_API_KEY
- app: petajuda
