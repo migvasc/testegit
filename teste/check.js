@@ -209,7 +209,7 @@ describe("testando ajax com spyOnteste..", function() {
         errorFn = jasmine.createSpy("errorFn");
         jQuery.ajax = spyOn(jQuery, "ajax").and.callFake(
             function (options) {
-                if(/.*success.*/.test(options.data)) {
+                if(/.*success.*/.test(options.url)) {
                     options.success();
                 } else {
                     options.error();
@@ -217,7 +217,7 @@ describe("testando ajax com spyOnteste..", function() {
             }
         );
     });
-
+    
     it("success", function () {
        // var data = ["teste@teste.com", "admin123"];
         login.fire("http://localhost/assets/post/check_login.php", successFn, errorFn);
