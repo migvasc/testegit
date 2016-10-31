@@ -29,13 +29,13 @@
 
 
 
-/*describe('testAle', function() {
+describe('testAle', function() {
     var a = "nope0";
 
     var email = 'teste@teste.com';
     var senha = 'admin123';
     $.ajax({
-        url: "http://localhost/assets/post/check_login.php",
+        url: "../../../post/check_login.php",
         //url: "assets/post/check_login.php",
         type: "POST",
         data: {
@@ -68,12 +68,12 @@
         expect(a).toBe("yep");
     });
 });
-*/
 
 
 
 
-describe("Ajax Tests", function() {
+
+/*describe("Ajax Tests", function() {
     var configuration = { url: "http://localhost/assets/post/check_login.php",
                           email: "teste@tes.com",
                           senha: "admin123"
@@ -109,4 +109,4 @@ function sendRequest(callbacks, configuration) {
         
     });
     return x;
-}
+}*/
