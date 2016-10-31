@@ -137,7 +137,7 @@ describe("A jQuery ajax request should be able to fetch...", function() {
     it("should make an AJAX request to the correct URL", function() {
         spyOn($, "ajax");
         getUserName("teste@teste.com", "admin123");
-        expect($.ajax.mostRecentCall.args[0]["url"]).toEqual("http://localhost/assets/post/check_login.php");
+        expect($.ajax.calls.mostRecentCall.args[0]["url"]).toEqual("http://localhost/assets/post/check_login.php");
     });
 });
 
