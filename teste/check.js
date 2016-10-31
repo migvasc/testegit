@@ -29,6 +29,7 @@
 
 
 
+/* Desse jeito nao esta funcionando porque a chamada ajax nao pode ser sincrona e usar o XMLHTTPRequest (em jquery.min.js)
 describe('testAle', function() {
     var a = "nope0";
 
@@ -67,13 +68,11 @@ describe('testAle', function() {
     it('Should exist', function() {
         expect(a).toBe("yep");
     });
-});
+});*/
 
 
 
-
-
-/*describe("Ajax Tests", function() {
+describe("Ajax Tests", function() {
     var configuration = { url: "http://localhost/assets/post/check_login.php",
                           email: "teste@tes.com",
                           senha: "admin123"
@@ -102,11 +101,19 @@ function sendRequest(callbacks, configuration) {
             x = "yep";
             callbacks.checkForInformation(data);
         },
-        error: function(data) {
+        error: function (xhr, ajaxOptions, thrownError){
+            if(xhr.status==404) {
+                x = "nope404";
+            }
+            else {
+                x = xhr.statusText;
+            }
+        }
+        /*error: function(data) {
             x = "nopenope";
             callbacks.displayErrorMessage();
-        }
+        }*/
         
     });
     return x;
-}*/
+}
