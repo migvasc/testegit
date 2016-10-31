@@ -141,6 +141,21 @@ function sendRequest(callbacks, configuration) {
     });
 });*/
 
+var login = {
+                fire: function(data, sfn, efn) {
+                   $.ajax({
+                       url: "http://localhost/assets/post/check_login.php",
+                        type: "POST",
+                        data: {
+                            email: data[0],
+                            senha: data[1]
+                        },
+                        success: sfn,
+                        error: efn
+                   });
+                }
+            };
+
 describe("testando ajax com spyOnteste..", function() {
     
     /*//Tentando seguir o exemplo abaixo, usando a funcao beforeEach...
@@ -204,20 +219,20 @@ describe("testando ajax com spyOnteste..", function() {
 
     it("success", function () {
         data = ["teste@teste.com", "admin123"];
-        getUserName(data, successFn, errorFn);
+        login.fire(data, successFn, errorFn);
         expect(successFn).toHaveBeenCalled();
     });
     
     it("error response", function () {
         data = ["teste@teste.com", "admin123"];
-        getUserName(data, successFn, errorFn);
+        login.fire(data, successFn, errorFn);
         expect(errorFn).toHaveBeenCalled();
     });
 
 });
 
 
-function getUserName(data, sfn, efn) {
+/*function getUserName(data, sfn, efn) {
    $.ajax({
         url: "http://localhost/assets/post/check_login.php",
         type: "POST",
@@ -230,4 +245,4 @@ function getUserName(data, sfn, efn) {
         success: sfn,
         error: efn
     });
-}
+}*/
