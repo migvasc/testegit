@@ -193,7 +193,7 @@ describe("testando ajax com spyOnteste..", function() {
         errorFn = jasmine.createSpy("errorFn");
         jQuery.ajax = spyOn(jQuery, "ajax").and.callFake(
             function (options) {
-                if(/.*success.*/.test(options.url)) {
+                if(/.*success.*/.test(options.data)) {
                     options.success();
                 } else {
                     options.error();
@@ -203,30 +203,31 @@ describe("testando ajax com spyOnteste..", function() {
     });
 
     it("success", function () {
-        email = "teste@teste.com";
-        senha = "admin123";
-        getUserName(email,senha, successFn, errorFn);
+        data = {
+            email: "teste@teste.com",
+            senha: "admin123"
+        }
+        getUserName(data, successFn, errorFn);
         expect(successFn).toHaveBeenCalled();
     });
     
     it("error response", function () {
-        email = "teste@teste.com";
-        senha = "sa";
-        getUserName(email,senha, successFn, errorFn);
+        data = {
+            email: "teste@teste.com",
+            senha: "sa"
+        }
+        getUserName(data, successFn, errorFn);
         expect(errorFn).toHaveBeenCalled();
     });
 
 });
 
 
-function getUserName(email, senha, sfn, efn) {
+function getUserName(data, sfn, efn) {
    $.ajax({
         url: "http://localhost/assets/post/check_login.php",
         type: "POST",
-        data: {
-            email: email,
-            senha: senha
-        },
+        data: data,
         cache: false,
         async: false,
         success: sfn,
