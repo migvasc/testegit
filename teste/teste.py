@@ -2,6 +2,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+import urllib2
   
 # This is the only code you need to edit in your existing scripts.
 # The command_executor tells the test to run on Sauce, while the desired_capabilities
