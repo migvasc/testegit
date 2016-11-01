@@ -22,9 +22,9 @@
                         <a class="page-scroll" href="index.php#team">Equipe</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index.php#contact">Contato</a>
+                        <a class="page-scroll" href="index.php#contact">Contact</a>
                     </li>
-                    <li><a href="login.php" class="page-scroll btn btn-xl">Entrar / Cadastrar-se</a></li>
+                    <li><a href="login.php" class="page-scroll btn btn-xl">Entrar OU Cadastrar-se</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
