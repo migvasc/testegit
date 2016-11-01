@@ -92,6 +92,160 @@ def login_fail_wrongSenha():
     if not "Pet Ajuda | Login" in driver.title:
         raise Exception("Login com senha errada passando!")
     print driver.title
+    
+    
+def signup_sucess():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/cadastro.php")
+    driver.find_element_by_id("nome").click()
+    driver.find_element_by_id("nome").clear()
+    driver.find_element_by_id("nome").send_keys("Carlos")
+    driver.find_element_by_id("sobrenome").clear()
+    driver.find_element_by_id("sobrenome").send_keys("Santos")
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("carlos@teste.com")
+    driver.find_element_by_id("senha1").clear()
+    driver.find_element_by_id("senha1").send_keys("123")
+    driver.find_element_by_id("senha2").clear()
+    driver.find_element_by_id("senha2").send_keys("123")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Home" in driver.title:
+        raise Exception("Algo errado no cadastro ... era pra dar certo!")
+    print driver.title
+    
+def signup_fail_emptyNome():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/cadastro.php")
+    driver.find_element_by_id("nome").click()
+    driver.find_element_by_id("nome").clear()
+    driver.find_element_by_id("nome").send_keys("")
+    driver.find_element_by_id("sobrenome").clear()
+    driver.find_element_by_id("sobrenome").send_keys("Santos")
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("carlos@carlos.com")
+    driver.find_element_by_id("senha1").clear()
+    driver.find_element_by_id("senha1").send_keys("123")
+    driver.find_element_by_id("senha2").clear()
+    driver.find_element_by_id("senha2").send_keys("123")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Cadastro" in driver.title:
+        raise Exception("Cadastro com nome vazio passando!")
+    print driver.title
+
+def signup_fail_emptySobrenome():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/cadastro.php")
+    driver.find_element_by_id("nome").click()
+    driver.find_element_by_id("nome").clear()
+    driver.find_element_by_id("nome").send_keys("Carlos")
+    driver.find_element_by_id("sobrenome").clear()
+    driver.find_element_by_id("sobrenome").send_keys("")
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("carlos@carlos.com")
+    driver.find_element_by_id("senha1").clear()
+    driver.find_element_by_id("senha1").send_keys("123")
+    driver.find_element_by_id("senha2").clear()
+    driver.find_element_by_id("senha2").send_keys("123")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Cadastro" in driver.title:
+        raise Exception("Cadastro com nome vazio passando!")
+    print driver.title
+    
+def signup_fail_emptyEmail():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/cadastro.php")
+    driver.find_element_by_id("nome").click()
+    driver.find_element_by_id("nome").clear()
+    driver.find_element_by_id("nome").send_keys("Carlos")
+    driver.find_element_by_id("sobrenome").clear()
+    driver.find_element_by_id("sobrenome").send_keys("Santos")
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("")
+    driver.find_element_by_id("senha1").clear()
+    driver.find_element_by_id("senha1").send_keys("123")
+    driver.find_element_by_id("senha2").clear()
+    driver.find_element_by_id("senha2").send_keys("123")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Cadastro" in driver.title:
+        raise Exception("Cadastro com email vazio passando!")
+    print driver.title
+    
+def signup_fail_emptySenha1():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/cadastro.php")
+    driver.find_element_by_id("nome").click()
+    driver.find_element_by_id("nome").clear()
+    driver.find_element_by_id("nome").send_keys("Carlos")
+    driver.find_element_by_id("sobrenome").clear()
+    driver.find_element_by_id("sobrenome").send_keys("Santos")
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("carlos@carlos.com")
+    driver.find_element_by_id("senha1").clear()
+    driver.find_element_by_id("senha1").send_keys("")
+    driver.find_element_by_id("senha2").clear()
+    driver.find_element_by_id("senha2").send_keys("123")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Cadastro" in driver.title:
+        raise Exception("Cadastro com email vazio passando!")
+    print driver.title
+    
+def signup_fail_emptySenha2():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/cadastro.php")
+    driver.find_element_by_id("nome").click()
+    driver.find_element_by_id("nome").clear()
+    driver.find_element_by_id("nome").send_keys("Carlos")
+    driver.find_element_by_id("sobrenome").clear()
+    driver.find_element_by_id("sobrenome").send_keys("Santos")
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("carlos@carlos.com")
+    driver.find_element_by_id("senha1").clear()
+    driver.find_element_by_id("senha1").send_keys("123")
+    driver.find_element_by_id("senha2").clear()
+    driver.find_element_by_id("senha2").send_keys("")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Cadastro" in driver.title:
+        raise Exception("Cadastro com email vazio passando!")
+    print driver.title
+    
+def signup_fail_Senha1Senha2NotEqual():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/cadastro.php")
+    driver.find_element_by_id("nome").click()
+    driver.find_element_by_id("nome").clear()
+    driver.find_element_by_id("nome").send_keys("Carlos")
+    driver.find_element_by_id("sobrenome").clear()
+    driver.find_element_by_id("sobrenome").send_keys("Santos")
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("carlos@carlos.com")
+    driver.find_element_by_id("senha1").clear()
+    driver.find_element_by_id("senha1").send_keys("123")
+    driver.find_element_by_id("senha2").clear()
+    driver.find_element_by_id("senha2").send_keys("1234")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Cadastro" in driver.title:
+        raise Exception("Cadastro com email vazio passando!")
+    print driver.title
+    
+def signup_fail_userAlreadyRegistered():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/cadastro.php")
+    driver.find_element_by_id("nome").click()
+    driver.find_element_by_id("nome").clear()
+    driver.find_element_by_id("nome").send_keys("Carlos")
+    driver.find_element_by_id("sobrenome").clear()
+    driver.find_element_by_id("sobrenome").send_keys("Santos")
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("carlos@carlos.com")
+    driver.find_element_by_id("senha1").clear()
+    driver.find_element_by_id("senha1").send_keys("123")
+    driver.find_element_by_id("senha2").clear()
+    driver.find_element_by_id("senha2").send_keys("123")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Cadastro" in driver.title:
+        raise Exception("Cadastro com email vazio passando!")
+    print driver.title
+    
 
 login_sucess()
 login_fail_emptyEmail()
@@ -99,5 +253,14 @@ login_fail_emptySenha()
 login_fail_emptyEmail_emptySenha()
 login_fail_wrongEmail()
 login_fail_wrongSenha()
+
+signup_sucess()
+signup_fail_emptyNome()
+signup_fail_emptySobrenome()
+signup_fail_emptyEmail()
+signup_fail_emptySenha1()
+signup_fail_emptySenha2()
+signup_fail_Senha1Senha2NotEqual()
+signup_fail_userAlreadyRegistered()
 
 driver.quit()
