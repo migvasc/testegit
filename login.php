@@ -83,13 +83,13 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="email" class="form-control" placeholder="Insira seu  *" id="email" required data-validation-required-message="Por favor insira seu e-mail.">
+                                                <input type="email" class="form-control" placeholder="Insira seu  e-mail*" id="email" required data-validation-required-message="Por favor insira seu e-mail.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="password" class="form-control" placeholder="Insira sua  *" id="senha" required data-validation-required-message="Por favor, insira sua senha."></textarea>
+                                                <input type="password" class="form-control" placeholder="Insira sua  senha*" id="senha" required data-validation-required-message="Por favor, insira sua senha."></textarea>
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>

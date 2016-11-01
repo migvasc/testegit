@@ -50,18 +50,18 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="inde#page-top"></a>
+                        <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="index.php#about">Sobre</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Team</a>
+                        <a class="page-scroll" href="index.php#team">Equipe</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="index.php#contact">Contato</a>
                     </li>
-                    <li><a href="login.php" class="page-scroll btn btn-xl">SIGN IN / SIGN UP</a></li>
+                    <li><a href="login.php" class="page-scroll btn btn-xl">Entrar / Cadastrar-se</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
