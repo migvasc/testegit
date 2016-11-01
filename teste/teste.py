@@ -27,7 +27,7 @@ def login_sucess():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Home" in driver.title:
         raise Exception("Algo errado no login!")
-    print driver.title
+    print "Teste login_sucess - done"
     
 def login_fail_emptyEmail():
     driver.implicitly_wait(10)
@@ -40,7 +40,7 @@ def login_fail_emptyEmail():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Login" in driver.title:
         raise Exception("Login com e-mail vazio passando!")
-    print driver.title
+    print "Teste login_fail_emptyEmail - done"
     
 def login_fail_emptySenha():
     driver.implicitly_wait(10)
@@ -53,7 +53,7 @@ def login_fail_emptySenha():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Login" in driver.title:
         raise Exception("Login com senha vazia passando!")
-    print driver.title
+    print "Teste login_fail_emptySenha - done"
 
 def login_fail_emptyEmail_emptySenha():
     driver.implicitly_wait(10)
@@ -66,7 +66,7 @@ def login_fail_emptyEmail_emptySenha():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Login" in driver.title:
         raise Exception("Login com e-mail vazio e senha vazia passando!")
-    print driver.title
+    print "Teste login_fail_emptyEmail_emptySenha - done"
 
 def login_fail_wrongEmail():
     driver.implicitly_wait(10)
@@ -79,7 +79,7 @@ def login_fail_wrongEmail():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Login" in driver.title:
         raise Exception("Login que nao existe passando!")
-    print driver.title
+    print "Teste login_fail_wrongEmail - done"
     
 def login_fail_wrongSenha():
     driver.implicitly_wait(10)
@@ -92,7 +92,7 @@ def login_fail_wrongSenha():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Login" in driver.title:
         raise Exception("Login com senha errada passando!")
-    print driver.title
+    print "Teste login_fail_wrongSenha - done"
     
     
 def signup_sucess():
@@ -112,7 +112,7 @@ def signup_sucess():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Home" in driver.title:
         raise Exception("Algo errado no cadastro ... era pra dar certo!")
-    print driver.title
+    print "Teste signup_sucess - done"
     
 def signup_fail_emptyNome():
     driver.implicitly_wait(10)
@@ -131,7 +131,7 @@ def signup_fail_emptyNome():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Cadastro" in driver.title:
         raise Exception("Cadastro com nome vazio passando!")
-    print driver.title
+    print "Teste signup_fail_emptyNome -  done"
 
 def signup_fail_emptySobrenome():
     driver.implicitly_wait(10)
@@ -150,7 +150,7 @@ def signup_fail_emptySobrenome():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Cadastro" in driver.title:
         raise Exception("Cadastro com nome vazio passando!")
-    print driver.title
+    print "Teste signup_fail_emptySobrenome - done"
     
 def signup_fail_emptyEmail():
     driver.implicitly_wait(10)
@@ -169,7 +169,7 @@ def signup_fail_emptyEmail():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Cadastro" in driver.title:
         raise Exception("Cadastro com email vazio passando!")
-    print driver.title
+    print "Teste signup_fail_emptyEmail - done"
     
 def signup_fail_emptySenha1():
     driver.implicitly_wait(10)
@@ -188,7 +188,7 @@ def signup_fail_emptySenha1():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Cadastro" in driver.title:
         raise Exception("Cadastro com email vazio passando!")
-    print driver.title
+    print "Teste signup_fail_emptySenha1 - done"
     
 def signup_fail_emptySenha2():
     driver.implicitly_wait(10)
@@ -207,7 +207,7 @@ def signup_fail_emptySenha2():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Cadastro" in driver.title:
         raise Exception("Cadastro com email vazio passando!")
-    print driver.title
+    print "Teste signup_fail_emptySenha2 - done"
     
 def signup_fail_Senha1Senha2NotEqual():
     driver.implicitly_wait(10)
@@ -226,7 +226,7 @@ def signup_fail_Senha1Senha2NotEqual():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Cadastro" in driver.title:
         raise Exception("Cadastro com email vazio passando!")
-    print driver.title
+    print "Teste signup_fail_Senha1Senha2NotEqual - done"
     
 def signup_fail_userAlreadyRegistered():
     driver.implicitly_wait(10)
@@ -245,7 +245,7 @@ def signup_fail_userAlreadyRegistered():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Cadastro" in driver.title:
         raise Exception("Cadastro com email vazio passando!")
-    print driver.title
+    print "Teste signup_fail_userAlreadyRegistered - done"
     
 
 login_sucess()
