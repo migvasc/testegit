@@ -25,7 +25,7 @@ def login_sucess():
     driver.find_element_by_id("senha").send_keys("1234")
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Home" in driver.title:
-        raise Exception("Unable to load google page!")
+        raise Exception("Algo errado no login!")
     print driver.title
     
 def login_fail_emptyEmail():
@@ -38,7 +38,7 @@ def login_fail_emptyEmail():
     driver.find_element_by_id("senha").send_keys("1234")
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Login" in driver.title:
-        raise Exception("Unable to load google page!")
+        raise Exception("Login com e-mail vazio passando!")
     print driver.title
     
 def login_fail_emptySenha():
@@ -51,7 +51,7 @@ def login_fail_emptySenha():
     driver.find_element_by_id("senha").send_keys("")
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Login" in driver.title:
-        raise Exception("Unable to load google page!")
+        raise Exception("Login com senha vazia passando!")
     print driver.title
 
 def login_fail_emptyEmail_emptySenha():
@@ -64,7 +64,7 @@ def login_fail_emptyEmail_emptySenha():
     driver.find_element_by_id("senha").send_keys("")
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Login" in driver.title:
-        raise Exception("Unable to load google page!")
+        raise Exception("Login com e-mail vazio e senha vazia passando!")
     print driver.title
 
 
