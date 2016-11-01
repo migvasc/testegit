@@ -25,7 +25,7 @@ driver.find_element_by_id("senha").clear()
 driver.find_element_by_id("senha").send_keys("1234")
 driver.find_element_by_xpath("//button[@type='submit']").click()
 al = driver.switch_to_alert()
-if (not al) :
+if al is None:
     raise Exception("Unable to load google page!")
 else: 
     al.accept()
