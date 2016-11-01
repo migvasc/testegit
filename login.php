@@ -38,7 +38,7 @@
 
 <body id="page-top" class="index">
 
-    require("menu.php");
+    include("menu.php");
 
     <div class="container-fluid full-height" id="fundo-login">
             <div class="container full-height">

@@ -35,7 +35,7 @@
 
 <body id="page-top" class="index">
 
-    require("menu.php");
+    include("menu.php");
 
     <!-- Header -->
     <header>
