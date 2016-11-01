@@ -24,8 +24,11 @@ driver.find_element_by_id("email").send_keys("carlos@carlos.com")
 driver.find_element_by_id("senha").clear()
 driver.find_element_by_id("senha").send_keys("1234")
 driver.find_element_by_xpath("//button[@type='submit']").click()
-if not "Bem-vindo(a), carlos" in driver.close_alert_and_get_its_text():
+al = driver.switch_to_alert()
+if (not al) :
     raise Exception("Unable to load google page!")
+else: 
+    al.accept()
 elem = driver.find_element_by_name("q")
 elem.send_keys("Sauce Labs")
 elem.submit()
