@@ -77,7 +77,7 @@ def login_fail_wrongEmail():
     driver.find_element_by_id("senha").send_keys("1234")
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Login" in driver.title:
-        raise Exception("Login que não existe passando!")
+        raise Exception("Login que nao existe passando!")
     print driver.title
     
 def login_fail_wrongSenha():
