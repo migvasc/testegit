@@ -26,9 +26,9 @@ driver.find_element_by_id("senha").send_keys("1234")
 driver.find_element_by_xpath("//button[@type='submit']").click()
 if not "Pet Ajuda | Home" in driver.title:
     raise Exception("Unable to load google page!")
-elem = driver.find_element_by_name("q")
-elem.send_keys("Sauce Labs")
-elem.submit()
+#elem = driver.find_element_by_name("q")
+#elem.send_keys("Sauce Labs")
+#elem.submit()
 print driver.title
   
 # This is where you tell Sauce Labs to stop running tests on your behalf.
