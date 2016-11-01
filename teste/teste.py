@@ -264,5 +264,6 @@ signup_fail_Senha1Senha2NotEqual()
 signup_fail_userAlreadyRegistered()
 
 
-driver.get("http://petajuda.herokuapp.com/cleanDB.php")
+#driver.get("http://petajuda.herokuapp.com/cleanDB.php")
+urllib2.urlopen('http://petajuda.herokuapp.com/cleanDB.php')
 driver.quit()
