@@ -67,10 +67,37 @@ def login_fail_emptyEmail_emptySenha():
         raise Exception("Login com e-mail vazio e senha vazia passando!")
     print driver.title
 
+def login_fail_wrongEmail():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/login.php")
+    driver.find_element_by_id("email").click()
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("carlos@teste.com")
+    driver.find_element_by_id("senha").clear()
+    driver.find_element_by_id("senha").send_keys("1234")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Login" in driver.title:
+        raise Exception("Login que não existe passando!")
+    print driver.title
+    
+def login_fail_wrongSenha():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/login.php")
+    driver.find_element_by_id("email").click()
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("carlos@carlos.com")
+    driver.find_element_by_id("senha").clear()
+    driver.find_element_by_id("senha").send_keys("123")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Login" in driver.title:
+        raise Exception("Login com senha errada passando!")
+    print driver.title
 
 login_sucess()
 login_fail_emptyEmail()
 login_fail_emptySenha()
 login_fail_emptyEmail_emptySenha()
+login_fail_wrongEmail()
+login_fail_wrongSenha()
 
 driver.quit()
