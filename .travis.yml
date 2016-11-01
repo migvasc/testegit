@@ -18,7 +18,11 @@ addons:
     access_key: $SAUCE_ACESS_KEY
 
 
-script: nosetests
+install:
+  - pip install selenium nose --use-mirrors
+
+
+script: python teste/teste2.py
 
 deploy:
  provider: heroku
