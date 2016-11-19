@@ -104,7 +104,7 @@ def signup_sucess():
     driver.find_element_by_id("sobrenome").clear()
     driver.find_element_by_id("sobrenome").send_keys("Santos")
     driver.find_element_by_id("email").clear()
-    driver.find_element_by_id("email").send_keys("carlos@gmail.com")
+    driver.find_element_by_id("email").send_keys("carlos@teste.com")
     driver.find_element_by_id("senha1").clear()
     driver.find_element_by_id("senha1").send_keys("123")
     driver.find_element_by_id("senha2").clear()
