@@ -45,7 +45,7 @@
   <!-- container section start -->
   <section id="container" class="">
      <?php 
-     
+        die($_SESSION['user']); 
         if($_SESSION['user'] = "") { //se sessão nao existe
              //ve se pode criar uma
             if ($_GET["user"] != "") {
@@ -54,6 +54,7 @@
                 $_SESSION['user'] = $_GET["user"];
             } else {
                 //se nao, redireciona pro login
+                die("sessao nao encontrada, é preciso login"); 
                 header("Location: ../login.php");
                 exit();
             }
