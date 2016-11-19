@@ -28,11 +28,7 @@ $(function () {
                         $('#success > .alert-success')
                             .append("<strong>Usuário entrou no sistema. </strong>");
                         $('#success > .alert-success')
-<<<<<<< HEAD
-                            .append('</div>');
-=======
                             .append("</div>");
->>>>>>> aa217bb05ef7798b8d0105f2eceea78b1928b557
                     //    alert("Bem-vindo(a), "+resposta);
                         window.location.assign("home/index.html");
                     }
