@@ -224,7 +224,7 @@
                                 <a href="#"><i class="icon_clock_alt"></i> Timeline</a>
                             </li>
                             <li>
-                                <a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
+                                <a href="../login.php"><i class="icon_key_alt"></i> Log Out</a>
                             </li>
                         </ul>
                     </li>
@@ -277,6 +277,9 @@
                           <span>Encontre Anfitriões</span>
                       </a>
                                          
+                  </li>
+                  <li>                     
+                    <span><?php echo $_SESSION['usuario']; ?></span>
                   </li>
                   
               </ul>
