@@ -28,9 +28,9 @@ $(function () {
                         $('#success > .alert-success')
                             .append("<strong>Usuário entrou no sistema. </strong>");
                         $('#success > .alert-success')
-                            .append("<?php session_start(); $_SESSION['usuario'] = "+resposta+";> </div>");
+                            .append("</div>");
                     //    alert("Bem-vindo(a), "+resposta);
-                        window.location.assign("home/index.php");
+                        window.location.assign("home/index.php?user="+resposta);
                     }
                         
                     else{

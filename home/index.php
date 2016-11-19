@@ -44,7 +44,8 @@
   <body>
   <!-- container section start -->
   <section id="container" class="">
-     
+     <?php if $_GET["user"] != ""
+            die("funcionou: " . $_GET["user"]);?>
       
       <header class="header dark-bg">
             <div class="toggle-nav">
@@ -277,10 +278,6 @@
                       </a>
                                          
                   </li>
-                  <li>                     
-                    <span><?php echo $_SESSION['usuario']; ?></span>
-                  </li>
-                  
               </ul>
               <!-- sidebar menu end-->
           </div>
