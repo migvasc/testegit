@@ -44,7 +44,7 @@
   <body>
   <!-- container section start -->
   <section id="container" class="">
-     <?php if $_GET["user"] != ""
+     <?php if ($_GET["user"] != "")
             die("funcionou: " . $_GET["user"]);?>
       
       <header class="header dark-bg">
