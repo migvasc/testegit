@@ -1,0 +1,26 @@
+[19-Nov-2016 22:36:03 UTC] PHP Warning:  pg_connect(): Unable to connect to PostgreSQL server: could not translate host name "sslmode=require" to address: Name or service not known in /home/ubuntu/workspace/conn.php on line 7
+[19-Nov-2016 22:36:03 UTC] PHP Stack trace:
+[19-Nov-2016 22:36:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/assets/post/check_cadastro.php:0
+[19-Nov-2016 22:36:03 UTC] PHP   2. require() /home/ubuntu/workspace/assets/post/check_cadastro.php:3
+[19-Nov-2016 22:36:03 UTC] PHP   3. pg_connect() /home/ubuntu/workspace/conn.php:7
+[19-Nov-2016 22:36:03 UTC] PHP Warning:  pg_query() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/assets/post/check_cadastro.php on line 4
+[19-Nov-2016 22:36:03 UTC] PHP Stack trace:
+[19-Nov-2016 22:36:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/assets/post/check_cadastro.php:0
+[19-Nov-2016 22:36:03 UTC] PHP   2. pg_query() /home/ubuntu/workspace/assets/post/check_cadastro.php:4
+[19-Nov-2016 22:36:03 UTC] PHP Warning:  pg_affected_rows() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/assets/post/check_cadastro.php on line 6
+[19-Nov-2016 22:36:03 UTC] PHP Stack trace:
+[19-Nov-2016 22:36:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/assets/post/check_cadastro.php:0
+[19-Nov-2016 22:36:03 UTC] PHP   2. pg_affected_rows() /home/ubuntu/workspace/assets/post/check_cadastro.php:6
+[19-Nov-2016 22:37:57 UTC] PHP Warning:  pg_connect(): Unable to connect to PostgreSQL server: could not translate host name "sslmode=require" to address: Name or service not known in /home/ubuntu/workspace/conn.php on line 7
+[19-Nov-2016 22:37:57 UTC] PHP Stack trace:
+[19-Nov-2016 22:37:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/assets/post/check_cadastro.php:0
+[19-Nov-2016 22:37:57 UTC] PHP   2. require() /home/ubuntu/workspace/assets/post/check_cadastro.php:3
+[19-Nov-2016 22:37:57 UTC] PHP   3. pg_connect() /home/ubuntu/workspace/conn.php:7
+[19-Nov-2016 22:37:57 UTC] PHP Warning:  pg_query() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/assets/post/check_cadastro.php on line 4
+[19-Nov-2016 22:37:57 UTC] PHP Stack trace:
+[19-Nov-2016 22:37:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/assets/post/check_cadastro.php:0
+[19-Nov-2016 22:37:57 UTC] PHP   2. pg_query() /home/ubuntu/workspace/assets/post/check_cadastro.php:4
+[19-Nov-2016 22:37:57 UTC] PHP Warning:  pg_affected_rows() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/assets/post/check_cadastro.php on line 6
+[19-Nov-2016 22:37:57 UTC] PHP Stack trace:
+[19-Nov-2016 22:37:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/assets/post/check_cadastro.php:0
+[19-Nov-2016 22:37:57 UTC] PHP   2. pg_affected_rows() /home/ubuntu/workspace/assets/post/check_cadastro.php:6
