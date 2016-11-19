@@ -255,7 +255,7 @@ login_fail_emptyEmail_emptySenha()
 login_fail_wrongEmail()
 login_fail_wrongSenha()
 
-#signup_sucess()
+signup_sucess()
 #signup_fail_emptyNome()
 #signup_fail_emptySobrenome()
 #signup_fail_emptyEmail()
