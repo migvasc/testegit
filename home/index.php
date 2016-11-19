@@ -46,10 +46,21 @@
   <section id="container" class="">
      <?php 
      
-     echo ($_SESSION['user']);
+        if($_SESSION['user'] = "") { //se sessão nao existe
+             //ve se pode criar uma
+            if ($_GET["user"] != "") {
+                //se sim, cria
+                session_start();
+                $_SESSION['user'] = $_GET["user"];
+            } else {
+                //se nao, redireciona pro login
+                header("Location: ../login.php");
+                exit();
+            }
+                //die("funcionou: " . $_GET["user"]); 
+        }
         
-    if ($_GET["user"] != "")
-        die("funcionou: " . $_GET["user"]);?>
+    ?>
       
       <header class="header dark-bg">
             <div class="toggle-nav">
