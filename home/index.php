@@ -46,7 +46,7 @@
   <section id="container" class="">
      <?php 
         //die($_SESSION['user']); 
-        if($_SESSION['user'] = "") { //se sessão nao existe
+        if($_SESSION) { //se sessão nao existe
              //ve se pode criar uma
             if ($_GET["user"] != "") {
                 //se sim, cria
@@ -58,7 +58,7 @@
                 header("Location: ../login.php");
                 exit();
             }
-           //die("funcionou: " . $_GET["user"]); 
+            //die("funcionou: " . $_GET["user"]); 
         }
         
     ?>
