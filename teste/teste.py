@@ -253,21 +253,29 @@ def signup_fail_userAlreadyRegistered():
         raise Exception("Cadastro com email vazio passando!")
     print "Teste signup_fail_userAlreadyRegistered - done"
 
-def redirect_home():
+def redirect_login():
     driver.implicitly_wait(10)
     driver.get("http://petajuda.herokuapp.com/login.php")
     driver.implicitly_wait(5)
     if not "Pet Ajuda | Home" in driver.title:
         raise Exception("Algo errado com a sessao!")
-    print "Teste redirect_home - done"    
+    print "Teste redirect_login - done"    
+    
+def redirect_signup():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/cadastro.php")
+    driver.implicitly_wait(5)
+    if not "Pet Ajuda | Home" in driver.title:
+        raise Exception("Algo errado com a sessao!")
+    print "Teste redirect_signup - done"
 
-def redirect_login():
+def redirect_home():
     driver.implicitly_wait(10)
     driver.get("http://petajuda.herokuapp.com/home/index.php")
     driver.implicitly_wait(5)
     if not "Pet Ajuda | Login" in driver.title:
-        raise Exception("Algo errado com a redirecionamento login!")
-    print "Teste redirect_login - done"    
+        raise Exception("Algo errado com a redirecionamento para o login!")
+    print "Teste redirect_home - done"    
 
 login_fail_emptyEmail()
 login_fail_emptySenha()
@@ -275,11 +283,12 @@ login_fail_emptyEmail_emptySenha()
 login_fail_wrongEmail()
 login_fail_wrongSenha()
 login_sucess()
-redirect_home()
+redirect_login()
+redirect_signup()
 
 logout()
 
-redirect_login()
+redirect_home()
 signup_fail_emptyNome()
 signup_fail_emptySobrenome()
 signup_fail_emptyEmail()
