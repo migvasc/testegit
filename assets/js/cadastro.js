@@ -16,6 +16,8 @@ $(function() {
             var phone = $("input#phone").val();
             var senha1 = $("input#senha1").val();
             var senha2 = $("input#senha2").val();
+            var resposta = $("input#pergunta").val();
+            
             
             if(senha1 != senha2){
                 $('#success').html("<div class='alert alert-danger'>");
@@ -33,7 +35,8 @@ $(function() {
                         sobrenome: sobrenome,
                         email: email,
                         phone: phone,
-                        senha1: senha1
+                        senha1: senha1,
+                        resposta: resposta
                     },
                     cache: false,
                     success: function(resposta) {
