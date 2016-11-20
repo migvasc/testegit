@@ -45,7 +45,7 @@
   <!-- container section start -->
   <section id="container" class="">
      <?php 
-        //die($_SESSION['user']); 
+        die(isset($_SESSION)); 
         if($_SESSION) { //se sessão nao existe
              //ve se pode criar uma
             if ($_GET["user"] != "") {
