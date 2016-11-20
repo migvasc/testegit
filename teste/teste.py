@@ -253,14 +253,24 @@ def signup_fail_userAlreadyRegistered():
         raise Exception("Cadastro com email vazio passando!")
     print "Teste signup_fail_userAlreadyRegistered - done"
 
+def redirect_home():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/login.php")
+    driver.implicitly_wait(5)
+    if not "Pet Ajuda | Home" in driver.title:
+        raise Exception("Algo errado com a sessão!")
+    print "Teste redirect_home - done"    
+
 login_fail_emptyEmail()
 login_fail_emptySenha()
 login_fail_emptyEmail_emptySenha()
 login_fail_wrongEmail()
 login_fail_wrongSenha()
 login_sucess()
+redirect_home()
 
 logout()
+
 
 signup_fail_emptyNome()
 signup_fail_emptySobrenome()
