@@ -291,7 +291,26 @@ def redirect_home():
     driver.implicitly_wait(5)
     if not "Pet Ajuda | Login" in driver.title:
         raise Exception("Algo errado com a redirecionamento para o login!")
-    print "Teste redirect_home - done"    
+    print "Teste redirect_home - done"
+
+def reset_success():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/esqueciminhasenha.php")
+    driver.find_element_by_id("email").click()
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("carlos@teste.com")
+    driver.find_element_by_id("pergunta").clear()
+    driver.find_element_by_id("pergunta").send_keys("tobby")
+    driver.find_element_by_id("senha1").clear()
+    driver.find_element_by_id("senha1").send_keys("novasenha")
+    driver.find_element_by_id("senha2").clear()
+    driver.find_element_by_id("senha2").send_keys("novasenha")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Home" in driver.title:
+        raise Exception("Esqueci minha senha nao funcionando!")
+    print "Teste reset_success - done"
+
+
 
 login_fail_emptyEmail()
 login_fail_emptySenha()
@@ -299,12 +318,12 @@ login_fail_emptyEmail_emptySenha()
 login_fail_wrongEmail()
 login_fail_wrongSenha()
 login_sucess()
+
 redirect_login()
 redirect_signup()
-
 logout()
-
 redirect_home()
+
 signup_fail_emptyNome()
 signup_fail_emptySobrenome()
 signup_fail_emptyEmail()
@@ -313,6 +332,10 @@ signup_fail_emptySenha2()
 signup_fail_Senha1Senha2NotEqual()
 signup_fail_userAlreadyRegistered()
 signup_sucess()
+
+logout()
+
+reset_success()
 
 
 #driver.get("http://petajuda.herokuapp.com/cleanDB.php")

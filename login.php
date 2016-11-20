@@ -87,6 +87,8 @@
                              <br /> 
                              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                              Problemas ao lembrar da senha? Defina uma nova <a href="esqueciminhasenha.php" class="page-scroll">aqui</a>.
+                             <br /> 
+                             &emsp;
                              
                         </div>
 
