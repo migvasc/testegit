@@ -84,7 +84,10 @@
                             </div>  
                              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                              Ainda não tem uma conta? Cadastre-se <a href="cadastro.php" class="page-scroll">aqui</a>.
-                             <br /> &emsp;
+                             <br /> 
+                             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                             Problemas ao lembrar da senha? Defina uma nova <a href="esqueciminhasenha.php" class="page-scroll">aqui</a>.
+                             
                         </div>
 
                     </div>
