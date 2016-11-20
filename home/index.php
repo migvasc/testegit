@@ -14,11 +14,11 @@
      <?php 
 //        echo isset($_SESSION);
   //      die(); 
-        if(!isset($_SESSION)) { //se sessão nao existe
+        session_start();
+        if(!isset($_SESSION['user'])) { //se sessão nao existe
              //ve se pode criar uma
             if ($_GET["user"] != "") {
                 //se sim, cria
-                session_start();
                 $_SESSION['user'] = $_GET["user"];
             } else {
                 //se nao, redireciona pro login
