@@ -87,7 +87,7 @@
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Qual o nome do seu primeiro amigo animal?" id="pergunta"> <!--  required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha." -->
+                                                <input type="text" class="form-control" placeholder="Qual o nome do seu primeiro amigo animal?" id="pergunta" required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha."> <!--   -->
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>
