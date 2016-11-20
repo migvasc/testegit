@@ -1,4 +1,25 @@
 <!DOCTYPE html>
+
+<?php 
+//        echo isset($_SESSION);
+  //      die(); 
+        if(!isset($_SESSION)) { //se sessão nao existe
+             //ve se pode criar uma
+            if ($_GET["user"] != "") {
+                //se sim, cria
+                session_start();
+                $_SESSION['user'] = $_GET["user"];
+            } else {
+                //se nao, redireciona pro login
+                //die("sessao nao encontrada, é preciso login"); 
+                header("Location: ../login.php");
+                exit();
+            }
+            //die("funcionou: " . $_GET["user"]); 
+        }
+        
+    ?>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -44,26 +65,6 @@
   <body>
   <!-- container section start -->
   <section id="container" class="">
-     <?php 
-//        echo isset($_SESSION);
-  //      die(); 
-        if(!isset($_SESSION)) { //se sessão nao existe
-             //ve se pode criar uma
-            if ($_GET["user"] != "") {
-                //se sim, cria
-                session_start();
-                $_SESSION['user'] = $_GET["user"];
-            } else {
-                //se nao, redireciona pro login
-                //die("sessao nao encontrada, é preciso login"); 
-                header("Location: ../login.php");
-                exit();
-            }
-            //die("funcionou: " . $_GET["user"]); 
-        }
-        
-    ?>
-      
       <header class="header dark-bg">
             <div class="toggle-nav">
                 <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
