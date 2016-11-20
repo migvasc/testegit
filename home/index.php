@@ -55,7 +55,7 @@
                 $_SESSION['user'] = $_GET["user"];
             } else {
                 //se nao, redireciona pro login
-                die("sessao nao encontrada, é preciso login"); 
+                //die("sessao nao encontrada, é preciso login"); 
                 header("Location: ../login.php");
                 exit();
             }
