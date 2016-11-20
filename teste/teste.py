@@ -258,7 +258,7 @@ def redirect_home():
     driver.get("http://petajuda.herokuapp.com/login.php")
     driver.implicitly_wait(5)
     if not "Pet Ajuda | Home" in driver.title:
-        raise Exception("Algo errado com a sessão!")
+        raise Exception("Algo errado com a sessao!")
     print "Teste redirect_home - done"    
 
 login_fail_emptyEmail()
