@@ -11,6 +11,19 @@
     <meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
 
     <title>Pet Ajuda | Login</title>
+    
+    <?php 
+//        echo isset($_SESSION);
+  //      die(); 
+        session_start();
+        if(isset($_SESSION['user'])) { //se sessão nao existe
+             //ve se pode criar uma
+            header("Location: home/index.php");
+            exit();
+        }
+        
+    ?>
+
 
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
