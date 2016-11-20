@@ -9,6 +9,27 @@
     <link rel="shortcut icon" href="img/favicon.png">
 
     <title>Pet Ajuda | Home</title>
+    
+    
+     <?php 
+//        echo isset($_SESSION);
+  //      die(); 
+        if(!isset($_SESSION)) { //se sessão nao existe
+             //ve se pode criar uma
+            if ($_GET["user"] != "") {
+                //se sim, cria
+                session_start();
+                $_SESSION['user'] = $_GET["user"];
+            } else {
+                //se nao, redireciona pro login
+                //die("sessao nao encontrada, é preciso login"); 
+                header("Location: ../login.php");
+                exit();
+            }
+            //die("funcionou: " . $_GET["user"]); 
+        }
+        
+    ?>
 
     <!-- Bootstrap CSS -->    
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -44,25 +65,7 @@
   <body>
   <!-- container section start -->
   <section id="container" class="">
-     <?php 
-//        echo isset($_SESSION);
-  //      die(); 
-        if(!isset($_SESSION)) { //se sessão nao existe
-             //ve se pode criar uma
-            if ($_GET["user"] != "") {
-                //se sim, cria
-                session_start();
-                $_SESSION['user'] = $_GET["user"];
-            } else {
-                //se nao, redireciona pro login
-                //die("sessao nao encontrada, é preciso login"); 
-                header("Location: ../login.php");
-                exit();
-            }
-            //die("funcionou: " . $_GET["user"]); 
-        }
-        
-    ?>
+    
       
       <header class="header dark-bg">
             <div class="toggle-nav">
