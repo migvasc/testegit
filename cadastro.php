@@ -86,6 +86,10 @@
                                                 <input type="password" class="form-control" placeholder="Confirme sua senha *" id="senha2" required data-validation-required-message="Por favor, confirme sua senha inserindo-a novamente no campo acima.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Qual o nome do seu primeiro amigo animal?" id="pergunta" required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
                                         </div>
                                         <div class="clearfix"></div>
                                         <div class="col-lg-12 text-center">
