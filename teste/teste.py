@@ -248,12 +248,12 @@ def signup_fail_userAlreadyRegistered():
     print "Teste signup_fail_userAlreadyRegistered - done"
     
 
-login_sucess()
 login_fail_emptyEmail()
 login_fail_emptySenha()
 login_fail_emptyEmail_emptySenha()
 login_fail_wrongEmail()
 login_fail_wrongSenha()
+login_sucess()
 
 signup_sucess()
 signup_fail_emptyNome()
