@@ -95,6 +95,7 @@ def login_fail_wrongSenha():
     print "Teste login_fail_wrongSenha - done"
     
 def logout():
+    driver.implicitly_wait(10)
     driver.get("http://petajuda.herokuapp.com/logout.php")
     if not "Pet Ajuda | Home" in driver.title:
         raise Exception("Logout nao esta redirecionando corretamente!")
@@ -262,14 +263,14 @@ login_sucess()
 
 logout()
 
-signup_fail_emptyNome()
-signup_fail_emptySobrenome()
-signup_fail_emptyEmail()
-signup_fail_emptySenha1()
-signup_fail_emptySenha2()
-signup_fail_Senha1Senha2NotEqual()
-signup_fail_userAlreadyRegistered()
-signup_sucess()
+#signup_fail_emptyNome()
+#signup_fail_emptySobrenome()
+#signup_fail_emptyEmail()
+#signup_fail_emptySenha1()
+#signup_fail_emptySenha2()
+#signup_fail_Senha1Senha2NotEqual()
+#signup_fail_userAlreadyRegistered()
+#signup_sucess()
 
 
 #driver.get("http://petajuda.herokuapp.com/cleanDB.php")
