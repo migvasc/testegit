@@ -16,8 +16,7 @@
 //        echo isset($_SESSION);
   //      die(); 
         session_start();
-        if(isset($_SESSION['user'])) { //se sessão nao existe
-             //ve se pode criar uma
+        if(isset($_SESSION['user'])) {
             header("Location: home/index.php");
             exit();
         }
