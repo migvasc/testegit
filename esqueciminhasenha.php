@@ -108,7 +108,7 @@
 
     <!-- Contact Form JavaScript -->
     <script src="assets/js/jqBootstrapValidation.js"></script>
-    <script src="assets/js/cadastro.js"></script>
+    <script src="assets/js/esqueci.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="assets/js/agency.min.js"></script>
