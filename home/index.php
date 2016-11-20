@@ -48,7 +48,6 @@
 //        echo isset($_SESSION);
   //      die(); 
         if(!isset($_SESSION)) { //se sessão nao existe
-        
              //ve se pode criar uma
             if ($_GET["user"] != "") {
                 //se sim, cria
