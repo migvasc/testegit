@@ -46,7 +46,7 @@ $(function() {
                             $('#success > .alert-success')
                                 .append('</div>');
                             //alert("Bem-vindo(a), "+resposta);
-                            window.location.assign("home/index.php");
+                            window.location.assign("home/index.php?user="+resposta);
                         }
                         else{
                             $('#success').html("<div class='alert alert-danger'>");
