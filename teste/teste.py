@@ -94,7 +94,12 @@ def login_fail_wrongSenha():
         raise Exception("Login com senha errada passando!")
     print "Teste login_fail_wrongSenha - done"
     
-    
+def logout():
+    driver.get("http://petajuda.herokuapp.com/logout.php")
+    if not "Pet Ajuda | Home" in driver.title:
+        raise Exception("Logout nao esta redirecionando corretamente!")
+    print "Teste logout - done"
+
 def signup_sucess():
     driver.implicitly_wait(10)
     driver.get("http://petajuda.herokuapp.com/cadastro.php")
@@ -254,6 +259,8 @@ login_fail_emptyEmail_emptySenha()
 login_fail_wrongEmail()
 login_fail_wrongSenha()
 login_sucess()
+
+logout()
 
 signup_sucess()
 signup_fail_emptyNome()
