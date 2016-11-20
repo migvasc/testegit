@@ -14,6 +14,7 @@
     <?php 
 //        echo isset($_SESSION);
   //      die(); 
+        session_name("testando");
         session_start();
         if(isset($_SESSION['user'])) {
             header("Location: home/index.php");

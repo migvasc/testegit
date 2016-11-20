@@ -14,7 +14,9 @@
      <?php 
 //        echo isset($_SESSION);
   //      die(); 
+        session_name("testando");
         session_start();
+        
         if(!isset($_SESSION['user'])) { //se sessão nao existe
              //ve se pode criar uma
             if ($_GET["user"] != "") {
