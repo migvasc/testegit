@@ -261,6 +261,7 @@ def redirect_home():
         raise Exception("Algo errado com a sessão!")
     print "Teste redirect_home - done"    
 '''
+
 login_fail_emptyEmail()
 login_fail_emptySenha()
 login_fail_emptyEmail_emptySenha()
