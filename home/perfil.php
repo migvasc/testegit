@@ -380,11 +380,12 @@
                     <div class="col-lg-6 col-md-8 col-sm-10 col-xs-10 col-lg-offset-3 col-md-offset-2 col-sm-offset-1 col-xs-offset-1">
                         <div class="panel panel-default" id="painel-login">
                             <div class="panel-body">
-                                <form name="esqueciminhasenha" id="esqueciForm" novalidate>
+                                <form name="perfil" id="perfilForm" novalidate>
                                     <div class="row">
-                                        &emsp;Preencha as informações abaixo solicitadas criar uma nova senha:
+                                        &emsp;Deixe sempre suas informações atualizadas! :)
                                         <br />&emsp;<br />&emsp;
                                         <div class="col-md-12">
+                                            
                                             <div class="form-group">
                                                 <input type="email" class="form-control" placeholder="Insira seu e-mail *" id="email" required data-validation-required-message="Por favor, insira seu e-mail.">
                                                 <p class="help-block text-danger"></p>
