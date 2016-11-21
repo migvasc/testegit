@@ -408,27 +408,15 @@
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Insira seu sobrenome *" id="sobrenome" required data-validation-required-message="Por favor, insira seu sobrenome.">
+                                                <input type="text" class="form-control" placeholder="Insira seu sobrenome *" id="sobrenome" value="<?=$sobrenome ?>" required data-validation-required-message="Por favor, insira seu sobrenome.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="email" class="form-control" placeholder="Insira seu e-mail *" id="email" required data-validation-required-message="Por favor, insira seu e-mail.">
+                                                <input type="tel" class="form-control" placeholder="Insira seu telefone" id="phone" value="<?=$telefone ?>">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
-                                                <input type="tel" class="form-control" placeholder="Insira seu telefone" id="phone">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control" placeholder="Insira sua senha *" id="senha1" required data-validation-required-message="Por favor, insira uma senha.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control" placeholder="Confirme sua senha *" id="senha2" required data-validation-required-message="Por favor, confirme sua senha inserindo-a novamente no campo acima.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Qual o nome do seu primeiro amigo animal?" id="pergunta" required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha."> <!--   -->
+                                                <input type="text" class="form-control" placeholder="Qual o nome do seu primeiro amigo animal?" id="pergunta" value="<?=$resposta ?>" required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha."> <!--   -->
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div id="success"></div>
