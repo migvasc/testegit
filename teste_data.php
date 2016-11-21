@@ -2,7 +2,7 @@
 
 require("conn.php");
 
-$result = pg_query($conn, "select row_to_json(endereco_logradouro, endereco_numero, endereco_bairro,endereco_cidade) from usuario;");
+$result = pg_query($conn, "select endereco_logradouro, endereco_numero, endereco_bairro,endereco_cidade from usuario;");
 
 
 
