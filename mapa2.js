@@ -1,10 +1,10 @@
-var geocoder;
+var geocoder = new google.maps.Geocoder();
 var map;
 var marker;
 $("head").append("<script type='text/javascript' src='https://raw.github.com/douglascrockford/JSON-js/master/json2.js'></script>");
 
 
-function initialize() {
+function inicializarMapa() {
     var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
     var options = {
         zoom: 5,
@@ -14,13 +14,12 @@ function initialize() {
  
     map = new google.maps.Map(document.getElementById("mapa"), options);
  
-    geocoder = new google.maps.Geocoder();
+    //geocoder = new google.maps.Geocoder();
 }
  
 function carregarNoMapa(pontos) {
     
     for(var ponto in pontos){
-        console.log("Ponto na funcao carregarNoMapa:" +pontos[0]);
         geocoder.geocode({ 'address': pontos[ponto]['endereco_logradouro'] +', '+pontos[ponto]['endereco_numero']+', '+ pontos[ponto]['endereco_cidade']+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 if (results[0]) {
@@ -61,10 +60,10 @@ function carregarNoMapa(pontos) {
        });*/
 }
 
-function run(pontos){
-    initialize(); 	
-    carregarNoMapa(pontos);
-}
+//function run(pontos){
+    //initialize(); 	
+    //carregarNoMapa(pontos);
+//}
 
 
 function reqListener () {
@@ -85,7 +84,8 @@ oReq.onload = function() {
     
     console.log(array[0]);
     
-    run(array);
+    inicializarMapa();
+    carregarNoMapa(array);
 };
     
     
