@@ -12,9 +12,8 @@ function inicializarMapa() {
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
  
-    map = new google.maps.Map(document.getElementById("mapa"), options);
+    map = new google.maps.Map(document.getElementById("map"), options);
  
-    //geocoder = new google.maps.Geocoder();
 }
  
 function carregarNoMapa(pontos) {
@@ -29,7 +28,7 @@ function carregarNoMapa(pontos) {
     	                position: new google.maps.LatLng(latitude, longitude),
     	                title: "Meu ponto personalizado! :-D",
     	                map: map,
-        		        icon: 'marcador.png'
+        		        icon: '../images/marcador.png'
     	            });
                 }
             }
@@ -89,7 +88,7 @@ oReq.onload = function() {
 };
     
     
-oReq.open("get", "teste_data.php", true);
+oReq.open("get", "../post/get_mapPoints.php", true);
 //                               ^ Don't block the rest of the execution.
 //                                 Don't wait until the request finishes to 
 //                                 continue.

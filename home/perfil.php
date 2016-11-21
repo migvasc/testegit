@@ -19,9 +19,9 @@
         
         if(!isset($_SESSION['user'])) { //se sessão nao existe
              //ve se pode criar uma
-            if ($_GET["user"] != "") {
+            if ($_GET["email"] != "") {
                 //se sim, cria
-                $_SESSION['user'] = $_GET["user"];
+                $_SESSION['user'] = $_GET["email"];
             } else {
                 //se nao, redireciona pro login
                 //die("sessao nao encontrada, é preciso login"); 
@@ -31,17 +31,14 @@
             //die("funcionou: " . $_GET["user"]); 
         }
         
-        
         require("../conn.php");
-        $result = pg_query($conn, "select * from usuario where nome = '". htmlentities($_SESSION['user'], ENT_QUOTES, "UTF-8")."'");
+        $result = pg_query($conn, "select * from usuario where email = '". htmlentities($_SESSION['user'], ENT_QUOTES, "UTF-8")."'");
         $var1 = pg_fetch_row($result);
         $email = $var1[0];
         $nome = $var1[2];
         $sobrenome = $var1[3];
         $telefone = $var1[4];
         $resposta = $var1[5];
-        
-
         
     ?>
 
