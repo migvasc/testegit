@@ -237,7 +237,7 @@
                         <ul class="dropdown-menu extended logout">
                             <div class="log-arrow-up"></div>
                             <li class="eborder-top">
-                                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                                <a href="perfil.php"><i class="icon_profile"></i>Meu Perfil</a>
                             </li>
                             <li>
                                 <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
@@ -313,42 +313,43 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">            
+            
               <!--overview start-->
-			  
+			<!--   
             <div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 					<div class="info-box blue-bg">
 						<i class="fa fa-paw"></i>
 						<div class="count">293</div>
 						<div class="title">Pets resgatados</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
+					</div>
+				</div>
 				
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 					<div class="info-box brown-bg">
 						<i class="fa fa-shopping-cart"></i>
 						<div class="count">13</div>
 						<div class="title">ONGs ativas</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->	
+					</div>
+				</div>
 				
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 					<div class="info-box dark-bg">
 						<i class="fa fa-thumbs-o-up"></i>
 						<div class="count">431</div>
 						<div class="title">Anfitriões cadastrados</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
+					</div>
+				</div>
 				
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 					<div class="info-box green-bg">
 						<i class="fa fa-cubes"></i>
 						<div class="count">158</div>
 						<div class="title">Pets adotados</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
+					</div>
+				</div>
 				
-			</div><!--/.row-->
+			</div>
 		
 			
            <div class="row">
@@ -369,42 +370,7 @@
 	
 					</div>
 				</div>
-              <div class="col-md-3">
-              <!-- List starts -->
-				<ul class="today-datas">
-                <!-- List #1 -->
-				<li>
-                  <!-- Graph -->
-                  <div><span id="todayspark1" class="spark"></span></div>
-                  <!-- Text -->
-                  <div class="datas-text">11,500 visitors/day</div>
-                </li>
-                <li>
-                  <div><span id="todayspark2" class="spark"></span></div>
-                  <div class="datas-text">15,000 Pageviews</div>
-                </li>
-                <li>
-                  <div><span id="todayspark3" class="spark"></span></div>
-                  <div class="datas-text">30.55% Bounce Rate</div>
-                </li>
-                <li>
-                  <div><span id="todayspark4" class="spark"></span></div>
-                  <div class="datas-text">$16,00 Revenue/Day</div>
-                </li> 
-                <li>
-                  <div><span id="todayspark5" class="spark"></span></div>
-                  <div class="datas-text">12,000000 visitors every Month</div>
-                </li>                                                                                                              
-              </ul>
-              </div>
               
-			 
-           </div>  
-            
-		  
-		  <!-- Today status end -->
-			
-
                     
                    
                 <!-- statics end -->
