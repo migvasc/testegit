@@ -14,7 +14,7 @@ if(pg_num_rows($result)){
     // $decoded_array = json_decode($resultArray[]0['rua']);
     
     // echo json_encode($decoded_array, JSON_PRETTY_PRINT);
-    echo response()->json([$result_array[0],$result_array[1], $result_array[2],$result_array[3]]);
+    echo [$result_array[0],$result_array[1], $result_array[2],$result_array[3]];
     
 }
 //	echo (pg_fetch_row($result)[0]);
