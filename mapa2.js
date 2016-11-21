@@ -1,6 +1,8 @@
 var geocoder;
 var map;
 var marker;
+$("head").append("<script type='text/javascript' src='https://raw.github.com/douglascrockford/JSON-js/master/json2.js'></script>");
+
 
 function initialize() {
     var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
@@ -65,9 +67,10 @@ function reqListener () {
         //This is where you handle what to do with the response.
         //The actual data is found on this.responseText
         
-        var arr = $.map(this.responseText, function(el) { return el });
-
-        alert(arr);
+        var obj = JSON.parse(this.responseText);
+    
+        for(var x in obj)
+            alert(x);
         
         run(this.responseText);
         
