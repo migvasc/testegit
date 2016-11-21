@@ -10,7 +10,7 @@ if(pg_num_rows($result)){
 //	echo (pg_fetch_row($result)[0]);
 //	$myfile = fopen("newfile.json", "w") or die("Unable to open file!"); 
 //fwrite($myfile,$result);
-    echo (pg_fetch_row($result));
+    echo (pg_fetch_row($result)[0]);
     //teste
 }
 else{
