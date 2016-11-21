@@ -63,9 +63,9 @@ function reqListener () {
         
         //This is where you handle what to do with the response.
         //The actual data is found on this.responseText
-        
-        run(this.responseText);
         alert(this.responseText);  
+        //run(this.responseText);
+        
     };
     oReq.open("get", "teste_data.php", true);
     //                               ^ Don't block the rest of the execution.
