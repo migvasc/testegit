@@ -23,8 +23,9 @@ function initialize() {
 
 	//para cada ponto no json, carrega as coordenadas
         $.each(pontos, function(index, ponto) {
+            console.log("Ponto na funcao carregarNoMapa:" +ponto);
     
-        geocoder.geocode({ 'address': ponto.rua +', '+ponto.num+', '+ ponto.cidade+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
+        geocoder.geocode({ 'address': ponto['endereco_logradouro'] +', '+ponto['endereco_numero']+', '+ ponto['endereco_cidade']+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
             
             if (status == google.maps.GeocoderStatus.OK) {
                 if (results[0]) {
