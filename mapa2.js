@@ -64,7 +64,7 @@ function reqListener () {
         
         //This is where you handle what to do with the response.
         //The actual data is found on this.responseText
-        alert(this.responseText); 
+        alert(this.responseText[0].rua); 
         
         run(this.responseText);
         
