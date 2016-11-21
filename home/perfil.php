@@ -8,7 +8,7 @@
     <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Pet Ajuda | Home</title>
+    <title>Pet Ajuda | Perfil</title>
     
     
      <?php 
@@ -40,9 +40,6 @@
         $sobrenome = $var1[3];
         $telefone = $var1[4];
         $resposta = $var1[5];
-        //var_dump($var1);
-        
-        //die("user: " .$_SESSION['user']. " --> ". $var1);// .", ".$var2 .", ".$var3 .", ".$var4 .", ".$var5 .", ");
         
 
         
