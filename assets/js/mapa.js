@@ -29,7 +29,7 @@ function carregarNoMapa(pontos) {
     	                position: new google.maps.LatLng(latitude, longitude),
     	                title: "Meu ponto personalizado! :-D",
     	                map: map,
-        		        icon: '../images/marcador.png'
+        		        icon: '../assets/images/marcador.png'
     	            });
                 }
             }
