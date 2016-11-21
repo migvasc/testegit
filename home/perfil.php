@@ -33,7 +33,7 @@
         
         
         require("../conn.php");
-        $result = pg_query($conn, "select * from usuario where nome = '". htmlentities($_SESSION['user'], ENT_QUOTES, "UTF-8")."'");
+        $result = pg_query($conn, "select nome, sobrenome, telefone, resposta from usuario where nome = '". htmlentities($_SESSION['user'], ENT_QUOTES, "UTF-8")."'");
         $var1 = pg_fetch_row($result)[0];
         $var2 = pg_fetch_row($result)[1];
         $var3 = pg_fetch_row($result)[2];
