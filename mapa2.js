@@ -69,12 +69,11 @@ function reqListener () {
         
         alert(this.responseText);
         
-        var obj = JSON.parse(this.responseText);
-    
-        for(var x in obj)
-            alert(obj[x]);
+        var array = JSON.parse(this.responseText);
         
-        run(this.responseText);
+        console.log(array[0]);
+        
+        run(array);
         
         
     };
