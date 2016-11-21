@@ -75,7 +75,7 @@
             </div>
 
             <!--logo start-->
-            <a href="index.html" class="logo"><img src="../assets/images/logo_extenso.png" alt="Pet Ajuda"></a>
+            <a href="index.php" class="logo"><img src="../assets/images/logo_extenso.png" alt="Pet Ajuda"></a>
             <!--logo end-->
 
             <div class="nav search-row" id="top_menu">
@@ -263,13 +263,13 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu">                
                   <li class="active">
-                      <a class="" href="index.html">
+                      <a class="" href="index.php">
                           <i class="icon_house_alt"></i>
                           <span>Home</span>
                       </a>
                   </li>
                   <li class="">
-                      <a class="" href="index.html">
+                      <a class="" href="index.php">
                           <i class="fa fa-paw"></i>
                           <span>Resgatei um Pet!</span>
                       </a>
@@ -288,13 +288,13 @@
                   </li>
                   -->       
                   <li>
-                      <a class="" href="index.html">
+                      <a class="" href="index.php">
                           <i class="fa fa-bank"></i>
                           <span>Encontre ONGs</span>
                       </a>
                   </li>
                   <li>                     
-                      <a class="" href="index.html">
+                      <a class="" href="index.php">
                           <i class="fa fa-user"></i>
                           <span>Encontre Anfitriões</span>
                       </a>
@@ -358,9 +358,9 @@
 						<div class="panel-heading">
 							<h2><i class="fa fa-map-marker red"></i><strong>Countries</strong></h2>
 							<div class="panel-actions">
-								<a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
-								<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
-								<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+								<a href="index.php#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+								<a href="index.php#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="index.php#" class="btn-close"><i class="fa fa-times"></i></a>
 							</div>	
 						</div>
 						<div class="panel-body-map">

@@ -89,7 +89,7 @@
             </div>
 
             <!--logo start-->
-            <a href="index.html" class="logo"><img src="../assets/images/logo_extenso.png" alt="Pet Ajuda"></a>
+            <a href="index.php" class="logo"><img src="../assets/images/logo_extenso.png" alt="Pet Ajuda"></a>
             <!--logo end-->
 
             <div class="nav search-row" id="top_menu">
@@ -404,18 +404,22 @@
                                         <div class="clearfix"></div>
                                         <div class="col-lg-12 text-center">
                                             <div class="form-group">
+                                                <p>Nome</p>
                                                 <input type="text" class="form-control" placeholder="Insira seu nome *" id="nome" value="<?=$nome ?>" required data-validation-required-message="Por favor, insira seu nome.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
+                                                <p>Sobrenome</p>
                                                 <input type="text" class="form-control" placeholder="Insira seu sobrenome *" id="sobrenome" value="<?=$sobrenome ?>" required data-validation-required-message="Por favor, insira seu sobrenome.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
+                                                <p>Telefone</p>
                                                 <input type="tel" class="form-control" placeholder="Insira seu telefone" id="phone" value="<?=$telefone ?>">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
+                                                <p>Qual o nome do seu primeiro amigo animal?</p>
                                                 <input type="text" class="form-control" placeholder="Qual o nome do seu primeiro amigo animal?" id="pergunta" value="<?=$resposta ?>" required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha."> <!--   -->
                                                 <p class="help-block text-danger"></p>
                                             </div>
@@ -423,9 +427,7 @@
                                             <button type="submit" class="btn btn-primary full-width">Atualizar!</button>
                                     </div>
                                 </form>
-                            </div>  
-                            <br />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                            Ja é cadastrado? Entre <a href="login.php" class="page-scroll">aqui</a>.
+                            </div> 
                              <p></p>
                         </div>
 
