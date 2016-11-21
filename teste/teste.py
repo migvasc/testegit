@@ -352,7 +352,7 @@ signup_fail_userAlreadyRegistered()
 logout()
 
 reset_fail_wrongAnswer()
-reset_success()
+# reset_success()
 
 
 #driver.get("http://petajuda.herokuapp.com/cleanDB.php")
