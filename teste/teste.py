@@ -348,7 +348,7 @@ signup_fail_emptySenha1()
 signup_fail_emptySenha2()
 signup_fail_Senha1Senha2NotEqual()
 signup_fail_userAlreadyRegistered()
-signup_sucess()
+#signup_sucess()
 
 logout()
 
