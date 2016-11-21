@@ -20,7 +20,7 @@ function initialize() {
 function carregarNoMapa(pontos) {
     
     for(var ponto in pontos){
-        console.log("Ponto na funcao carregarNoMapa:" +pontos[ponto]);
+        console.log("Ponto na funcao carregarNoMapa:" +pontos[0]);
         geocoder.geocode({ 'address': pontos[ponto]['endereco_logradouro'] +', '+pontos[ponto]['endereco_numero']+', '+ pontos[ponto]['endereco_cidade']+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 if (results[0]) {
