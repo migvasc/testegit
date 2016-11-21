@@ -10,6 +10,7 @@ if(pg_num_rows($result)){
 //	$myfile = fopen("newfile.json", "w") or die("Unable to open file!"); 
 //fwrite($myfile,$result);
     echo json_encode(pg_fetch_row($result)[0]);
+    //teste
 }
 else
 	echo null;
