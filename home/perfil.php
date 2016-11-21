@@ -35,6 +35,7 @@
         require("../conn.php");
         $result = pg_query($conn, "select * from usuario where nome = '". htmlentities($_SESSION['user'], ENT_QUOTES, "UTF-8")."'");
         $var1 = pg_fetch_row($result);
+        $email = $var1[0];
         $nome = $var1[2];
         $sobrenome = $var1[3];
         $telefone = $var1[4];
@@ -424,6 +425,8 @@
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div id="success"></div>
+                                            
+                                            <input type="hidden" id="email" value="<?=$email ?>">
                                             <button type="submit" class="btn btn-primary full-width">Atualizar!</button>
                                     </div>
                                 </form>
