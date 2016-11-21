@@ -2,18 +2,19 @@
 
 require("conn.php");
 
-$result = pg_query($conn, "select row_to_json(usuario_teste) from usuario_teste;");
+$result = pg_query($conn, "select row_to_json(endereco_logradouro, endereco_numero, endereco_bairro,endereco_cidade) from usuario;");
 
 
 
-echo ("TESTE");
+// echo ("TESTE");
 if(pg_num_rows($result)){
     
     $resultArray = pg_fetch_all($result);
     
-    $decoded_array = json_decode($resultArray[]0['rua']);
+    // $decoded_array = json_decode($resultArray[]0['rua']);
     
-    echo json_encode($decoded_array, JSON_PRETTY_PRINT);
+    // echo json_encode($decoded_array, JSON_PRETTY_PRINT);
+    echo response()->json([$result_array[0]['endereco_logradouro'],$result_array[0]['endereco_numero'], $result_array[0]['endereco_bairro'],$result_array[0]['endereco_cidade']]);
     
 }
 //	echo (pg_fetch_row($result)[0]);
