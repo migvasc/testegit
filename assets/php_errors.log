@@ -24,3 +24,29 @@
 [19-Nov-2016 22:37:57 UTC] PHP Stack trace:
 [19-Nov-2016 22:37:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/assets/post/check_cadastro.php:0
 [19-Nov-2016 22:37:57 UTC] PHP   2. pg_affected_rows() /home/ubuntu/workspace/assets/post/check_cadastro.php:6
+[21-Nov-2016 00:20:51 UTC] PHP Warning:  pg_connect(): Unable to connect to PostgreSQL server: could not translate host name "sslmode=require" to address: Name or service not known in /home/ubuntu/workspace/conn.php on line 7
+[21-Nov-2016 00:20:51 UTC] PHP Stack trace:
+[21-Nov-2016 00:20:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/assets/post/generate_json.php:0
+[21-Nov-2016 00:20:51 UTC] PHP   2. require() /home/ubuntu/workspace/assets/post/generate_json.php:3
+[21-Nov-2016 00:20:51 UTC] PHP   3. pg_connect() /home/ubuntu/workspace/conn.php:7
+[21-Nov-2016 00:20:51 UTC] PHP Warning:  pg_query() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/assets/post/generate_json.php on line 4
+[21-Nov-2016 00:20:51 UTC] PHP Stack trace:
+[21-Nov-2016 00:20:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/assets/post/generate_json.php:0
+[21-Nov-2016 00:20:51 UTC] PHP   2. pg_query() /home/ubuntu/workspace/assets/post/generate_json.php:4
+[21-Nov-2016 00:20:51 UTC] PHP Warning:  pg_num_rows() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/assets/post/generate_json.php on line 6
+[21-Nov-2016 00:20:51 UTC] PHP Stack trace:
+[21-Nov-2016 00:20:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/assets/post/generate_json.php:0
+[21-Nov-2016 00:20:51 UTC] PHP   2. pg_num_rows() /home/ubuntu/workspace/assets/post/generate_json.php:6
+[21-Nov-2016 00:23:19 UTC] PHP Warning:  pg_connect(): Unable to connect to PostgreSQL server: could not translate host name "sslmode=require" to address: Name or service not known in /home/ubuntu/workspace/conn.php on line 7
+[21-Nov-2016 00:23:19 UTC] PHP Stack trace:
+[21-Nov-2016 00:23:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/assets/post/generate_json.php:0
+[21-Nov-2016 00:23:19 UTC] PHP   2. require() /home/ubuntu/workspace/assets/post/generate_json.php:3
+[21-Nov-2016 00:23:19 UTC] PHP   3. pg_connect() /home/ubuntu/workspace/conn.php:7
+[21-Nov-2016 00:23:19 UTC] PHP Warning:  pg_query() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/assets/post/generate_json.php on line 5
+[21-Nov-2016 00:23:19 UTC] PHP Stack trace:
+[21-Nov-2016 00:23:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/assets/post/generate_json.php:0
+[21-Nov-2016 00:23:19 UTC] PHP   2. pg_query() /home/ubuntu/workspace/assets/post/generate_json.php:5
+[21-Nov-2016 00:23:19 UTC] PHP Warning:  pg_num_rows() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/assets/post/generate_json.php on line 8
+[21-Nov-2016 00:23:19 UTC] PHP Stack trace:
+[21-Nov-2016 00:23:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/assets/post/generate_json.php:0
+[21-Nov-2016 00:23:19 UTC] PHP   2. pg_num_rows() /home/ubuntu/workspace/assets/post/generate_json.php:8
