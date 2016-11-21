@@ -65,9 +65,9 @@ function reqListener () {
         //This is where you handle what to do with the response.
         //The actual data is found on this.responseText
         
-        var arr = Object.keys(this.responseText).map(function(k) { return this.responseText[k] });
+        var arr = $.map(this.responseText, function(el) { return el });
 
-        alert(arr); 
+        alert(arr);
         
         run(this.responseText);
         
