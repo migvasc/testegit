@@ -6,12 +6,12 @@ $result = pg_query($conn, "select row_to_json(usuario_teste) from usuario_teste;
 
 
 
-
+echo ("TESTE");
 if(pg_num_rows($result)){
     
     $resultArray = pg_fetch_all($result);
     
-    $decoded_array = json_decode($resultArray[][]);
+    $decoded_array = json_decode($resultArray[]0['rua']);
     
     echo json_encode($decoded_array, JSON_PRETTY_PRINT);
     
