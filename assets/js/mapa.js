@@ -5,6 +5,7 @@ $("head").append("<script type='text/javascript' src='https://raw.github.com/dou
 
 
 function inicializarMapa() {
+    console.log("Olar");
     var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
     var options = {
         zoom: 5,
@@ -81,7 +82,7 @@ oReq.onload = function() {
     
     var array = JSON.parse(this.responseText);
     
-    console.log(array[0]);
+    
     
     inicializarMapa();
     carregarNoMapa(array);
