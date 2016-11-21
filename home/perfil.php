@@ -375,7 +375,7 @@
                 <!-- statics end -->
                 
               <div class="container-fluid full-height" id="fundo-login">
-            <div class="container full-height">
+                <div class="container full-height">
                 <div class="row">
                     <div class="col-lg-6 col-md-8 col-sm-10 col-xs-10 col-lg-offset-3 col-md-offset-2 col-sm-offset-1 col-xs-offset-1 fade">
                         <div class="panel panel-default" id="painel-login">
@@ -430,6 +430,27 @@
   <!-- container section start -->
 
     <!-- javascripts -->
+    
+    <script src="assets/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="assets/js/jqBootstrapValidation.js"></script>
+    <script src="assets/js/esqueci.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="assets/js/agency.min.js"></script>
+    
+    
+    
+    
+    
+    
     <script src="js/jquery.js"></script>
 	<script src="js/jquery-ui-1.10.4.min.js"></script>
     <script src="js/jquery-1.8.3.min.js"></script>
