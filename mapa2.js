@@ -21,8 +21,9 @@ function initialize() {
 
 	//para cada ponto no json, carrega as coordenadas
         $.each(pontos, function(index, ponto) {
- 
+        alert(ponto.rua);  
         geocoder.geocode({ 'address': ponto.rua +', '+ponto.num+', '+ ponto.cidade+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
+            
             if (status == google.maps.GeocoderStatus.OK) {
                 if (results[0]) {
                     var latitude = results[0].geometry.location.lat();
