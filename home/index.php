@@ -412,7 +412,7 @@
   <!-- container section start -->
 
     <!-- javascripts -->
-    <script src="../js/mapa.js"></script>
+    <script src="../assets/js/mapa.js"></script>
     <script src="js/jquery.js"></script>
 	<script src="js/jquery-ui-1.10.4.min.js"></script>
     <script src="js/jquery-1.8.3.min.js"></script>
