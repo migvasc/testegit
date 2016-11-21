@@ -371,9 +371,58 @@
 					</div>
 				</div>
               
-                    
                    
                 <!-- statics end -->
+                
+              <div class="container-fluid full-height" id="fundo-login">
+            <div class="container full-height">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-10 col-xs-10 col-lg-offset-3 col-md-offset-2 col-sm-offset-1 col-xs-offset-1 fade">
+                        <div class="panel panel-default" id="painel-login">
+                            <div class="panel-body">
+                                <form name="esqueciminhasenha" id="esqueciForm" novalidate>
+                                    <div class="row">
+                                        &emsp;Preencha as informações abaixo solicitadas criar uma nova senha:
+                                        <br />&emsp;<br />&emsp;
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" placeholder="Insira seu e-mail *" id="email" required data-validation-required-message="Por favor, insira seu e-mail.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Qual o nome do seu primeiro amigo animal?" id="pergunta" required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha."> <!--   -->
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" placeholder="Insira sua nova senha *" id="senha1" required data-validation-required-message="Por favor, insira uma senha.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" placeholder="Confirme sua nova senha *" id="senha2" required data-validation-required-message="Por favor, confirme sua senha inserindo-a novamente no campo acima.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-lg-12 text-center">
+
+                                            <div id="success"></div>
+                                            <button type="submit" class="btn btn-primary full-width">Definir nova Senha</button>
+                                    </div>
+                                </form>
+                            </div>  
+                            <br />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                            Ja é cadastrado? Entre <a href="login.php" class="page-scroll">aqui</a>.
+                             <p></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+                
+                
+                
           </section>
       </section>
       <!--main content end-->
