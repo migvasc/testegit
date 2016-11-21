@@ -48,7 +48,7 @@ $(function() {
                                 .append("<strong>Usuário cadastrado com sucesso. </strong>");
                             $('#success > .alert-success')
                                 .append('</div>');
-                            //alert("Bem-vindo(a), "+resposta);
+                            alert("Bem-vindo(a), "+resposta);
                             window.location.assign("home/index.php?email="+resposta);
                         }
                         else{
