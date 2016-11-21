@@ -492,6 +492,7 @@
 	<script src="js/charts.js"></script>
 	<script src="js/jquery.slimscroll.min.js"></script>
 	
+	<script src="assets/js/jqBootstrapValidation.js"></script>
 	<script src="assets/js/perfil.js"></script>
   <script>
 
