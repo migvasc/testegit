@@ -21,7 +21,7 @@ function initialize() {
 
 	//para cada ponto no json, carrega as coordenadas
         $.each(pontos, function(index, ponto) {
-        alert(ponto.rua);  
+    
         geocoder.geocode({ 'address': ponto.rua +', '+ponto.num+', '+ ponto.cidade+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
             
             if (status == google.maps.GeocoderStatus.OK) {
@@ -64,7 +64,7 @@ function reqListener () {
         
         //This is where you handle what to do with the response.
         //The actual data is found on this.responseText
-        //alert(this.responseText);  
+        alert(this.responseText.rua);  
         run(this.responseText);
         
     };
