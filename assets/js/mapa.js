@@ -88,7 +88,7 @@ oReq.onload = function() {
 };
     
     
-oReq.open("get", "../post/get_mapPoints.php", true);
+oReq.open("get", "../assets/post/get_mapPoints.php", true);
 //                               ^ Don't block the rest of the execution.
 //                                 Don't wait until the request finishes to 
 //                                 continue.
