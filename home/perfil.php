@@ -386,28 +386,39 @@
                                         <br />&emsp;<br />&emsp;
                                         <div class="col-md-12">
                                             
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-lg-12 text-center">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Insira seu nome *" id="nome" required data-validation-required-message="Por favor, insira seu nome.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Insira seu sobrenome *" id="sobrenome" required data-validation-required-message="Por favor, insira seu sobrenome.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
                                             <div class="form-group">
                                                 <input type="email" class="form-control" placeholder="Insira seu e-mail *" id="email" required data-validation-required-message="Por favor, insira seu e-mail.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="tel" class="form-control" placeholder="Insira seu telefone" id="phone">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" placeholder="Insira sua senha *" id="senha1" required data-validation-required-message="Por favor, insira uma senha.">
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" placeholder="Confirme sua senha *" id="senha2" required data-validation-required-message="Por favor, confirme sua senha inserindo-a novamente no campo acima.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-control" placeholder="Qual o nome do seu primeiro amigo animal?" id="pergunta" required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha."> <!--   -->
                                                 <p class="help-block text-danger"></p>
                                             </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control" placeholder="Insira sua nova senha *" id="senha1" required data-validation-required-message="Por favor, insira uma senha.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control" placeholder="Confirme sua nova senha *" id="senha2" required data-validation-required-message="Por favor, confirme sua senha inserindo-a novamente no campo acima.">
-                                                <p class="help-block text-danger"></p>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="col-lg-12 text-center">
-
                                             <div id="success"></div>
-                                            <button type="submit" class="btn btn-primary full-width">Definir nova Senha</button>
+                                            <button type="submit" class="btn btn-primary full-width">Atualizar!</button>
                                     </div>
                                 </form>
                             </div>  
