@@ -30,7 +30,7 @@ $(function () {
                         $('#success > .alert-success')
                             .append("</div>");
                     //    alert("Bem-vindo(a), "+resposta);
-                        window.location.assign("home/index.php?user="+resposta);
+                        window.location.assign("home/index.php?email="+resposta);
                     }
                         
                     else{
