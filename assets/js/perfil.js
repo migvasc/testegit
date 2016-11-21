@@ -17,7 +17,7 @@ $(function() {
             var resposta = $("input#pergunta").val();
             
                 $.ajax({
-                    url: "assets/post/check_perfil.php",
+                    url: "../assets/post/check_perfil.php",
                     type: "POST",
                     data: {
                         email: email,
