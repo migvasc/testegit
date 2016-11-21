@@ -20,7 +20,8 @@ function initialize() {
 }
  
     function carregarNoMapa(pontos) {
-
+    
+    console.log("Pontos na funcao carregarNoMapa:" +pontos);
 	//para cada ponto no json, carrega as coordenadas
         $.each(pontos, function(index, ponto) {
             console.log("Ponto na funcao carregarNoMapa:" +ponto);
