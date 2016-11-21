@@ -36,7 +36,7 @@ $(function() {
                                 .append("<strong>Dados alterados com sucesso. </strong>");
                             $('#success > .alert-success')
                                 .append('</div>');
-                            window.location.assign("home/index.php");
+                            window.location.assign("../../home/index.php");
                         }
                         else{
                             $('#success').html("<div class='alert alert-danger'>");
