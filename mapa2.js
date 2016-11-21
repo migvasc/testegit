@@ -21,7 +21,7 @@ function carregarNoMapa(pontos) {
     
     for(var ponto in pontos){
         console.log("Ponto na funcao carregarNoMapa:" +pontos[ponto]);
-        geocoder.geocode({ 'address': ponto['endereco_logradouro'] +', '+ponto['endereco_numero']+', '+ ponto['endereco_cidade']+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
+        geocoder.geocode({ 'address': pontos[ponto]['endereco_logradouro'] +', '+pontos[ponto]['endereco_numero']+', '+ pontos[ponto]['endereco_cidade']+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 if (results[0]) {
                     var latitude = results[0].geometry.location.lat();
