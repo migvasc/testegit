@@ -32,7 +32,11 @@
         }
         
         
+        require("../../conn.php");
+        $result = pg_query($conn, "select nome from usuario where nome = '". htmlentities($_SESSION['user'], ENT_QUOTES, "UTF-8")."'");
+        die(pg_fetch_row($result)[0]);
         
+
         
     ?>
 
