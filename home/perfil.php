@@ -35,8 +35,13 @@
         require("../conn.php");
         $result = pg_query($conn, "select * from usuario where nome = '". htmlentities($_SESSION['user'], ENT_QUOTES, "UTF-8")."'");
         $var1 = pg_fetch_row($result);
-        var_dump($var1);
-        die("user: " .$_SESSION['user']. " --> ". $var1);// .", ".$var2 .", ".$var3 .", ".$var4 .", ".$var5 .", ");
+        $nome = $var1[2];
+        $sobrenome = $var1[3];
+        $telefone = $var1[4];
+        $resposta = $var1[5];
+        //var_dump($var1);
+        
+        //die("user: " .$_SESSION['user']. " --> ". $var1);// .", ".$var2 .", ".$var3 .", ".$var4 .", ".$var5 .", ");
         
 
         
@@ -399,7 +404,7 @@
                                         <div class="clearfix"></div>
                                         <div class="col-lg-12 text-center">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Insira seu nome *" id="nome" required data-validation-required-message="Por favor, insira seu nome.">
+                                                <input type="text" class="form-control" placeholder="Insira seu nome *" id="nome" value="<?=$nome ?>" required data-validation-required-message="Por favor, insira seu nome.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">

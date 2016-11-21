@@ -12,7 +12,10 @@
         
         //This is where you handle what to do with the response.
         //The actual data is found on this.responseText
-        alert(this.responseText); //Will alert: 42
+        
+        $.getScript("mapa2.js", function(){
+            .run(this.responseText);
+        });
         
     };
     oReq.open("get", "teste_data.php", true);
