@@ -12,7 +12,6 @@ function inicializarMapa() {
     
     var user_nome = document.getElementById("user_nome").textContent;
     var user_email = document.getElementById("user_email").textContent;
-    var user_phone = document.getElementById("user_phone").textContent;
     var user_endereco_logradouro = document.getElementById("user_endereco_logradouro").textContent;
     var user_endereco_numero = document.getElementById("user_endereco_numero").textContent;
     var user_endereco_cidade = document.getElementById("user_endereco_cidade").textContent;
