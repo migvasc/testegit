@@ -23,7 +23,7 @@
                 //se sim, cria
                 $_SESSION['user'] = $_GET["email"];
                 # get user infos that are used in this page
-                require("../../conn.php");
+                require("../conn.php");
                 $result = pg_query($conn, "select nome, email, phone, tipo, endereco_logradouro, endereco_numero, endereco_bairro,endereco_cidade from usuario where email = '"+$_SESSION['user']+"'");
                 $user_info = pg_fetch_row($result);
                 $_SESSION['nome'] = $user_info[0];
