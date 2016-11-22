@@ -10,12 +10,12 @@ $("head").append("<script type='text/javascript' src='https://raw.github.com/dou
 function inicializarMapa() {
     // console.log("endereco quando chega na funcao inicializar: "+user);
     
-    var user_nome = document.getElementById("user_nome").value();
-    var user_email = document.getElementById("user_email").value();
-    var user_phone = document.getElementById("user_phone").value();
-    var user_endereco_logradouro = document.getElementById("user_endereco_logradouro").value();
-    var user_endereco_numero = document.getElementById("user_endereco_numero").value();
-    var user_endereco_cidade = document.getElementById("user_endereco_cidade").value();
+    var user_nome = document.getElementById("user_nome").value;
+    var user_email = document.getElementById("user_email").value;
+    var user_phone = document.getElementById("user_phone").value;
+    var user_endereco_logradouro = document.getElementById("user_endereco_logradouro").value;
+    var user_endereco_numero = document.getElementById("user_endereco_numero").value;
+    var user_endereco_cidade = document.getElementById("user_endereco_cidade").value;
     var user_lat = -18.8800397;
     var user_lng = -47.05878999999999;
     
