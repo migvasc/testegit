@@ -71,9 +71,9 @@ function carregarNoMapa(pontos) {
                     var contentString = '<div id="content">'+
                     		      '<div id="siteNotice">'+
                     		      '</div>'+
-                    		      '<h3 id="firstHeading" class="firstHeading">'+ponto[ponto]['nome']+'</h3>'+
+                    		      '<h3 id="firstHeading" class="firstHeading">'+pontos[ponto]['nome']+'</h3>'+
                     		      '<div id="bodyContent">'+
-                    		      '<p><b>Contato: </b>'+ponto[ponto]['email']+'</p>'+
+                    		      '<p><b>Contato: </b>'+pontos[ponto]['email']+'</p>'+
                     		      '</div>'+
                     		      '</div>';
                     
