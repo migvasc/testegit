@@ -26,7 +26,7 @@ function carregarNoMapa(pontos) {
         geocoder.geocode({ 'address': pontos[ponto]['endereco_logradouro'] +', '+pontos[ponto]['endereco_numero']+', '+ pontos[ponto]['endereco_cidade']+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 if (results[0]) {
-                    var icon_per = '../assets/images/map-icon-'+pontos[ponto]['tipo']
+                    var icon_per = '../assets/images/map-icon-'+pontos[ponto]['tipo']+'.png'
                     var latitude = results[0].geometry.location.lat();
                     var longitude = results[0].geometry.location.lng(); 
     	            var marker = new google.maps.Marker({
