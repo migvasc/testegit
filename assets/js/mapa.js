@@ -1,44 +1,39 @@
 var geocoder = new google.maps.Geocoder();
 var map;
 var marker;
+var user_nome = document.getElementById("user_nome").textContent;
+var user_email = document.getElementById("user_email").textContent;
+var user_endereco_logradouro = document.getElementById("user_endereco_logradouro").textContent;
+var user_endereco_numero = document.getElementById("user_endereco_numero").textContent;
+var user_endereco_cidade = document.getElementById("user_endereco_cidade").textContent;
+var user_lat = -18.8800397;
+var user_lng = -47.05878999999999;
+
 
 console.log("Chegou no mapa.js");
 
 $("head").append("<script type='text/javascript' src='https://raw.github.com/douglascrockford/JSON-js/master/json2.js'></script>");
 
+geocoder.geocode({ 'address': user_endereco_logradouro +', '+user_endereco_numero+', '+user_endereco_cidade+', Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
+//geocoder.geocode({ 'address': 'Av. Arlindo Bettio, 1000, Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+        if (results[0]) {
+            user_lat = results[0].geometry.location.lat();
+            user_lng = results[0].geometry.location.lng();
+            setUserPosition(user_lat,user_lng)
+        }
+    }
+});
+
+function setUserPosition(lat,lng){
+    user_lat = lat;
+    user_lng = lng;
+}
+
+console.log(user_lat)
+console.log(user_lng)
 
 function inicializarMapa() {
-
-    var user_nome = document.getElementById("user_nome").textContent;
-    var user_email = document.getElementById("user_email").textContent;
-    var user_endereco_logradouro = document.getElementById("user_endereco_logradouro").textContent;
-    var user_endereco_numero = document.getElementById("user_endereco_numero").textContent;
-    var user_endereco_cidade = document.getElementById("user_endereco_cidade").textContent;
-    var user_lat = -18.8800397;
-    var user_lng = -47.05878999999999;
-    
-    console.log(user_nome);
-    console.log(user_email);
-    console.log(user_endereco_logradouro);
-    console.log(user_endereco_numero);
-    console.log(user_endereco_cidade);
-    
-    geocoder.geocode({ 'address': user_endereco_logradouro +', '+user_endereco_numero+', '+user_endereco_cidade+', Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
-    //geocoder.geocode({ 'address': 'Av. Arlindo Bettio, 1000, Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
-        console.log("Results:" + results);
-        console.log("Status:" + status);
-        if (status == google.maps.GeocoderStatus.OK) {
-            console.log("Achou!");
-            if (results[0]) {
-                console.log("Results[0] eh valido!");
-                user_lat = results[0].geometry.location.lat();
-                console.log("User lgn: "+user_lat);
-                user_lng = results[0].geometry.location.lng();
-                 console.log("User lgn: "+user_lng);
-            }
-        }
-    });
-    
     var latlng = new google.maps.LatLng(user_lat,user_lng);
     var options = {
         zoom: 10,
