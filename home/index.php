@@ -452,6 +452,8 @@
 	<script src="js/sparklines.js"></script>	
 	<script src="js/charts.js"></script>
 	<script src="js/jquery.slimscroll.min.js"></script>
+	 <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA725OG4Uyt_o2gyuM00U9PcytQroKmdrU&amp;sensor=false"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="../assets/js/mapa.js"></script>
   <!--<script>
 
