@@ -1,6 +1,9 @@
 var geocoder = new google.maps.Geocoder();
 var map;
 var marker;
+
+console.log("Chegou no mapa.js");
+
 $("head").append("<script type='text/javascript' src='https://raw.github.com/douglascrockford/JSON-js/master/json2.js'></script>");
 
 
