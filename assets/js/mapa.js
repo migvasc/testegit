@@ -63,6 +63,7 @@ function inicializarMapa(user_lat,user_lng) {
 function carregarNoMapa(pontos) {
     // console.log("endereco quando chega na funcao inicializar: "+pontos);
     for(var ponto in pontos){
+        usleep(500);
         var address = pontos[ponto]['endereco_logradouro'] +', '+pontos[ponto]['endereco_numero']+', '+ pontos[ponto]['endereco_cidade']+' '+ ', Brasil'
         console.log(address);
         geocoder.geocode({ 'address': address, 'region': 'BR' }, function (results, status) {
