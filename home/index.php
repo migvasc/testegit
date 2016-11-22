@@ -245,15 +245,15 @@
                             <span class="profile-ava">
                                 <img alt="" src="img/avatar1_small.jpg">
                             </span>
-                            <span class="username"><?php echo($_SESSION['nome']); ?></span>
-                            <span id="user_tipo" style="visibility: hidden" value=<?php echo($_SESSION['tipo']); ?>></span>
-                            <span id="user_nome" style="visibility: hidden" value=<?php echo($_SESSION['nome']); ?>></span>
-                            <span id="user_email" style="visibility: hidden" value=><?php echo($_SESSION['email']); ?></span>
-                            <span id="user_phone" style="visibility: hidden" value=><?php echo($_SESSION['phone']); ?></span>
-                            <span id="user_endereco_logradouro" style="visibility: hidden" value=<?php echo($_SESSION['endereco_logradouro']); ?>></span>
-                            <span id="user_endereco_numero" style="visibility: hidden" value=<?php echo($_SESSION['endereco_numero']); ?>></span>
-                            <span id="user_endereco_cidade" style="visibility: hidden" value=<?php echo($_SESSION['endereco_cidade']); ?>></span>
-                            <b class="caret"></b>
+                            <span class="username"><?php echo($_SESSION['nome']);?></span>
+                            <div style="display: none;" id="user_tipo"><?php echo($_SESSION['tipo']); ?></div>
+                            <div style="display: none;" id="user_nome"><?php echo($_SESSION['nome']); ?></div>
+                            <div style="display: none;" id="user_email"><?php echo($_SESSION['email']); ?></div>
+                            <div style="display: none;" id="user_endereco_logradouro"><?php echo($_SESSION['endereco_logradouro']); ?></div>
+                            <div style="display: none;" id="user_endereco_numero"><?php echo($_SESSION['endereco_numero']); ?></div>
+                            <div style="display: none;" id="user_endereco_cidade"><?php echo($_SESSION['endereco_cidade']); ?></div>
+                         
+                           <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
                             <div class="log-arrow-up"></div>
