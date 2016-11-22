@@ -26,6 +26,8 @@
                 require("../conn.php");
                 $result = pg_query($conn, "select nome, email, phone, tipo, endereco_logradouro, endereco_numero, endereco_bairro,endereco_cidade from usuario where email = '"+$_SESSION['user']+"'");
                 $user_info = pg_fetch_row($result);
+                vardump($user_info);
+                die();
                 $_SESSION['nome'] = $user_info[0];
                 $_SESSION['email'] = $user_info[1];
                 $_SESSION['phone'] = $user_info[2];
