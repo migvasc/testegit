@@ -81,9 +81,9 @@ function carregarNoMapa(pontos) {
             console.log('Status: ' + status + " - " + address);
             if (status == google.maps.GeocoderStatus.OK) {
                 if (results[0]) {
-                    var icon_per = '../assets/images/map-icon-'+pontos[ponto]['tipo']+'.png'
                     var latitude = results[0].geometry.location.lat();
                     var longitude = results[0].geometry.location.lng(); 
+                    var icon_per = '../assets/images/map-icon-'+pontos[ponto]['tipo']+'.png';
                     var contentString = '<div id="content">'+
                     		      '<div id="siteNotice">'+
                     		      '</div>'+
