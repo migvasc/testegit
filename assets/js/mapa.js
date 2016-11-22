@@ -71,41 +71,50 @@ function sleep(milliseconds) {
   }
 }
  
+ 
+function marcarNoMapa(ponto,latitude,longitude){
+    var icon_per = '../assets/images/map-icon-'+ponto['tipo']+'.png';
+    var contentString = '<div id="content">'+
+    		      '<div id="siteNotice">'+
+    		      '</div>'+
+    		      '<h3 id="firstHeading" class="firstHeading">'+ponto['nome']+'</h3>'+
+    		      '<div id="bodyContent">'+
+    		      '<p><b>Contato: </b>'+ponto['email']+'</p>'+
+    		      '</div>'+
+    		      '</div>';
+    
+	  var infowindow = new google.maps.InfoWindow({
+	    content: contentString
+	  });
+    
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(latitude, longitude),
+        title: ponto['tipo'],
+        map: map,
+        icon: icon_per
+}
+ 
+function buscarNoMapa(address, ponto){
+    geocoder.geocode({ 'address': address, 'region': 'BR' }, function (results, status) {
+        console.log('Status: ' + status + " - " + address);
+        if (status == google.maps.GeocoderStatus.OK) {
+            if (results[0]) {
+                var latitude = results[0].geometry.location.lat();
+                var longitude = results[0].geometry.location.lng(); 
+                marcarNoMapa(ponto,latitude,longitude);
+	            });
+            }
+        }
+    });
+}
+ 
 function carregarNoMapa(pontos) {
     // console.log("endereco quando chega na funcao inicializar: "+pontos);
     for(var ponto in pontos){
         sleep(500);
         var address = pontos[ponto]['endereco_logradouro'] +', '+pontos[ponto]['endereco_numero']+', '+ pontos[ponto]['endereco_cidade']+' '+ ', Brasil'
         console.log(address);
-        geocoder.geocode({ 'address': address, 'region': 'BR' }, function (results, status) {
-            console.log('Status: ' + status + " - " + address);
-            if (status == google.maps.GeocoderStatus.OK) {
-                if (results[0]) {
-                    var latitude = results[0].geometry.location.lat();
-                    var longitude = results[0].geometry.location.lng(); 
-                    var icon_per = '../assets/images/map-icon-'+pontos[ponto]['tipo']+'.png';
-                    var contentString = '<div id="content">'+
-                    		      '<div id="siteNotice">'+
-                    		      '</div>'+
-                    		      '<h3 id="firstHeading" class="firstHeading">'+pontos[ponto]['nome']+'</h3>'+
-                    		      '<div id="bodyContent">'+
-                    		      '<p><b>Contato: </b>'+pontos[ponto]['email']+'</p>'+
-                    		      '</div>'+
-                    		      '</div>';
-                    
-            		  var infowindow = new google.maps.InfoWindow({
-            		    content: contentString
-            		  });
-                    
-    	            var marker = new google.maps.Marker({
-    	                position: new google.maps.LatLng(latitude, longitude),
-    	                title: pontos[ponto]['tipo'],
-    	                map: map,
-        		        icon: icon_per
-    	            });
-                }
-            }
-        });
+        buscarNoMapa(address, pontos[ponto]);
     }
 }
 
