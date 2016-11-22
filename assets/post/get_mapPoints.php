@@ -27,7 +27,7 @@ if(pg_num_rows($all_address) && pg_num_rows($user_address)){
     //teste
 
 else{
-	echo json_encode(24);
+	echo json_encode($_SESSION['user']);
     
 }
 ?>
