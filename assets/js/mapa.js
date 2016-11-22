@@ -92,6 +92,7 @@ function marcarNoMapa(ponto,latitude,longitude){
         title: ponto['tipo'],
         map: map,
         icon: icon_per
+    });
 }
  
 function buscarNoMapa(address, ponto){
@@ -102,7 +103,7 @@ function buscarNoMapa(address, ponto){
                 var latitude = results[0].geometry.location.lat();
                 var longitude = results[0].geometry.location.lng(); 
                 marcarNoMapa(ponto,latitude,longitude);
-	            });
+	       
             }
         }
     });
