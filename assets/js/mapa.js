@@ -18,6 +18,13 @@ function inicializarMapa() {
     var user_lat = -18.8800397;
     var user_lng = -47.05878999999999;
     
+    alert(user_nome);
+    alert(user_email);
+    alert(user_endereco_logradouroe);
+    alert(user_endereco_numero);
+    alert(user_endereco_cidade);
+]    
+    
     geocoder.geocode({ 'address': user_endereco_logradouro +', '+user_endereco_numero+', '+ user_endereco_cidade+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             if (results[0]) {
