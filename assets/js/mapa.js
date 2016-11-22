@@ -7,7 +7,7 @@ console.log("Chegou no mapa.js");
 $("head").append("<script type='text/javascript' src='https://raw.github.com/douglascrockford/JSON-js/master/json2.js'></script>");
 
 
-function inicializarMapa(user) {
+function inicializarMapa() {
     console.log("endereco quando chega na funcao inicializar: "+user);
     var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
     var options = {
@@ -69,7 +69,8 @@ oReq.onload = function() {
     // alert(this.responseText);
     
     var array = JSON.parse(this.responseText);
-
+    
+    inicializarMapa()
     carregarNoMapa(array);
 };
     
