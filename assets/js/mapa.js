@@ -8,7 +8,7 @@ $("head").append("<script type='text/javascript' src='https://raw.github.com/dou
 
 
 function inicializarMapa() {
-    console.log("endereco quando chega na funcao inicializar: "+user);
+    // console.log("endereco quando chega na funcao inicializar: "+user);
     var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
     var options = {
         zoom: 5,
@@ -21,7 +21,7 @@ function inicializarMapa() {
 }
  
 function carregarNoMapa(pontos) {
-    console.log("endereco quando chega na funcao inicializar: "+pontos);
+    // console.log("endereco quando chega na funcao inicializar: "+pontos);
     for(var ponto in pontos){
         geocoder.geocode({ 'address': pontos[ponto]['endereco_logradouro'] +', '+pontos[ponto]['endereco_numero']+', '+ pontos[ponto]['endereco_cidade']+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
