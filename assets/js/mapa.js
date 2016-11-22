@@ -14,26 +14,21 @@ console.log("Chegou no mapa.js");
 
 $("head").append("<script type='text/javascript' src='https://raw.github.com/douglascrockford/JSON-js/master/json2.js'></script>");
 
-geocoder.geocode({ 'address': user_endereco_logradouro +', '+user_endereco_numero+', '+user_endereco_cidade+', Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
-//geocoder.geocode({ 'address': 'Av. Arlindo Bettio, 1000, Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
-    if (status == google.maps.GeocoderStatus.OK) {
-        if (results[0]) {
-            user_lat = results[0].geometry.location.lat();
-            user_lng = results[0].geometry.location.lng();
-            setUserPosition(user_lat,user_lng)
-        }
-    }
-});
+function inicializar() {
 
-function setUserPosition(lat,lng){
-    user_lat = lat;
-    user_lng = lng;
+    geocoder.geocode({ 'address': user_endereco_logradouro +', '+user_endereco_numero+', '+user_endereco_cidade+', Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
+    //geocoder.geocode({ 'address': 'Av. Arlindo Bettio, 1000, Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            if (results[0]) {
+                user_lat = results[0].geometry.location.lat();
+                user_lng = results[0].geometry.location.lng();
+                inicializarMapa(user_lat,user_lng)
+            }
+        }
+    });
 }
 
-console.log(user_lat)
-console.log(user_lng)
-
-function inicializarMapa() {
+function inicializarMapa(user_lat,user_lng) {
     var latlng = new google.maps.LatLng(user_lat,user_lng);
     var options = {
         zoom: 10,
@@ -115,7 +110,7 @@ oReq.onload = function() {
     
     var array = JSON.parse(this.responseText);
     
-    inicializarMapa()
+    inicializar()
     carregarNoMapa(array);
 };
     
