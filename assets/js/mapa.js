@@ -31,7 +31,7 @@ function inicializar() {
 function inicializarMapa(user_lat,user_lng) {
     var latlng = new google.maps.LatLng(user_lat,user_lng);
     var options = {
-        zoom: 13,
+        zoom: 12,
         center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
