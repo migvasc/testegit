@@ -4,20 +4,20 @@ require("../../conn.php");
 
 
 
-$result = pg_query($conn, "select tipo, endereco_logradouro, endereco_numero, endereco_bairro,endereco_cidade from usuario;");
+$all_address = pg_query($conn, "select tipo, endereco_logradouro, endereco_numero, endereco_bairro,endereco_cidade from usuario;");
 
+session_name("testando");
+session_start();
+
+$user_address = pg_query($conn, "select tipo, endereco_logradouro, endereco_numero, endereco_bairro,endereco_cidade from usuario where email = '"+$_SESSION['user']+"';");
 
 
 // echo ("TESTE");
-if(pg_num_rows($result)){
+if(pg_num_rows($all_address) && pg_num_rows($user_address)){
     
-    $resultArray = pg_fetch_all($result);
+    echo json_encode(['all' => pg_fetch_all($all_address), 'user' => pg_fetch_all($user_address)], JSON_PRETTY_PRINT);
     
-    // $decoded_array = json_decode($resultArray[]0['rua']);
-    
-    // echo json_encode($decoded_array, JSON_PRETTY_PRINT);
-    // echo json_encode([$result_array[0],$result_array[1], $result_array[2],$result_array[3]], JSON_PRETTY_PRINT);
-    echo json_encode(pg_fetch_all($result), JSON_PRETTY_PRINT);
+   //echo json_encode(pg_fetch_all($result), JSON_PRETTY_PRINT);
     
 }
 //	echo (pg_fetch_row($result)[0]);

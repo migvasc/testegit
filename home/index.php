@@ -22,6 +22,8 @@
             if ($_GET["email"] != "") {
                 //se sim, cria
                 $_SESSION['user'] = $_GET["email"];
+                header("Location: ../home/");
+                exit();
             } else {
                 //se nao, redireciona pro login
                 //die("sessao nao encontrada, é preciso login"); 
