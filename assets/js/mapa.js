@@ -66,7 +66,7 @@ function carregarNoMapa(pontos) {
         var address = pontos[ponto]['endereco_logradouro'] +', '+pontos[ponto]['endereco_numero']+', '+ pontos[ponto]['endereco_cidade']+' '+ ', Brasil'
         console.log(address);
         geocoder.geocode({ 'address': address, 'region': 'BR' }, function (results, status) {
-            console.log(status);
+            console.log('Status: ' + status + " - " + address);
             if (status == google.maps.GeocoderStatus.OK) {
                 if (results[0]) {
                     var icon_per = '../assets/images/map-icon-'+pontos[ponto]['tipo']+'.png'
