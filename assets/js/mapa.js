@@ -9,14 +9,53 @@ $("head").append("<script type='text/javascript' src='https://raw.github.com/dou
 
 function inicializarMapa() {
     // console.log("endereco quando chega na funcao inicializar: "+user);
-    var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
+    
+    var user_nome = document.getElementById("user_nome").value();
+    var user_email = document.getElementById("user_email").value();
+    var user_phone = document.getElementById("user_phone").value();
+    var user_endereco_logradouro = document.getElementById("user_endereco_logradouro").value();
+    var user_endereco_numero = document.getElementById("user_endereco_numero").value();
+    var user_endereco_cidade = document.getElementById("user_endereco_cidade").value();
+    var user_lat = -18.8800397;
+    var user_lng = -47.05878999999999;
+    
+    geocoder.geocode({ 'address': user_endereco_logradouro +', '+user_endereco_numero+', '+ user_endereco_cidade+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            if (results[0]) {
+                user_lat = results[0].geometry.location.lat();
+                user_lng = results[0].geometry.location.lng();
+            }
+        }
+    });
+    
+    var latlng = new google.maps.LatLng(user_lat,user_lng);
     var options = {
-        zoom: 5,
+        zoom: 15,
         center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
  
     map = new google.maps.Map(document.getElementById("map"), options);
+    
+    var contentString = '<div id="content">'+
+                    		      '<div id="siteNotice">'+
+            		      '</div>'+
+            		      '<h3 id="firstHeading" class="firstHeading">'+user_nome+'</h3>'+
+            		      '<div id="bodyContent">'+
+            		      '<p><b>Contato: </b>'+user_email+'</p>'+
+            		      '</div>'+
+            		      '</div>';
+    
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+    
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(user_lat, user_lng),
+        title: user_tipo,
+        map: map,
+        icon: '../assets/images/marcador.png'
+    });
  
 }
  
@@ -32,15 +71,15 @@ function carregarNoMapa(pontos) {
                     var contentString = '<div id="content">'+
                     		      '<div id="siteNotice">'+
                     		      '</div>'+
-                    		      '<h3 id="firstHeading" class="firstHeading">'+ponto.nome+'</h3>'+
+                    		      '<h3 id="firstHeading" class="firstHeading">'+ponto[ponto]['nome']+'</h3>'+
                     		      '<div id="bodyContent">'+
-                    		      '<p><b>Contato: </b>'+ponto.email+'</p>'+
+                    		      '<p><b>Contato: </b>'+ponto[ponto]['email']+'</p>'+
                     		      '</div>'+
                     		      '</div>';
                     
-                    		  var infowindow = new google.maps.InfoWindow({
-                    		    content: contentString
-                    		  });
+            		  var infowindow = new google.maps.InfoWindow({
+            		    content: contentString
+            		  });
                     
     	            var marker = new google.maps.Marker({
     	                position: new google.maps.LatLng(latitude, longitude),

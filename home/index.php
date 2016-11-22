@@ -22,6 +22,18 @@
             if ($_GET["email"] != "") {
                 //se sim, cria
                 $_SESSION['user'] = $_GET["email"];
+                # get user infos that are used in this page
+                require("../../conn.php");
+                $result = pg_query($conn, "select nome, email, phone, tipo, endereco_logradouro, endereco_numero, endereco_bairro,endereco_cidade from usuario where email = '"+$_SESSION['user']+"'");
+                $user_info = pg_fetch_row($result);
+                $_SESSION['nome'] = $user_info[0];
+                $_SESSION['email'] = $user_info[1];
+                $_SESSION['phone'] = $user_info[2];
+                $_SESSION['tipo'] = $user_info[3];
+                $_SESSION['endereco_logradouro'] = $user_info[4];
+                $_SESSION['endereco_numero'] = $user_info[5];
+                $_SESSION['endereco_bairro'] = $user_info[6];
+                $_SESSION['endereco_cidade'] = $user_info[7];
                 header("Location: ../home/");
                 exit();
             } else {
@@ -32,7 +44,7 @@
             }
             //die("funcionou: " . $_GET["user"]); 
         }
-        
+    
     ?>
 
     <!-- Bootstrap CSS -->    
@@ -233,7 +245,14 @@
                             <span class="profile-ava">
                                 <img alt="" src="img/avatar1_small.jpg">
                             </span>
-                            <span class="username"><?php echo($_SESSION['user']); ?></span>
+                            <span class="username"><?php echo($_SESSION['nome']); ?></span>
+                            <span id="user_tipo" style="visibility: hidden" value=<?php echo($_SESSION['tipo']); ?>></span>
+                            <span id="user_nome" style="visibility: hidden" value=<?php echo($_SESSION['nome']); ?>></span>
+                            <span id="user_email" style="visibility: hidden" value=><?php echo($_SESSION['email']); ?></span>
+                            <span id="user_phone" style="visibility: hidden" value=><?php echo($_SESSION['phone']); ?></span>
+                            <span id="user_endereco_logradouro" style="visibility: hidden" value=<?php echo($_SESSION['endereco_logradouro']); ?>></span>
+                            <span id="user_endereco_numero" style="visibility: hidden" value=<?php echo($_SESSION['endereco_numero']); ?>></span>
+                            <span id="user_endereco_cidade" style="visibility: hidden" value=<?php echo($_SESSION['endereco_cidade']); ?>></span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
