@@ -20,7 +20,7 @@ function inicializarMapa() {
     
     alert(user_nome);
     alert(user_email);
-    alert(user_endereco_logradouroe);
+    alert(user_endereco_logradouro);
     alert(user_endereco_numero);
     alert(user_endereco_cidade);
     
