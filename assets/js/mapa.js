@@ -25,11 +25,11 @@ function inicializarMapa() {
     
     //geocoder.geocode({ 'address': user_endereco_logradouro +', '+user_endereco_numero+', Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
     geocoder.geocode({ 'address': 'Av. Arlindo Bettio, 1000, Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
-    
+        console.log("Results:" + results)
+        console.log("Status:" + status)
         if (status == google.maps.GeocoderStatus.OK) {
             if (results[0]) {
                 user_lat = results[0].geometry.location.lat();
-                console.log()
                 user_lng = results[0].geometry.location.lng();
             }
         }
