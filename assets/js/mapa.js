@@ -23,7 +23,6 @@ function inicializarMapa() {
     alert(user_endereco_logradouroe);
     alert(user_endereco_numero);
     alert(user_endereco_cidade);
-]    
     
     geocoder.geocode({ 'address': user_endereco_logradouro +', '+user_endereco_numero+', '+ user_endereco_cidade+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
