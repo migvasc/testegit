@@ -8,8 +8,7 @@ $("head").append("<script type='text/javascript' src='https://raw.github.com/dou
 
 
 function inicializarMapa() {
-    // console.log("endereco quando chega na funcao inicializar: "+user);
-    
+
     var user_nome = document.getElementById("user_nome").textContent;
     var user_email = document.getElementById("user_email").textContent;
     var user_endereco_logradouro = document.getElementById("user_endereco_logradouro").textContent;
@@ -18,16 +17,17 @@ function inicializarMapa() {
     var user_lat = -18.8800397;
     var user_lng = -47.05878999999999;
     
-    alert(user_nome);
-    alert(user_email);
-    alert(user_endereco_logradouro);
-    alert(user_endereco_numero);
-    alert(user_endereco_cidade);
+    console.log(user_nome);
+    console.log(user_email);
+    console.log(user_endereco_logradouro);
+    console.log(user_endereco_numero);
+    console.log(user_endereco_cidade);
     
-    geocoder.geocode({ 'address': user_endereco_logradouro +', '+user_endereco_numero+', '+ user_endereco_cidade+' '+ ', Brasil', 'region': 'BR' }, function (results, status) {
+    geocoder.geocode({ 'address': user_endereco_logradouro +', '+user_endereco_numero+', Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             if (results[0]) {
                 user_lat = results[0].geometry.location.lat();
+                console.log()
                 user_lng = results[0].geometry.location.lng();
             }
         }
