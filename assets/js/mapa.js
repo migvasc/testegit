@@ -23,7 +23,9 @@ function inicializarMapa() {
     console.log(user_endereco_numero);
     console.log(user_endereco_cidade);
     
-    geocoder.geocode({ 'address': user_endereco_logradouro +', '+user_endereco_numero+', Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
+    //geocoder.geocode({ 'address': user_endereco_logradouro +', '+user_endereco_numero+', Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
+    geocoder.geocode({ 'address': 'Av. Arlindo Bettio, 1000, Sao Paulo, Brasil', 'region': 'BR' }, function (results, status) {
+    
         if (status == google.maps.GeocoderStatus.OK) {
             if (results[0]) {
                 user_lat = results[0].geometry.location.lat();
