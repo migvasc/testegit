@@ -30,8 +30,11 @@ function inicializarMapa() {
         if (status == google.maps.GeocoderStatus.OK) {
             console.log("Achou!");
             if (results[0]) {
+                console.log("Results[0] eh valido!");
                 user_lat = results[0].geometry.location.lat();
+                console.log("User lgn: "+user_lat);
                 user_lng = results[0].geometry.location.lng();
+                 console.log("User lgn: "+user_lng);
             }
         }
     });
