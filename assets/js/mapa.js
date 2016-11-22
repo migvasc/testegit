@@ -82,7 +82,7 @@ oReq.onload = function() {
     //This is where you handle what to do with the response.
     //The actual data is found on this.responseText
     
-    alert(this.responseText);
+    //alert(this.responseText);
     
     var array = JSON.parse(this.responseText);
     
