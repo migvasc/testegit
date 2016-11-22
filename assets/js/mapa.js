@@ -29,6 +29,19 @@ function carregarNoMapa(pontos) {
                     var icon_per = '../assets/images/map-icon-'+pontos[ponto]['tipo']+'.png'
                     var latitude = results[0].geometry.location.lat();
                     var longitude = results[0].geometry.location.lng(); 
+                    var contentString = '<div id="content">'+
+                    		      '<div id="siteNotice">'+
+                    		      '</div>'+
+                    		      '<h3 id="firstHeading" class="firstHeading">'+ponto.nome+'</h3>'+
+                    		      '<div id="bodyContent">'+
+                    		      '<p><b>Contato: </b>'+ponto.email+'</p>'+
+                    		      '</div>'+
+                    		      '</div>';
+                    
+                    		  var infowindow = new google.maps.InfoWindow({
+                    		    content: contentString
+                    		  });
+                    
     	            var marker = new google.maps.Marker({
     	                position: new google.maps.LatLng(latitude, longitude),
     	                title: pontos[ponto]['tipo'],
@@ -53,15 +66,11 @@ oReq.onload = function() {
     //This is where you handle what to do with the response.
     //The actual data is found on this.responseText
     
-    alert(this.responseText);
+    // alert(this.responseText);
     
     var array = JSON.parse(this.responseText);
-    
-    console.log(array['user']);
-    console.log(array['all']);
-    
-    inicializarMapa(array['user']);
-    carregarNoMapa(array['all']);
+
+    carregarNoMapa(array);
 };
     
     

@@ -4,7 +4,7 @@ require("../../conn.php");
 
 
 
-$all_address = pg_query($conn, "select tipo, endereco_logradouro, endereco_numero, endereco_bairro,endereco_cidade from usuario;");
+$all_address = pg_query($conn, "select nome, email, phone, tipo, endereco_logradouro, endereco_numero, endereco_bairro,endereco_cidade from usuario;");
 
 // echo ("TESTE");
 if(pg_num_rows($all_address)){
