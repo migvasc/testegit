@@ -93,6 +93,10 @@ function marcarNoMapa(ponto,latitude,longitude){
         map: map,
         icon: icon_per
     });
+    
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
+    });
 }
  
 function buscarNoMapa(address, ponto){
