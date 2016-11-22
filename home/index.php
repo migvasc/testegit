@@ -361,7 +361,7 @@
 							</div>	
 						</div>
 						<div class="panel-body-map">
-							<div id="map" style="height:380px;"></div>	
+							<div id="map" style="height:380px; width: 100%"></div>	
 						</div>
 	
 					</div>
