@@ -45,7 +45,7 @@
         $cidade = $var1[8];
         $estado = $var1[9];
         $resposta = $var1[10];
-        $tipo = $var1[11];
+        $perfil = $var1[11];
     ?>
 
     <!-- Bootstrap CSS -->    
@@ -464,7 +464,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <p align="left">Qual é o tipo de perfil que você deseja ter?</p>
-                                                <input type="text" class="form-control" placeholder="Tipo de perfil: Padrinho, Anfitrião ou ONG" id="pergunta" value="<?=$resposta ?>" required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha."> <!--   -->
+                                                <input type="text" class="form-control" placeholder="Tipo de perfil: Padrinho, Anfitrião ou ONG" id="tipo" value="<?=$perfil?>" required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha."> <!--   -->
                                                 <p align="left">*Por favor, preencha com somente uma das 3 opções dadas (Padrinho, Anfitrião ou ONG) e sem acentos.</p>
                                                 <p class="help-block text-danger"></p>
                                             </div>

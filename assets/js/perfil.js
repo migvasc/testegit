@@ -20,6 +20,7 @@ $(function() {
             var bairro = $("input#bairro").val();
             var cidade = $("input#cidade").val();
             var estado = $("input#estado").val();
+            var tipo = $("input#tipo").val();
             var resposta = $("input#pergunta").val();
             
                 $.ajax({
@@ -36,6 +37,7 @@ $(function() {
                         bairro: bairro,
                         cidade: cidade,
                         estado: estado,
+                        tipo: tipo,
                         resposta: resposta
                     },
                     cache: false,
