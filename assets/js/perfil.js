@@ -31,7 +31,7 @@ $(function() {
                         nome: nome,
                         sobrenome: sobrenome,
                         phone: phone,
-                        endereco: endereco,
+                        logradouro: endereco,
                         numero: numero,
                         complemento: complemento,
                         bairro: bairro,
