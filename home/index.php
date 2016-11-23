@@ -108,7 +108,7 @@
                 <!-- notificatoin dropdown start-->
                 <ul class="nav pull-right top-menu">
                     
-                    <!-- task notificatoin start -->
+                    <!-- task notificatoin start 
                     <li id="task_notificatoin_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <i class="icon-envelope-l"></i>
@@ -192,12 +192,10 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- task notificatoin end -->
-                    <!-- alert notification start-->
-                    <li id="alert_notificatoin_bar" class="dropdown">
+                    <!--<li id="alert_notificatoin_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
 
-                            <i class="icon-bell-l"></i>
+                           <i class="icon-bell-l"></i>
                             <span class="badge bg-important">7</span>
                         </a>
                         <ul class="dropdown-menu extended notification">
@@ -237,13 +235,13 @@
                                 <a href="#">See all notifications</a>
                             </li>
                         </ul>
-                    </li>
+                    </li>-->
                     <!-- alert notification end-->
                     <!-- user login dropdown start-->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/avatar1_small.jpg">
+                                Seu perfil atual: <b></b><?php echo $_SESSION['tipo']?></b><img alt="" src="img/user.jpeg">
                             </span>
                             <span class="username"><?php echo($_SESSION['nome']);?></span>
                             <div style="display: none;" id="user_tipo"><?php echo($_SESSION['tipo']); ?></div>
@@ -261,10 +259,10 @@
                                 <a href="perfil.php"><i class="icon_profile"></i>Meu Perfil</a>
                             </li>
                             <li>
-                                <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
+                                <!--<a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
                             </li>
                             <li>
-                                <a href="#"><i class="icon_clock_alt"></i> Timeline</a>
+                                <a href="#"><i class="icon_clock_alt"></i> Timeline</a>-->
                             </li>
                             <li>
                                 <a href="../logout.php"><i class="icon_key_alt"></i> Log Out</a>
@@ -307,7 +305,8 @@
                           <li><a class="" href="form_validation.html">Form Validation</a></li>
                       </ul>
                   </li>
-                  -->       
+                  -->
+                  
                   <li>
                       <a class="" href="index.php">
                           <i class="fa fa-bank"></i>
@@ -318,6 +317,13 @@
                       <a class="" href="index.php">
                           <i class="fa fa-user"></i>
                           <span>Encontre Anfitriões</span>
+                      </a>
+                                         
+                  </li>
+                   <li>                     
+                      <a class="" href="index.php">
+                          <i class="fa fa-user"></i>
+                          <span>Encontre Padrinhos</span>
                       </a>
                                          
                   </li>
@@ -386,7 +392,6 @@
 							    <br />
 							    <br />
 							    <br />
-							    
 							    <p align="center"><img src="http://www.diversityabroad.com/img/loader.gif" style="height:50px; width: 50px"></p>
 							    <p align="center"><h5 align="center"> Carregando as informações dos usuários perto de você...</h5></p>
 						    </div>	
