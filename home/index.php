@@ -241,7 +241,7 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                Seu perfil atual: <b></b><?php echo $_SESSION['tipo']?></b><img alt="" src="img/user.jpeg">
+                                Seu perfil atual: <b></b><?php echo $_SESSION['tipo'];?></b><img alt="" src="img/user.jpeg">
                             </span>
                             <span class="username"><?php echo($_SESSION['nome']);?></span>
                             <div style="display: none;" id="user_tipo"><?php echo($_SESSION['tipo']); ?></div>
