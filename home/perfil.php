@@ -424,37 +424,37 @@
                                             </div>
                                             <div class="form-group">
                                                 <p align="left">Telefone</p>
-                                                <input type="tel" class="form-control" placeholder="Insira seu telefone" id="phone" value="<?=$telefone ?>">
+                                                <input type="text" class="form-control" placeholder="Insira seu telefone" id="phone" value="<?=$telefone ?>">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
                                                 <p align="left">Endereco </p>
-                                                <input type="logradouro" class="form-control" placeholder="Insira o logradouro do seu endereco" id="phone" value="<?=$logradouro ?>"></p>
+                                                <input type="text" class="form-control" placeholder="Insira o logradouro do seu endereco" id="endereco" value="<?=$logradouro ?>"></p>
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
                                                 <p align="left">Número </p>
-                                                <input type="tel" class="form-control" placeholder="Insira o número do seu endereço" id="numero" value="<?=$numero ?>"></p>
+                                                <input type="text" class="form-control" placeholder="Insira o número do seu endereço" id="numero" value="<?=$numero ?>"></p>
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
                                                 <p align="left">Complemento </p>
-                                                <input type="tel" class="form-control" placeholder="Insira o complemento do seu endereço (se houver) " id="complemento" value="<?=$complemento ?>"></p>
+                                                <input type="text" class="form-control" placeholder="Insira o complemento do seu endereço (se houver) " id="complemento" value="<?=$complemento ?>"></p>
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
                                                 <p align="left">Bairro </p>
-                                                <input type="tel" class="form-control" placeholder="Insira o bairro do seu endereço" id="bairro" value="<?=$bairro ?>"></p>
+                                                <input type="text" class="form-control" placeholder="Insira o bairro do seu endereço" id="bairro" value="<?=$bairro ?>"></p>
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
                                                 <p align="left">Cidade </p>
-                                                <input type="tel" class="form-control" placeholder="Insira a cidade do seu endereço" id="cidade" value="<?=$cidade ?>"></p>
+                                                <input type="text" class="form-control" placeholder="Insira a cidade do seu endereço" id="cidade" value="<?=$cidade ?>"></p>
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
                                                 <p align="left">Estado </p>
-                                                <input type="tel" class="form-control" placeholder="Insira a sigla do Estado do seu endereço" id="estado" value="<?=$estado ?>"></p>
+                                                <input type="text" class="form-control" placeholder="Insira a sigla do Estado do seu endereço" id="estado" value="<?=$estado ?>"></p>
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
