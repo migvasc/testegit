@@ -32,14 +32,20 @@
         }
         
         require("../conn.php");
-        $result = pg_query($conn, "select * from usuario where email = '". htmlentities($_SESSION['user'], ENT_QUOTES, "UTF-8")."'");
+        $result = pg_query($conn, "select email, nome, sobrenome, phone, endereco_logradouro, endereco_numero, endereco_complemento, endereco_bairro, endereco_cidade, endereco_estado, resposta, tipo from usuario where email = '". htmlentities($_SESSION['user'], ENT_QUOTES, "UTF-8")."'");
         $var1 = pg_fetch_row($result);
         $email = $var1[0];
-        $nome = $var1[2];
-        $sobrenome = $var1[3];
-        $telefone = $var1[4];
-        $resposta = $var1[5];
-        
+        $nome = $var1[1];
+        $sobrenome = $var1[2];
+        $telefone = $var1[3];
+        $logradouro = $var1[4];
+        $numero = $var1[5];
+        $complemento = $var1[6];
+        $bairro = $var1[7];
+        $cidade = $var1[8];
+        $estado = $var1[9];
+        $resposta = $var1[10];
+        $tipo = $var1[11];
     ?>
 
     <!-- Bootstrap CSS -->    
@@ -391,7 +397,15 @@
                             <div class="panel-body">
                                 <form name="perfil" id="perfilForm" novalidate>
                                     <div class="row">
-                                        &emsp;Deixe sempre suas informações atualizadas! :)
+                                        <p><h3> Meu perfil</h3></p>
+                                        <br />
+                                        <p align="left">
+                                        &emsp;Essas são as informações que nós temos cadastradas sobre você.
+                                        </p>
+                                        <br />
+                                        <p align="left">
+                                        &emsp;Atualize os campos que precisarem de alteração e clique em <i>Atualizar</i>
+                                         </p>
                                         <br />&emsp;<br />&emsp;
                                         <div class="col-md-12">
                                             
@@ -399,29 +413,65 @@
                                         <div class="clearfix"></div>
                                         <div class="col-lg-12 text-center">
                                             <div class="form-group">
-                                                <p>Nome</p>
+                                                <p align="left">Nome</p>
                                                 <input type="text" class="form-control" placeholder="Insira seu nome *" id="nome" value="<?=$nome ?>" required data-validation-required-message="Por favor, insira seu nome.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
-                                                <p>Sobrenome</p>
+                                                <p align="left">Sobrenome</p>
                                                 <input type="text" class="form-control" placeholder="Insira seu sobrenome *" id="sobrenome" value="<?=$sobrenome ?>" required data-validation-required-message="Por favor, insira seu sobrenome.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
-                                                <p>Telefone</p>
+                                                <p align="left">Telefone</p>
                                                 <input type="tel" class="form-control" placeholder="Insira seu telefone" id="phone" value="<?=$telefone ?>">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
-                                                <p>Qual o nome do seu primeiro amigo animal?</p>
+                                                <p align="left">Endereco </p>
+                                                <input type="logradouro" class="form-control" placeholder="Insira o logradouro do seu endereco" id="phone" value="<?=$logradouro ?>"></p>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <p align="left">Número </p>
+                                                <input type="tel" class="form-control" placeholder="Insira o número do seu endereço" id="numero" value="<?=$numero ?>"></p>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <p align="left">Complemento </p>
+                                                <input type="tel" class="form-control" placeholder="Insira o complemento do seu endereço (se houver) " id="complemento" value="<?=$complemento ?>"></p>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <p align="left">Bairro </p>
+                                                <input type="tel" class="form-control" placeholder="Insira o bairro do seu endereço" id="bairro" value="<?=$bairro ?>"></p>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <p align="left">Cidade </p>
+                                                <input type="tel" class="form-control" placeholder="Insira a cidade do seu endereço" id="cidade" value="<?=$cidade ?>"></p>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <p align="left">Estado </p>
+                                                <input type="tel" class="form-control" placeholder="Insira a sigla do Estado do seu endereço" id="estado" value="<?=$estado ?>"></p>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <p align="left">Qual o nome do seu primeiro amigo animal?</p>
                                                 <input type="text" class="form-control" placeholder="Qual o nome do seu primeiro amigo animal?" id="pergunta" value="<?=$resposta ?>" required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha."> <!--   -->
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <p align="left">Qual é o tipo de perfil que você deseja ter?</p>
+                                                <input type="text" class="form-control" placeholder="Tipo de perfil: Padrinho, Anfitrião ou ONG" id="pergunta" value="<?=$resposta ?>" required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha."> <!--   -->
+                                                <p align="left">*Por favor, preencha com somente uma das 3 opções dadas (Padrinho, Anfitrião ou ONG) e sem acentos.</p>
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div id="success"></div>
                                             
                                             <input type="hidden" id="email" value="<?=$email ?>">
-                                            <button type="submit" class="btn btn-primary full-width">Atualizar!</button>
+                                            <button type="submit" class="btn btn-primary full-width">Atualizar</button>
                                     </div>
                                 </form>
                             </div> 

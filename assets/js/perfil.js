@@ -14,6 +14,12 @@ $(function() {
             var nome = $("input#nome").val();
             var sobrenome = $("input#sobrenome").val();
             var phone = $("input#phone").val();
+            var endereco = $("input#endereco").val();
+            var numero = $("input#numero").val();
+            var complemento = $("input#complemento").val();
+            var bairro = $("input#bairro").val();
+            var cidade = $("input#cidade").val();
+            var estado = $("input#estado").val();
             var resposta = $("input#pergunta").val();
             
                 $.ajax({
@@ -24,6 +30,12 @@ $(function() {
                         nome: nome,
                         sobrenome: sobrenome,
                         phone: phone,
+                        endereco: endereco,
+                        numero: numero,
+                        complemento: complemento,
+                        bairro: bairro,
+                        cidade: cidade,
+                        estado: estado,
                         resposta: resposta
                     },
                     cache: false,
