@@ -374,27 +374,30 @@
 					
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h2><i class="fa fa-map-marker red"></i><strong>Countries</strong></h2>
-							<div class="panel-actions">
-								<a href="index.php#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
-								<a href="index.php#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
-								<a href="index.php#" class="btn-close"><i class="fa fa-times"></i></a>
-							</div>	
-						</div>
+							<h2><i class="fa fa-map-marker red"></i><strong>Mapa da localização dos usuários do Pet Ajuda perto de você</strong></h2>
+						    <?php 
+						        if($_SESSION['endereco_logradouro'] == '')
+						            echo  "<h5> Cadastre seu endereço e mantenha-o sempre atualizado para que possamos te mostrar tudo que acontece ao seu redor :) </h5>";
+						        else
+						            echo " <h5> Mantenha seu endereço sempre atualizado para que possamos te mostrar tudo que acontece ao seu redor :) </h5>"
+						    ?>
 						<div class="panel-body-map">
-							<div id="map" style="height:380px; width: 100%"></div>	
+							<div id="map" style="height:380px; width: 100%">
+							    <br />
+							    <br />
+							    <br />
+							    
+							    <p align="center"><img src="http://www.diversityabroad.com/img/loader.gif" style="height:50px; width: 50px"></p>
+							    <p align="center"><h5 align="center"> Carregando as informações dos usuários perto de você...</h5></p>
+						    </div>	
 						</div>
 	
 					</div>
 				</div>
-              <div class="col-md-3">
-              <!-- List starts -->
+              <!--<div class="col-md-3">
 				<ul class="today-datas">
-                <!-- List #1 -->
 				<li>
-                  <!-- Graph -->
                   <div><span id="todayspark1" class="spark"></span></div>
-                  <!-- Text -->
                   <div class="datas-text">11,500 visitors/day</div>
                 </li>
                 <li>
@@ -414,8 +417,7 @@
                   <div class="datas-text">12,000000 visitors every Month</div>
                 </li>                                                                                                              
               </ul>
-              </div>
-              
+              </div> -->
 			 
            </div>  
             
