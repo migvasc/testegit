@@ -46,6 +46,8 @@
         $estado = $var1[9];
         $resposta = $var1[10];
         $perfil = $var1[11];
+        
+        $perfis = ['anfitriao','padrinho','ONG']
     ?>
 
     <!-- Bootstrap CSS -->    
@@ -462,10 +464,21 @@
                                                 <input type="text" class="form-control" placeholder="Qual o nome do seu primeiro amigo animal?" id="pergunta" value="<?=$resposta ?>" required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha."> <!--   -->
                                                 <p class="help-block text-danger"></p>
                                             </div>
-                                            <div class="form-group">
-                                                <p align="left">Qual é o tipo de perfil que você deseja ter?</p>
-                                                <input type="text" class="form-control" placeholder="Tipo de perfil: Padrinho, Anfitrião ou ONG" id="tipo" value="<?=$perfil?>" required data-validation-required-message="Por favor, responda a pergunta de recuperacao de senha."> <!--   -->
-                                                <p align="left">*Por favor, preencha com somente uma das 3 opções dadas (Padrinho, Anfitrião ou ONG) e sem acentos.</p>
+                                            <div class="form-group" align = "left"> 
+                                                <p align="left">Qual é o tipo de perfil que você deseja ter? </p>
+                            
+                                                <select id="tipo" style="width: 100%">
+                                                    <?php 
+                                                      foreach ($perfis as $perfil_op) {
+                                                          $option = ($perfil_op == "anfitriao")? "Anfitrião":(($perfil_op == "padrinho")?"Padrinho":"ONG");
+                                                          $selected = ($perfil == $perfil_op) ? "selected=\"selected\"" : null;
+                                                          echo "<option value='" . $perfil_op . "' " . $selected . ">" . $option . "</option>";
+                                                      }
+                                                    ?>
+                                                </select>
+                                                <p></p>
+                                                <p>&emsp;Não sabe qual o perfil mais adequado a você? Clique <a href="../index.php#about" target="_blank">aqui</a> e confira!</p>
+                                               
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div id="success"></div>
