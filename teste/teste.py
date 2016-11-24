@@ -359,6 +359,18 @@ def update_fail_nameLast():
         raise Exception("Permitindo alterar deixando nome e sobrenome vazio")
     print "Teste update_fail_nameLast - done"
 
+def update_name():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/home/perfil.php")     
+    nome = driver.find_element_by_id("nome").getAttribute("value")
+    driver.find_element_by_id("nome").click()
+    driver.find_element_by_id("nome").clear()
+    driver.find_element_by_id("nome").send_keys("UE")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    driver.get("http://petajuda.herokuapp.com/home/perfil.php")
+    if not nome == driver.find_element_by_id("nome").getAttribute("value"):
+        raise Exception("Ue")
+    print "Teste update_name - done"
 
 login_fail_emptyEmail()
 login_fail_emptySenha()
