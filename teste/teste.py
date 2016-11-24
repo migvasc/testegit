@@ -332,6 +332,7 @@ def update_fail_name():
     driver.get("http://petajuda.herokuapp.com/home/perfil.php") 
     driver.find_element_by_id("nome").click()
     driver.find_element_by_id("nome").clear()
+     driver.find_element_by_id("nome").send_keys("")
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Perfil" in driver.title:
         raise Exception("Permitindo alterar deixando nome vazio")
