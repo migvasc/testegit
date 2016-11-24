@@ -12,19 +12,19 @@ python:
 # command to install dependencies
 
 # command to run tests
-addons:
-  sauce_connect:
-    username: $SAUCE_USER_NAME
-    access_key: $SAUCE_ACESS_KEY
+#addons:
+ # sauce_connect:
+  #  username: $SAUCE_USER_NAME
+   # access_key: $SAUCE_ACESS_KEY
 
 
-install:
-  - pip install selenium nose --use-mirrors
+#install:
+  #- pip install selenium nose --use-mirrors
 
 
 script:
    - node_modules/karma/bin/karma start my.config.js --single-run
-   - python teste/teste.py
+   #- python teste/teste.py
 
 deploy:
  provider: heroku
