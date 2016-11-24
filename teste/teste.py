@@ -369,8 +369,8 @@ def update_name():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     driver.get("http://petajuda.herokuapp.com/home/perfil.php")
     if not nome == driver.find_element_by_id("nome").getAttribute("value"):
-        raise Exception("Ue")
-    print "Teste update_name - done"
+        raise Exception("Teste update_name - done")
+    print "ue"
 
 login_fail_emptyEmail()
 login_fail_emptySenha()
@@ -378,6 +378,11 @@ login_fail_emptyEmail_emptySenha()
 login_fail_wrongEmail()
 login_fail_wrongSenha()
 login_sucess()
+
+update_fail_name()
+update_fail_lastName()
+update_fail_nameLast()
+update_name()
 
 redirect_login()
 redirect_signup()
