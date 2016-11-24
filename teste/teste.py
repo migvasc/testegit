@@ -380,9 +380,9 @@ login_fail_wrongEmail()
 login_fail_wrongSenha()
 login_sucess()
 
-update_fail_name()
 update_fail_lastName()
 update_fail_nameLast()
+update_fail_name()
 update_name()
 
 redirect_login()
