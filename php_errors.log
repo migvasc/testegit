@@ -416,3 +416,16 @@
 [24-Nov-2016 21:22:22 UTC] PHP Stack trace:
 [24-Nov-2016 21:22:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/home/perfil.php:0
 [24-Nov-2016 21:22:22 UTC] PHP   2. pg_fetch_row() /home/ubuntu/workspace/home/perfil.php:36
+[24-Nov-2016 22:03:56 UTC] PHP Warning:  pg_connect(): Unable to connect to PostgreSQL server: could not translate host name "sslmode=require" to address: Name or service not known in /home/ubuntu/workspace/conn.php on line 7
+[24-Nov-2016 22:03:56 UTC] PHP Stack trace:
+[24-Nov-2016 22:03:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/home/perfil.php:0
+[24-Nov-2016 22:03:56 UTC] PHP   2. require() /home/ubuntu/workspace/home/perfil.php:34
+[24-Nov-2016 22:03:56 UTC] PHP   3. pg_connect() /home/ubuntu/workspace/conn.php:7
+[24-Nov-2016 22:03:56 UTC] PHP Warning:  pg_query() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/home/perfil.php on line 35
+[24-Nov-2016 22:03:56 UTC] PHP Stack trace:
+[24-Nov-2016 22:03:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/home/perfil.php:0
+[24-Nov-2016 22:03:56 UTC] PHP   2. pg_query() /home/ubuntu/workspace/home/perfil.php:35
+[24-Nov-2016 22:03:56 UTC] PHP Warning:  pg_fetch_row() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/home/perfil.php on line 36
+[24-Nov-2016 22:03:56 UTC] PHP Stack trace:
+[24-Nov-2016 22:03:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/home/perfil.php:0
+[24-Nov-2016 22:03:56 UTC] PHP   2. pg_fetch_row() /home/ubuntu/workspace/home/perfil.php:36

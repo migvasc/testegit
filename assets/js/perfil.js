@@ -20,7 +20,7 @@ $(function() {
             var bairro = $("input#bairro").val();
             var cidade = $("input#cidade").val();
             var estado = $("input#estado").val();
-            var tipo = $("input#tipo").val();
+            var tipo = $("#tipo").val();
             var resposta = $("input#pergunta").val();
             
             alert(tipo);
