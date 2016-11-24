@@ -23,6 +23,8 @@ $(function() {
             var tipo = $("input#tipo").val();
             var resposta = $("input#pergunta").val();
             
+            alert(tipo);
+            
                 $.ajax({
                     url: "../assets/post/check_perfil.php",
                     type: "POST",
