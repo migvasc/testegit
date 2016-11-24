@@ -326,6 +326,26 @@ def reset_fail_wrongAnswer():
     if not "Pet Ajuda | Esqueci minha senha" in driver.title:
         raise Exception("Esqueci minha senha deixando passar com resposta errada!")
     print "Teste reset_fail_wrongAnswer - done"
+    
+def update_fail_name():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/home/perfil.php") 
+    driver.find_element_by_id("nome").click()
+    driver.find_element_by_id("nome").clear()
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Perfil" in driver.title:
+        raise Exception("Permitindo alterar deixando nome vazio")
+    print "Teste update_fail_name - done"
+    
+def update_fail_lastName():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/home/perfil.php") 
+    driver.find_element_by_id("sobrenome").click()
+    driver.find_element_by_id("sobrenome").clear()
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Perfil" in driver.title:
+        raise Exception("Permitindo alterar deixando sobrenome vazio")
+    print "Teste update_fail_lastN - done"
 
 
 
