@@ -330,6 +330,7 @@ def reset_fail_wrongAnswer():
 def update_fail_name():
     driver.implicitly_wait(10)
     driver.get("http://petajuda.herokuapp.com/home/perfil.php") 
+    print driver.title
     driver.find_element_by_id("nome").click()
     driver.find_element_by_id("nome").clear()
     driver.find_element_by_id("atualizar").click()
@@ -368,7 +369,7 @@ login_fail_wrongEmail()
 login_fail_wrongSenha()
 login_sucess()
 
-# update_fail_name()
+update_fail_name()
 update_fail_lastName()
 update_fail_nameLast()
 
