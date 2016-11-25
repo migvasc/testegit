@@ -242,7 +242,7 @@
                                             <div id="success"></div>
                                             
                                             <input type="hidden" id="email" value="<?=$email ?>">
-                                            <button type="submit" class="btn btn-primary">Atualizar</button>
+                                            <button type="submit" id="atualizar" class="btn btn-primary">Atualizar</button>
                                     </div>
                                 </form>
                             </div> 
