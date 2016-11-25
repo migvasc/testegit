@@ -384,6 +384,7 @@ time.sleep(5)
 
 
 def login_sucess_mapa():
+    logout()
     driver.implicitly_wait(10)
     driver.get("http://petajuda.herokuapp.com/login.php")
     driver.find_element_by_id("email").click()
