@@ -340,14 +340,6 @@ def update_fail_name():
     
 def update_fail_lastName():
     driver.implicitly_wait(10)
-    driver.implicitly_wait(10)
-    driver.get("http://petajuda.herokuapp.com/login.php")
-    driver.find_element_by_id("email").click()
-    driver.find_element_by_id("email").clear()
-    driver.find_element_by_id("email").send_keys("alerossialvares@gmail.com")
-    driver.find_element_by_id("senha").clear()
-    driver.find_element_by_id("senha").send_keys("123456")
-    driver.find_element_by_xpath("//button[@type='submit']").click()
     driver.get("http://petajuda.herokuapp.com/home/perfil.php") 
     driver.find_element_by_id("sobrenome").click()
     driver.find_element_by_id("sobrenome").clear()
@@ -376,7 +368,7 @@ login_fail_wrongEmail()
 login_fail_wrongSenha()
 login_sucess()
 
-update_fail_name()
+# update_fail_name()
 update_fail_lastName()
 update_fail_nameLast()
 
