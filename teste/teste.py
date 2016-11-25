@@ -17,6 +17,11 @@ driver = webdriver.Remote(
    command_executor='http://migvasc:edb8e905-bb7c-45f0-8c81-fa2a41402c5d@ondemand.saucelabs.com:80/wd/hub',
    desired_capabilities=desired_cap)
   
+  
+
+
+  
+  
 def login_sucess():
     driver.implicitly_wait(10)
     driver.get("http://petajuda.herokuapp.com/login.php")
@@ -363,6 +368,9 @@ def update_fail_emptyNomeSobrenome():
     print "Teste update_fail_emptyNomeSobrenome - done"
 
 
+print "Teste showMapa "
+login_sucess_mapa()
+
 print "Testes historia 1 - Login"
 login_fail_emptyEmail()
 login_fail_emptySenha()
@@ -384,7 +392,6 @@ time.sleep(5)
 
 
 def login_sucess_mapa():
-    logout()
     driver.implicitly_wait(10)
     driver.get("http://petajuda.herokuapp.com/login.php")
     driver.find_element_by_id("email").click()
@@ -393,13 +400,18 @@ def login_sucess_mapa():
     driver.find_element_by_id("senha").clear()
     driver.find_element_by_id("senha").send_keys("senha123")
     driver.find_element_by_xpath("//button[@type='submit']").click()
+    
     if not "Pet Ajuda | Home" in driver.title:
         raise Exception("Algo errado no login!")
-    else:
-        print "OK"
         
-print "Teste showMapa "
-login_sucess_mapa()
+    driver.implicitly_wait(100)
+    texto = driver.find_element_by_id("txtMapa").getAttribute("value")
+    if texto == "achou": 
+       print "Teste login_sucess_mapa - done"
+    else:
+        raise Exception("Algo errado no mapa!")
+    logout()        
+
 
 print "Testes historia 3 - Sessao de usuario"
 redirect_login()
