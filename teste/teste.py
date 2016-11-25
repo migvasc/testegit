@@ -394,14 +394,10 @@ def login_sucess_mapa():
     driver.find_element_by_xpath("//button[@type='submit']").click()
     if not "Pet Ajuda | Home" in driver.title:
         raise Exception("Algo errado no login!")
-    driver.implicitly_wait(100)
-    texto = driver.find_element_by_id("txtMapa").getAttribute("value")
-    if texto == "achou": 
-        print "Teste login_sucess_mapa - done"
     else:
-        raise Exception("Algo errado no mapa!")
+        print "OK"
         
-print "Teste showMapa - done"
+print "Teste showMapa "
 login_sucess_mapa()
 
 print "Testes historia 3 - Sessao de usuario"
