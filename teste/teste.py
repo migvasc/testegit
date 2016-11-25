@@ -383,6 +383,25 @@ print "Testes historia 6 - Plotagem de informacoes no mapa"
 time.sleep(5)
 print "Teste showMapa - done"
 
+def login_sucess_mapa():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/login.php")
+    driver.find_element_by_id("email").click()
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("ongbras@mail.com")
+    driver.find_element_by_id("senha").clear()
+    driver.find_element_by_id("senha").send_keys("senha123")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    if not "Pet Ajuda | Home" in driver.title:
+        raise Exception("Algo errado no login!")
+    driver.implicitly_wait(100)
+    texto = driver.find_element_by_id("txtMapa").getAttribute("value")
+    if texto == "achou": 
+        print "Teste login_sucess_mapa - done"
+    else:
+        raise Exception("Algo errado no mapa!")
+        
+
 print "Testes historia 3 - Sessao de usuario"
 redirect_login()
 redirect_signup()
