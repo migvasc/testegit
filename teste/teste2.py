@@ -3,8 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import urllib2
-import time
-  
+
 # This is the only code you need to edit in your existing scripts.
 # The command_executor tells the test to run on Sauce, while the desired_capabilities
 # parameter tells us which browsers and OS to spin up.
@@ -372,16 +371,12 @@ login_fail_wrongSenha()
 login_sucess()
 
 print "Testes historia 5 - Alteração de Perfil"
-time.sleep(5)
-print "Teste update_fail_emptyNome - done"
-time.sleep(5)
-print "Teste update_fail_emptySobrenome - done"
-time.sleep(5)
-print "Teste update_fail_emptyResposta - done"
+update_fail_emptyNome()
+update_fail_emptySobrenome()
+update_fail_emptyNomeSobrenome()
 
 print "Testes historia 6 - Plotagem de informações no mapa"
-time.sleep(5)
-print "Teste showMapa - done"
+update_fail_showMapa()
 
 print "Testes historia 3 - Sessão de usuário"
 redirect_login()
