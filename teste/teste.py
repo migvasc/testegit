@@ -381,7 +381,7 @@ def login_sucess_mapa():
         raise Exception("Algo errado no login!")
         
     driver.implicitly_wait(100)
-    texto = driver.find_element_by_id("txtMapa").getAttribute("value")
+    texto = driver.find_element_by_id("txtMapa").get_attribute("value")
     if texto == "achou": 
        print "Teste login_sucess_mapa - done"
     else:
