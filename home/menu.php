@@ -166,6 +166,7 @@
                                 <?php 
                                     $s = $SESSION['tipo'] == "padrinho"?"Padrinho":$_SESSION['tipo'] == "anfitriao"?"Anfitriao":"ONG";
                                     echo "Olá, " . $_SESSION['nome'] . " - " . $s;
+                                ?>
                                 </span>
                             <div style="display: none;" id="user_tipo"><?php echo($_SESSION['tipo']); ?></div>
                             <div style="display: none;" id="user_nome"><?php echo($_SESSION['nome']); ?></div>
