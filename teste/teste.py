@@ -371,7 +371,7 @@ login_fail_wrongEmail()
 login_fail_wrongSenha()
 login_sucess()
 
-print "Testes historia 5 - Alteração de Perfil"
+print "Testes historia 5 - Alteracao de Perfil"
 time.sleep(5)
 print "Teste update_fail_emptyNome - done"
 time.sleep(5)
@@ -379,11 +379,11 @@ print "Teste update_fail_emptySobrenome - done"
 time.sleep(5)
 print "Teste update_fail_emptyResposta - done"
 
-print "Testes historia 6 - Plotagem de informações no mapa"
+print "Testes historia 6 - Plotagem de informacoes no mapa"
 time.sleep(5)
 print "Teste showMapa - done"
 
-print "Testes historia 3 - Sessão de usuário"
+print "Testes historia 3 - Sessão de usuario"
 redirect_login()
 redirect_signup()
 logout()
@@ -400,7 +400,7 @@ signup_fail_userAlreadyRegistered()
 signup_sucess()
 logout()
 
-print "Testes historia 4 - Alteração de senha"
+print "Testes historia 4 - Alteracao de senha"
 reset_fail_wrongAnswer()
 reset_success()
 
