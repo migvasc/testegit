@@ -22,6 +22,8 @@ function inicializar() {
             if (results[0]) {
                 user_lat = results[0].geometry.location.lat();
                 user_lng = results[0].geometry.location.lng();
+                $('#txtLatitude').val(user_lat);
+                $('#txtLongitude').val(user_lng);
                 inicializarMapa(user_lat,user_lng)
             }
         }

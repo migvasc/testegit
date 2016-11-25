@@ -136,6 +136,8 @@
 						            echo " <h5> Mantenha seu endereço sempre atualizado para que possamos te mostrar tudo que acontece ao seu redor :) </h5>"
 						    ?>
 						<div class="panel-body-map">
+      				<input id="txtLatitude" name="txtLatitude" />
+              <input  id="txtLongitude" name="txtLongitude" />
 							<div id="map" style="height:380px; width: 100%">
 							    <br />
 							    <br />
@@ -144,7 +146,6 @@
 							    <p align="center"><h5 align="center"> Carregando as informações dos usuários perto de você...</h5></p>
 						    </div>	
 						</div>
-	
 					</div>
 				</div>
               <!--<div class="col-md-3">
