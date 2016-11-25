@@ -329,6 +329,17 @@ def reset_fail_wrongAnswer():
     
 def update_fail_name():
     driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/esqueciminhasenha.php")
+    driver.find_element_by_id("email").click()
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("carlos@teste.com")
+    driver.find_element_by_id("pergunta").clear()
+    driver.find_element_by_id("pergunta").send_keys("tobby2")
+    driver.find_element_by_id("senha1").clear()
+    driver.find_element_by_id("senha1").send_keys("novasenha")
+    driver.find_element_by_id("senha2").clear()
+    driver.find_element_by_id("senha2").send_keys("novasenha")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
     driver.get("http://petajuda.herokuapp.com/home/perfil.php") 
     driver.find_element_by_id("nome").click()
     driver.find_element_by_id("nome").clear()
