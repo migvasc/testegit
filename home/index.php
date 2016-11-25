@@ -136,7 +136,7 @@
 						            echo " <h5> Mantenha seu endereço sempre atualizado para que possamos te mostrar tudo que acontece ao seu redor :) </h5>"
 						    ?>
 						<div class="panel-body-map">
-      				<input id="txtMapa" name="txtMapa" />
+      				<input type="hidden" id="txtMapa" name="txtMapa" />
               
 							<div id="map" style="height:380px; width: 100%">
 							    <br />
