@@ -367,6 +367,27 @@ def update_fail_emptyNomeSobrenome():
         raise Exception("Permitindo alterar deixando nome e sobrenome vazio")
     print "Teste update_fail_emptyNomeSobrenome - done"
 
+def login_sucess_mapa():
+    driver.implicitly_wait(10)
+    driver.get("http://petajuda.herokuapp.com/login.php")
+    driver.find_element_by_id("email").click()
+    driver.find_element_by_id("email").clear()
+    driver.find_element_by_id("email").send_keys("ongbras@mail.com")
+    driver.find_element_by_id("senha").clear()
+    driver.find_element_by_id("senha").send_keys("senha123")
+    driver.find_element_by_xpath("//button[@type='submit']").click()
+    
+    if not "Pet Ajuda | Home" in driver.title:
+        raise Exception("Algo errado no login!")
+        
+    driver.implicitly_wait(100)
+    texto = driver.find_element_by_id("txtMapa").getAttribute("value")
+    if texto == "achou": 
+       print "Teste login_sucess_mapa - done"
+    else:
+        raise Exception("Algo errado no mapa!")
+    logout()        
+
 
 print "Teste showMapa "
 login_sucess_mapa()
@@ -391,26 +412,6 @@ print "Testes historia 6 - Plotagem de informacoes no mapa"
 time.sleep(5)
 
 
-def login_sucess_mapa():
-    driver.implicitly_wait(10)
-    driver.get("http://petajuda.herokuapp.com/login.php")
-    driver.find_element_by_id("email").click()
-    driver.find_element_by_id("email").clear()
-    driver.find_element_by_id("email").send_keys("ongbras@mail.com")
-    driver.find_element_by_id("senha").clear()
-    driver.find_element_by_id("senha").send_keys("senha123")
-    driver.find_element_by_xpath("//button[@type='submit']").click()
-    
-    if not "Pet Ajuda | Home" in driver.title:
-        raise Exception("Algo errado no login!")
-        
-    driver.implicitly_wait(100)
-    texto = driver.find_element_by_id("txtMapa").getAttribute("value")
-    if texto == "achou": 
-       print "Teste login_sucess_mapa - done"
-    else:
-        raise Exception("Algo errado no mapa!")
-    logout()        
 
 
 print "Testes historia 3 - Sessao de usuario"
