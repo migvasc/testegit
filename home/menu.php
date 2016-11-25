@@ -160,9 +160,13 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                Seu perfil atual: <b></b><?php echo $_SESSION['tipo'];?></b><img alt="" src="img/user.jpeg">
+                                <img alt="" src="img/user.jpeg">
                             </span>
-                            <span class="username"><?php echo($_SESSION['nome']);?></span>
+                            <span class="username">
+                                <?php 
+                                    echo "Olá, " . $_SESSION['nome'] . " - " . $SESSION['tipo'] == "padrinho"? "Padrinho":$_SESSION['tipo'] == "anfitriao"?"Anfitriao":"ONG";
+                                ?>
+                                </span>
                             <div style="display: none;" id="user_tipo"><?php echo($_SESSION['tipo']); ?></div>
                             <div style="display: none;" id="user_nome"><?php echo($_SESSION['nome']); ?></div>
                             <div style="display: none;" id="user_email"><?php echo($_SESSION['email']); ?></div>
