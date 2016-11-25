@@ -383,7 +383,7 @@ print "Testes historia 6 - Plotagem de informacoes no mapa"
 time.sleep(5)
 print "Teste showMapa - done"
 
-print "Testes historia 3 - Sessão de usuario"
+print "Testes historia 3 - Sessao de usuario"
 redirect_login()
 redirect_signup()
 logout()
