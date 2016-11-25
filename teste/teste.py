@@ -381,7 +381,7 @@ print "Teste update_fail_emptyResposta - done"
 
 print "Testes historia 6 - Plotagem de informacoes no mapa"
 time.sleep(5)
-print "Teste showMapa - done"
+
 
 def login_sucess_mapa():
     driver.implicitly_wait(10)
@@ -401,6 +401,8 @@ def login_sucess_mapa():
     else:
         raise Exception("Algo errado no mapa!")
         
+print "Teste showMapa - done"
+login_sucess_mapa()
 
 print "Testes historia 3 - Sessao de usuario"
 redirect_login()
